@@ -10,23 +10,6 @@ from wordcloud import WordCloud
 import spacy
 import os
 
-    # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
-    st.markdown(
-        """
-        <div style="text-align: center; font-size: 28px;">
-            <a href="https://dados-violencia-brasil-2015-a-2024.streamlit.app/" target="_self" title="Home">🏠</a> &nbsp;
-            <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
-            <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
-            <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
-            <a href="#detalhes-técnicos" title="Detalhes Técnicos">⚙️</a> &nbsp;
-            <a href="#sobre-o-projeto" title="Sobre o Projeto">ℹ️</a>
-        </div>
-        <br>
-        """,
-        unsafe_allow_html=True
-    )
-
-
 
 # --- ADICIONADO: Carregar modelo de linguagem para stopwords ---
 try:
@@ -73,6 +56,23 @@ except FileNotFoundError:
 #     st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras.")
 
 with st.sidebar:
+    
+        # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
+    st.markdown(
+        """
+        <div style="text-align: center; font-size: 28px;">
+            <a href="https://dados-violencia-brasil-2015-a-2024.streamlit.app/" target="_self" title="Home">🏠</a> &nbsp;
+            <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
+            <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
+            <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
+            <a href="#detalhes-técnicos" title="Detalhes Técnicos">⚙️</a> &nbsp;
+            <a href="#sobre-o-projeto" title="Sobre o Projeto">ℹ️</a>
+        </div>
+        <br>
+        """,
+        unsafe_allow_html=True
+    )
+    
     # --- CÓDIGO CSS PARA ADICIONAR ESPAÇAMENTO ---
     st.markdown("""
     <style>
