@@ -12,23 +12,21 @@ import os
 
 # --- FUNÇÃO PARA O MENU DE EMOJIS ---
 def menu_emojis():
-    base_url = "https://dados-violencia-brasil.streamlit.app/"
-    # Nomes curtos para usar nos links
-    paginas_link = ["Home", "Dashboard", "Previsao", "Analise", "Detalhes", "Sobre"]
-    # Emojis correspondentes
-    emojis = ["🏠", "📊", "🧠", "📜", "⚙️", "ℹ️"]
+    base_url = "https://dados-violencia-brasil-2015-a-2024.streamlit.app/"
+    paginas = {"Dashboard": "📊", "Previsao": "🧠", "Analise": "📜", "Detalhes": "⚙️", "Sobre": "ℹ️"}
     
-    # Usamos st.columns para criar a fileira de botões
-    colunas = st.columns(len(emojis))
+    # Adiciona o botão Home e os botões de emoji em colunas
+    colunas = st.columns(len(paginas) + 1)
+    with colunas[0]:
+        st.link_button("🏠", base_url, use_container_width=True, help="Página Inicial")
     
-    for i, coluna in enumerate(colunas):
-        with coluna:
-            if paginas_link[i] == "Home":
-                st.link_button(emojis[i], base_url, use_container_width=True)
-            else:
-                st.link_button(emojis[i], base_url + f"?page={paginas_link[i]}", use_container_width=True)
-                
-    st.markdown("<hr>", unsafe_allow_html=True) # Linha divisória
+    i = 1
+    for nome_curto, emoji in paginas.items():
+        with colunas[i]:
+            st.link_button(emoji, base_url + f"?page={nome_curto}", use_container_width=True, help=nome_curto)
+        i += 1
+        
+    st.markdown("<hr>", unsafe_allow_html=True)
 
 
 # --- ADICIONADO: Carregar modelo de linguagem para stopwords ---
@@ -76,7 +74,7 @@ except FileNotFoundError:
 #     st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras.")
 
 with st.sidebar:
-    # --- CÓDIGO CSS PARA ADICIONAR ESPAÇAMENTO ---
+    # --- CÓDIGO CSS (Opcional, pode remover se não quiser o espaçamento) ---
     st.markdown("""
     <style>
         div[role="radiogroup"] > div { margin-bottom: 15px; }
@@ -93,21 +91,21 @@ with st.sidebar:
         "Detalhes": "⚙️ Detalhes Técnicos",
         "Sobre": "ℹ️ Sobre o Projeto"
     }
-    lista_paginas_completas = list(paginas.values())
+    lista_de_opcoes = list(paginas.values())
 
-    # Verifica se um botão de emoji foi clicado (olhando o final do link no navegador)
-    pagina_no_url = st.query_params.get("page", None)
+    # LÊ O EMOJI CLICADO
+    pagina_clicada = st.query_params.get("page", None)
     
-    # Define qual item do menu radio deve começar selecionado
-    indice_selecionado = 0 # Padrão é a primeira página (Dashboard)
-    if pagina_no_url in paginas:
-        indice_selecionado = lista_paginas_completas.index(paginas[pagina_no_url])
+    # DEFINE QUAL OPÇÃO DO RADIO DEVE ESTAR MARCADA
+    indice = 0 # Padrão: a primeira opção
+    if pagina_clicada in paginas:
+        indice = lista_de_opcoes.index(paginas[pagina_clicada])
 
-    # Seu st.radio original, agora com o 'index' inteligente
+    # SEU CÓDIGO ORIGINAL DO RADIO, AGORA COM O 'index'
     pagina_selecionada = st.radio(
         "Escolha uma seção:",
-        lista_paginas_completas,
-        index=indice_selecionado
+        lista_de_opcoes,
+        index=indice
     )
     
     st.markdown("---")
