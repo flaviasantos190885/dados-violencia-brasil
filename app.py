@@ -57,39 +57,49 @@ except FileNotFoundError:
 
 with st.sidebar:
     
-        # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
+    # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
     st.header("Dados Violência Brasil")
-    
-    # --- FUNÇÃO PARA O MENU DE EMOJIS EM HTML ---
-    def menu_emojis_html():
-        st.markdown("""
-        <div style="text-align: center; font-size: 24px; margin-bottom: 15px;">
-            <a href="?page=Home" target="_self" title="Home">🏠</a> &nbsp;&nbsp;
-            <a href="?page=Dashboard" target="_self" title="Dashboard de Análise">📊</a> &nbsp;&nbsp;
-            <a href="?page=Previsao" target="_self" title="Módulo de Previsão">🧠</a> &nbsp;&nbsp;
-            <a href="?page=Analise" target="_self" title="Análise de Palavras">📜</a> &nbsp;&nbsp;
-            <a href="?page=Detalhes" target="_self" title="Detalhes Técnicos">⚙️</a> &nbsp;&nbsp;
-            <a href="?page=Sobre" target="_self" title="Sobre o Projeto">ℹ️</a>
+        # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
+    st.markdown(
+        """
+        <div style="text-align: center; font-size: 28px;">
+            <a href="https://dados-violencia-brasil-2015-a-2024.streamlit.app/" target="_self" title="Home">🏠</a> &nbsp;
+            <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
+            <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
+            <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
+            <a href="#detalhes-técnicos" title="Detalhes Técnicos">⚙️</a> &nbsp;
+            <a href="#sobre-o-projeto" title="Sobre o Projeto">ℹ️</a>
         </div>
-        <hr>
-        """, unsafe_allow_html=True)
-    
-
-    
-    pagina_selecionada = st.radio(
-    "Escolha uma seção:",
-    (
-        "📊 Dashboard de Análise",
-        "🧠 Módulo de Previsão",
-        "📜 Análise de Palavras",
-        "⚙️ Detalhes Técnicos",
-        "ℹ️ Sobre o Projeto"
+        <br>
+        """,
+        unsafe_allow_html=True
     )
-)
+
+    # ... (seu código de CSS e st.header aqui) ...
+    paginas = {
+        "Dashboard": "📊 Dashboard de Análise",
+        "Previsao": "🧠 Módulo de Previsão",
+        "Analise": "📜 Análise de Palavras",
+        "Detalhes": "⚙️ Detalhes Técnicos",
+        "Sobre": "ℹ️ Sobre o Projeto"
+    }
+    lista_paginas_completas = list(paginas.values())
+    pagina_no_url = st.query_params.get("page", None)
+    
+    indice_selecionado = 0 
+    if pagina_no_url in paginas:
+        indice_selecionado = lista_paginas_completas.index(paginas[pagina_no_url])
+
+    pagina_selecionada = st.radio(
+        "Escolha uma seção:",
+        lista_paginas_completas,
+        index=indice_selecionado
+    )
+    
+    # ... (seu st.markdown("---") e st.info(...) aqui) ...
     st.markdown("---")
     st.info(
-        "Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras.   "
-        
+        "Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. "
         "O projeto representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
         "pelo IF Sudeste MG - Campus Muriaé."
     )
@@ -112,6 +122,20 @@ if pagina_selecionada == "📊 Dashboard de Análise":
 
     # ---------- TÍTULO GLOBAL ----------
     st.markdown("<h1 style='text-align: center; font-size: 40px; color: white'>📊 Dados da Violência no Brasil</h1>", unsafe_allow_html=True)
+    
+    # --- INÍCIO DO BLOCO DE EMOJIS ---
+    st.markdown("""
+    <div style="text-align: center; font-size: 24px; margin-bottom: 15px;">
+        <a href="?page=Home" target="_self" title="Home">🏠</a> &nbsp;&nbsp;
+        <a href="?page=Dashboard" target="_self" title="Dashboard de Análise">📊</a> &nbsp;&nbsp;
+        <a href="?page=Previsao" target="_self" title="Módulo de Previsão">🧠</a> &nbsp;&nbsp;
+        <a href="?page=Analise" target="_self" title="Análise de Palavras">📜</a> &nbsp;&nbsp;
+        <a href="?page=Detalhes" target="_self" title="Detalhes Técnicos">⚙️</a> &nbsp;&nbsp;
+        <a href="?page=Sobre" target="_self" title="Sobre o Projeto">ℹ️</a>
+    </div>
+    <hr>
+    """, unsafe_allow_html=True)
+    # --- FIM DO BLOCO DE EMOJIS ---
     
     st.info("Este painel interativo permite a exploração detalhada dos dados de violência. Utilize os filtros de Ano, Estado e Tipo de Evento para visualizar os gráficos e a tabela com informações específicas. Dica: ao selecionar um único estado, o filtro por cidade será habilitado para uma análise ainda mais granular.")
 
