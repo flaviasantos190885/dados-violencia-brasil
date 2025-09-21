@@ -63,7 +63,7 @@ with st.sidebar:
     st.markdown(
         """
         <div style="text-align: center; font-size: 28px;">
-            <a href="https://dados-violencia-brasil.streamlit.app/" target="_self" title="Home">🏠</a> &nbsp;
+            <a href="https://dados-violencia-brasil.streamlit.app" target="_self" title="Home">🏠</a> &nbsp;
             <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
             <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
             <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
