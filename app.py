@@ -60,20 +60,19 @@ with st.sidebar:
         # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
     st.header("Dados Violência Brasil")
     
-    st.markdown(
-        """
-        <div style="text-align: center; font-size: 28px;">
-            <a href="https://dados-violencia-brasil.streamlit.app/" target="_self" title="Home">🏠</a> &nbsp;
-            <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
-            <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
-            <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
-            <a href="#detalhes-técnicos" title="Detalhes Técnicos">⚙️</a> &nbsp;
-            <a href="#sobre-o-projeto" title="Sobre o Projeto">ℹ️</a>
+    # --- FUNÇÃO PARA O MENU DE EMOJIS EM HTML ---
+    def menu_emojis_html():
+        st.markdown("""
+        <div style="text-align: center; font-size: 24px; margin-bottom: 15px;">
+            <a href="?page=Home" target="_self" title="Home">🏠</a> &nbsp;&nbsp;
+            <a href="?page=Dashboard" target="_self" title="Dashboard de Análise">📊</a> &nbsp;&nbsp;
+            <a href="?page=Previsao" target="_self" title="Módulo de Previsão">🧠</a> &nbsp;&nbsp;
+            <a href="?page=Analise" target="_self" title="Análise de Palavras">📜</a> &nbsp;&nbsp;
+            <a href="?page=Detalhes" target="_self" title="Detalhes Técnicos">⚙️</a> &nbsp;&nbsp;
+            <a href="?page=Sobre" target="_self" title="Sobre o Projeto">ℹ️</a>
         </div>
-        <br>
-        """,
-        unsafe_allow_html=True
-    )
+        <hr>
+        """, unsafe_allow_html=True)
     
 
     
