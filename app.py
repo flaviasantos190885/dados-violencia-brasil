@@ -51,64 +51,51 @@ except FileNotFoundError:
 
 
 with st.sidebar:
-    
-    # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
     st.header("Dados Violência Brasil")
-        # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
-    st.markdown(
-        """
-        <div style="text-align: center; font-size: 28px;">
-            <a href="https://dados-violencia-brasil.streamlit.app" target="_self" title="Home">🏠</a> &nbsp;
-            <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
-            <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
-            <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
-            <a href="#detalhes-técnicos" title="Detalhes Técnicos">⚙️</a> &nbsp;
-            <a href="#sobre-o-projeto" title="Sobre o Projeto">ℹ️</a>
-        </div>
-        <br>
-        """,
-        unsafe_allow_html=True
+
+    # --- MENU DE EMOJIS NA BARRA LATERAL ---
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    with col1:
+        st.link_button("🏠", "https://dados-violencia-brasil-2015-a-2024.streamlit.app/", use_container_width=True, help="Página Inicial")
+    with col2:
+        if st.button("📊", use_container_width=True, help="Dashboard de Análise"):
+            st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
+    with col3:
+        if st.button("🧠", use_container_width=True, help="Módulo de Previsão"):
+            st.session_state.pagina_selecionada = "🧠 Módulo de Previsão"
+    with col4:
+        if st.button("📜", use_container_width=True, help="Análise de Palavras"):
+            st.session_state.pagina_selecionada = "📜 Análise de Palavras"
+    with col5:
+        if st.button("⚙️", use_container_width=True, help="Detalhes Técnicos"):
+            st.session_state.pagina_selecionada = "⚙️ Detalhes Técnicos"
+    with col6:
+        if st.button("ℹ️", use_container_width=True, help="Sobre o Projeto"):
+            st.session_state.pagina_selecionada = "ℹ️ Sobre o Projeto"
+    
+    st.markdown("---") # Linha divisória entre os menus
+
+    # --- SEU MENU RADIO, AGORA 100% SINCRONIZADO ---
+    opcoes_menu = (
+        "📊 Dashboard de Análise", "🧠 Módulo de Previsão", "📜 Análise de Palavras", 
+        "⚙️ Detalhes Técnicos", "ℹ️ Sobre o Projeto"
     )
-
-    # ... (seu código de CSS e st.header aqui) ...
-    # SUBSTITUA APENAS O SEU st.radio na barra lateral por este bloco:
-
-# Dicionário que traduz o link para o nome completo da página
-    paginas = {
-        "Dashboard": "📊 Dashboard de Análise",
-        "Previsao": "🧠 Módulo de Previsão",
-        "Analise": "📜 Análise de Palavras",
-        "Detalhes": "⚙️ Detalhes Técnicos",
-        "Sobre": "ℹ️ Sobre o Projeto"
-    }
-    opcoes_menu = list(paginas.values())
-
-    # Ouve o 'sinal' do emoji clicado no link
-    pagina_clicada = st.query_params.get("page", None)
-
-    # Define qual bolinha do radio deve ser marcada
-    indice = 0 
-    if pagina_clicada in paginas:
-        indice = opcoes_menu.index(paginas[pagina_clicada])
-
-    # SEU CÓDIGO ORIGINAL, que continua criando a variável 'pagina_selecionada'
-    pagina_selecionada = st.radio(
+    
+    st.radio(
         "Escolha uma seção:",
         opcoes_menu,
-        index=indice
+        key="pagina_selecionada"
     )
-    
-    # ... (seu st.markdown("---") e st.info(...) aqui) ...
+
     st.markdown("---")
     st.info(
-        "Análise visual dos dados de violência e um módulo para estimativas futuras. "
-        "O projeto representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
+        "Este painel representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
         "pelo IF Sudeste MG - Campus Muriaé."
     )
 # ==============================================================================
 # --- SEÇÃO 1: DASHBOARD DE ANÁLISE (RESTAURADA DO ORIGINAL) ---
 # ==============================================================================
-if pagina_selecionada == "📊 Dashboard de Análise":
+if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
 
     df = df_completo.copy()
     df['Ano'] = df['data_referencia'].dt.year
@@ -311,7 +298,7 @@ if pagina_selecionada == "📊 Dashboard de Análise":
 # ==============================================================================
 # --- SEÇÃO 2: MÓDULO DE PREVISÃO (VERSÃO COMPLETA E CORRIGIDA) ---
 # ==============================================================================
-elif pagina_selecionada == "🧠 Módulo de Previsão":
+elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
     
     st.markdown("<h1 style='text-align: center; color: white;'>🧠 Módulo de Previsão Anual</h1>", unsafe_allow_html=True)
     st.markdown("#### Como Funciona?")
@@ -418,7 +405,7 @@ elif pagina_selecionada == "🧠 Módulo de Previsão":
 # ==============================================================================
 # --- SEÇÃO 3: ANÁLISE DE PALAVRAS (VERSÃO COM CONTROLE FINO) ---
 # ==============================================================================
-elif pagina_selecionada == "📜 Análise de Palavras":
+elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
 
     st.markdown("<h1 style='text-align: center; color: white;'>📜 Análise de Tipos de Evento</h1>", unsafe_allow_html=True)
     st.info("Frequência dos eventos exibidas em Nuvem de Palavras e através de uma tabela de percentual de cada evento.")
@@ -476,7 +463,7 @@ elif pagina_selecionada == "📜 Análise de Palavras":
     # ==============================================================================
 # --- SEÇÃO 4: DETALHES TÉCNICOS DO PROJETO (VERSÃO FINAL) ---
 # ==============================================================================
-elif pagina_selecionada == "⚙️ Detalhes Técnicos":
+elif st.session_state.pagina_selecionada == "⚙️ Detalhes Técnicos":
 
     st.markdown("<h1 style='text-align: center; color: white;'>⚙️ Detalhes Técnicos do Projeto</h1>", unsafe_allow_html=True)
     st.info("Arquitetura, tecnologias e a metodologia utilizadas para o desenvolvimento desta ferramenta de análise e previsão.")
@@ -566,7 +553,7 @@ elif pagina_selecionada == "⚙️ Detalhes Técnicos":
 # ==============================================================================
 # --- SEÇÃO 5: SOBRE O PROJETO ---
 # ==============================================================================
-elif pagina_selecionada == "ℹ️ Sobre o Projeto":
+elif st.session_state.pagina_selecionada == "ℹ️ Sobre o Projeto":
 
     st.markdown("<h1 style='text-align: center; color: white;'>ℹ️ Sobre o Projeto e a Fonte dos Dados</h1>", unsafe_allow_html=True)
     st.info("Visualização e análises dos dados abertos sobre segurança pública no Brasil, com o objetivo de promover a transparência e facilitar o entendimento sobre o tema.")
