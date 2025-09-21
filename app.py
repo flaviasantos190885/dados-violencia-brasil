@@ -52,11 +52,45 @@ except FileNotFoundError:
 
 with st.sidebar:
     st.header("Dados Violência Brasil")
+    
+    # --- CÓDIGO CSS ATUALIZADO ---
+    st.markdown("""
+    <style>
+        /* Espaçamento para o menu radio */
+        div[role="radiogroup"] > div {
+            margin-bottom: 15px;
+        }
+
+        /* --- CSS PARA OS BOTÕES DE EMOJI --- */
+        /* Seleciona os botões dentro do bloco horizontal da barra lateral */
+        [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] button {
+            background-color: transparent; /* Fundo invisível */
+            border: none;                 /* Sem borda */
+            padding: 0 !important;        /* Sem espaçamento interno */
+            font-size: 24px;              /* Tamanho do emoji */
+            color: white !important;      /* Garante que o emoji seja branco */
+            text-decoration: none;        /* Sem sublinhado */
+            transition: transform 0.1s ease-in-out; /* Efeito suave */
+        }
+
+        /* Efeito ao passar o mouse */
+        [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] button:hover {
+            transform: scale(1.2); /* Aumenta um pouco o tamanho */
+            color: white;
+        }
+        
+        /* Remove o contorno azul ao clicar */
+        [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] button:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
     # --- MENU DE EMOJIS NA BARRA LATERAL ---
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
-        st.link_button("🏠", "https://dados-violencia-brasil-2015-a-2024.streamlit.app/", use_container_width=True, help="Página Inicial")
+        st.link_button("🏠", "https://dados-violencia-brasil.streamlit.app/", use_container_width=True, help="Página Inicial")
     with col2:
         if st.button("📊", use_container_width=True, help="Dashboard de Análise"):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
