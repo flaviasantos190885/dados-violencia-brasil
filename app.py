@@ -10,6 +10,10 @@ from wordcloud import WordCloud
 import spacy
 import os
 
+# --- CONTROLE DE NAVEGAÇÃO ---
+if 'pagina_selecionada' not in st.session_state:
+    st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
+
 
 # --- ADICIONADO: Carregar modelo de linguagem para stopwords ---
 try:
@@ -45,15 +49,6 @@ except FileNotFoundError:
     st.error("Erro: O arquivo 'Dados_2015_2024.csv' não foi encontrado. Por favor, coloque-o na mesma pasta.")
     st.stop() # Interrompe a execução se o arquivo principal não for encontrado
 
-# --- BARRA LATERAL DE NAVEGAÇÃO ---
-# with st.sidebar:
-#     st.header("Navegação")
-#     pagina_selecionada = st.radio(
-#         "Escolha uma seção:",
-#         ("Dashboard de Análise", "Módulo de Previsão")
-#     )
-#     st.markdown("---")
-#     st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras.")
 
 with st.sidebar:
     
@@ -76,6 +71,9 @@ with st.sidebar:
     )
 
     # ... (seu código de CSS e st.header aqui) ...
+    # SUBSTITUA APENAS O SEU st.radio na barra lateral por este bloco:
+
+# Dicionário que traduz o link para o nome completo da página
     paginas = {
         "Dashboard": "📊 Dashboard de Análise",
         "Previsao": "🧠 Módulo de Previsão",
@@ -83,17 +81,21 @@ with st.sidebar:
         "Detalhes": "⚙️ Detalhes Técnicos",
         "Sobre": "ℹ️ Sobre o Projeto"
     }
-    lista_paginas_completas = list(paginas.values())
-    pagina_no_url = st.query_params.get("page", None)
-    
-    indice_selecionado = 0 
-    if pagina_no_url in paginas:
-        indice_selecionado = lista_paginas_completas.index(paginas[pagina_no_url])
+    opcoes_menu = list(paginas.values())
 
+    # Ouve o 'sinal' do emoji clicado no link
+    pagina_clicada = st.query_params.get("page", None)
+
+    # Define qual bolinha do radio deve ser marcada
+    indice = 0 
+    if pagina_clicada in paginas:
+        indice = opcoes_menu.index(paginas[pagina_clicada])
+
+    # SEU CÓDIGO ORIGINAL, que continua criando a variável 'pagina_selecionada'
     pagina_selecionada = st.radio(
         "Escolha uma seção:",
-        lista_paginas_completas,
-        index=indice_selecionado
+        opcoes_menu,
+        index=indice
     )
     
     # ... (seu st.markdown("---") e st.info(...) aqui) ...
