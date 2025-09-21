@@ -101,7 +101,7 @@ with st.sidebar:
     # ... (seu st.markdown("---") e st.info(...) aqui) ...
     st.markdown("---")
     st.info(
-        "Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. "
+        "Análise visual dos dados de violência e um módulo para estimativas futuras. "
         "O projeto representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
         "pelo IF Sudeste MG - Campus Muriaé."
     )
@@ -139,7 +139,7 @@ if pagina_selecionada == "📊 Dashboard de Análise":
     """, unsafe_allow_html=True)
     # --- FIM DO BLOCO DE EMOJIS ---
     
-    st.info("Este painel interativo permite a exploração detalhada dos dados de violência. Utilize os filtros de Ano, Estado e Tipo de Evento para visualizar os gráficos e a tabela com informações específicas. Dica: ao selecionar um único estado, o filtro por cidade será habilitado para uma análise ainda mais granular.")
+    st.info("Exploração detalhada dos dados de violência. Utilize os filtros de Ano, Estado e Tipo de Evento para visualizar os gráficos e a tabela com informações específicas. Dica: ao selecionar um único estado, o filtro por cidade será habilitado para uma análise ainda mais granular.")
 
     # Filtros disponíveis
     anos = sorted(df['Ano'].unique())
@@ -582,7 +582,7 @@ elif pagina_selecionada == "⚙️ Detalhes Técnicos":
 elif pagina_selecionada == "ℹ️ Sobre o Projeto":
 
     st.markdown("<h1 style='text-align: center; color: white;'>ℹ️ Sobre o Projeto e a Fonte dos Dados</h1>", unsafe_allow_html=True)
-    st.info("Este painel foi desenvolvido para visualizar e analisar os dados abertos sobre segurança pública no Brasil, com o objetivo de promover a transparência e facilitar o entendimento sobre o tema.")
+    st.info("Visualização e análises dos dados abertos sobre segurança pública no Brasil, com o objetivo de promover a transparência e facilitar o entendimento sobre o tema.")
 
     st.markdown("---")
 
