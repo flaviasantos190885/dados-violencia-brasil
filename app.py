@@ -10,6 +10,26 @@ from wordcloud import WordCloud
 import spacy
 import os
 
+# --- FUNÇÃO PARA O MENU DE EMOJIS ---
+def menu_emojis():
+    base_url = "https://dados-violencia-brasil.streamlit.app/"
+    # Nomes curtos para usar nos links
+    paginas_link = ["Home", "Dashboard", "Previsao", "Analise", "Detalhes", "Sobre"]
+    # Emojis correspondentes
+    emojis = ["🏠", "📊", "🧠", "📜", "⚙️", "ℹ️"]
+    
+    # Usamos st.columns para criar a fileira de botões
+    colunas = st.columns(len(emojis))
+    
+    for i, coluna in enumerate(colunas):
+        with coluna:
+            if paginas_link[i] == "Home":
+                st.link_button(emojis[i], base_url, use_container_width=True)
+            else:
+                st.link_button(emojis[i], base_url + f"?page={paginas_link[i]}", use_container_width=True)
+                
+    st.markdown("<hr>", unsafe_allow_html=True) # Linha divisória
+
 
 # --- ADICIONADO: Carregar modelo de linguagem para stopwords ---
 try:
@@ -59,27 +79,40 @@ with st.sidebar:
     # --- CÓDIGO CSS PARA ADICIONAR ESPAÇAMENTO ---
     st.markdown("""
     <style>
-        div[role="radiogroup"] > div {
-            margin-bottom: 1500px; /* Aumenta o espaço abaixo de cada item */
-        }
+        div[role="radiogroup"] > div { margin-bottom: 15px; }
     </style>
     """, unsafe_allow_html=True)
 
-    st.header("Menu Interativo teste")
+    st.header("Menu Interativo")
+
+    # Dicionário que conecta o nome curto do link ao nome completo da página
+    paginas = {
+        "Dashboard": "📊 Dashboard de Análise",
+        "Previsao": "🧠 Módulo de Previsão",
+        "Analise": "📜 Análise de Palavras",
+        "Detalhes": "⚙️ Detalhes Técnicos",
+        "Sobre": "ℹ️ Sobre o Projeto"
+    }
+    lista_paginas_completas = list(paginas.values())
+
+    # Verifica se um botão de emoji foi clicado (olhando o final do link no navegador)
+    pagina_no_url = st.query_params.get("page", None)
+    
+    # Define qual item do menu radio deve começar selecionado
+    indice_selecionado = 0 # Padrão é a primeira página (Dashboard)
+    if pagina_no_url in paginas:
+        indice_selecionado = lista_paginas_completas.index(paginas[pagina_no_url])
+
+    # Seu st.radio original, agora com o 'index' inteligente
     pagina_selecionada = st.radio(
-    "Escolha uma seção:",
-    (
-        "📊 Dashboard de Análise",
-        "🧠 Módulo de Previsão",
-        "📜 Análise de Palavras",
-        "⚙️ Detalhes Técnicos",
-        "ℹ️ Sobre o Projeto"
+        "Escolha uma seção:",
+        lista_paginas_completas,
+        index=indice_selecionado
     )
-)
+    
     st.markdown("---")
     st.info(
-        "Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras.   "
-        
+        "Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. "
         "O projeto representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
         "pelo IF Sudeste MG - Campus Muriaé."
     )
