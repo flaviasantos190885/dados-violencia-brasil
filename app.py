@@ -73,14 +73,6 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     
-    # --- CÓDIGO CSS PARA ADICIONAR ESPAÇAMENTO ---
-    st.markdown("""
-    <style>
-        div[role="radiogroup"] > div {
-            margin-bottom: 1500px; /* Aumenta o espaço abaixo de cada item */
-        }
-    </style>
-    """, unsafe_allow_html=True)
 
     st.header("Menu Interativo teste")
     pagina_selecionada = st.radio(
