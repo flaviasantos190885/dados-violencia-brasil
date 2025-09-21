@@ -10,23 +10,22 @@ from wordcloud import WordCloud
 import spacy
 import os
 
-# --- FUNÇÃO PARA O MENU DE EMOJIS ---
-def menu_emojis():
-    base_url = "https://dados-violencia-brasil-2015-a-2024.streamlit.app/"
-    paginas = {"Dashboard": "📊", "Previsao": "🧠", "Analise": "📜", "Detalhes": "⚙️", "Sobre": "ℹ️"}
-    
-    # Adiciona o botão Home e os botões de emoji em colunas
-    colunas = st.columns(len(paginas) + 1)
-    with colunas[0]:
-        st.link_button("🏠", base_url, use_container_width=True, help="Página Inicial")
-    
-    i = 1
-    for nome_curto, emoji in paginas.items():
-        with colunas[i]:
-            st.link_button(emoji, base_url + f"?page={nome_curto}", use_container_width=True, help=nome_curto)
-        i += 1
-        
-    st.markdown("<hr>", unsafe_allow_html=True)
+    # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
+    st.markdown(
+        """
+        <div style="text-align: center; font-size: 28px;">
+            <a href="https://dados-violencia-brasil-2015-a-2024.streamlit.app/" target="_self" title="Home">🏠</a> &nbsp;
+            <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
+            <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
+            <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
+            <a href="#detalhes-técnicos" title="Detalhes Técnicos">⚙️</a> &nbsp;
+            <a href="#sobre-o-projeto" title="Sobre o Projeto">ℹ️</a>
+        </div>
+        <br>
+        """,
+        unsafe_allow_html=True
+    )
+
 
 
 # --- ADICIONADO: Carregar modelo de linguagem para stopwords ---
@@ -74,43 +73,30 @@ except FileNotFoundError:
 #     st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras.")
 
 with st.sidebar:
-    # --- CÓDIGO CSS (Opcional, pode remover se não quiser o espaçamento) ---
+    # --- CÓDIGO CSS PARA ADICIONAR ESPAÇAMENTO ---
     st.markdown("""
     <style>
-        div[role="radiogroup"] > div { margin-bottom: 15px; }
+        div[role="radiogroup"] > div {
+            margin-bottom: 1500px; /* Aumenta o espaço abaixo de cada item */
+        }
     </style>
     """, unsafe_allow_html=True)
 
-    st.header("Menu Interativo")
-
-    # Dicionário que conecta o nome curto do link ao nome completo da página
-    paginas = {
-        "Dashboard": "📊 Dashboard de Análise",
-        "Previsao": "🧠 Módulo de Previsão",
-        "Analise": "📜 Análise de Palavras",
-        "Detalhes": "⚙️ Detalhes Técnicos",
-        "Sobre": "ℹ️ Sobre o Projeto"
-    }
-    lista_de_opcoes = list(paginas.values())
-
-    # LÊ O EMOJI CLICADO
-    pagina_clicada = st.query_params.get("page", None)
-    
-    # DEFINE QUAL OPÇÃO DO RADIO DEVE ESTAR MARCADA
-    indice = 0 # Padrão: a primeira opção
-    if pagina_clicada in paginas:
-        indice = lista_de_opcoes.index(paginas[pagina_clicada])
-
-    # SEU CÓDIGO ORIGINAL DO RADIO, AGORA COM O 'index'
+    st.header("Menu Interativo teste")
     pagina_selecionada = st.radio(
-        "Escolha uma seção:",
-        lista_de_opcoes,
-        index=indice
+    "Escolha uma seção:",
+    (
+        "📊 Dashboard de Análise",
+        "🧠 Módulo de Previsão",
+        "📜 Análise de Palavras",
+        "⚙️ Detalhes Técnicos",
+        "ℹ️ Sobre o Projeto"
     )
-    
+)
     st.markdown("---")
     st.info(
-        "Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. "
+        "Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras.   "
+        
         "O projeto representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
         "pelo IF Sudeste MG - Campus Muriaé."
     )
