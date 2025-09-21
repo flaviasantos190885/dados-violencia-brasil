@@ -10,9 +10,37 @@ from wordcloud import WordCloud
 import spacy
 import os
 
-# --- CONTROLE DE NAVEGAÇÃO ---
+# --- CONTROLE DE NAVEGAÇÃO E MENU HORIZONTAL ---
+# Esta é a "memória" do app. Ele começa na página do Dashboard.
 if 'pagina_selecionada' not in st.session_state:
     st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
+
+# Esta função desenha os botões que mudam a página de forma sutil
+def menu_horizontal():
+    colunas = st.columns(6)
+    with colunas[0]:
+        st.link_button("🏠 Home", "https://dados-violencia-brasil-2015-a-2024.streamlit.app/", use_container_width=True)
+    with colunas[1]:
+        if st.button("📊", use_container_width=True, help="Dashboard de Análise"):
+            st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
+            st.rerun()
+    with colunas[2]:
+        if st.button("🧠", use_container_width=True, help="Módulo de Previsão"):
+            st.session_state.pagina_selecionada = "🧠 Módulo de Previsão"
+            st.rerun()
+    with colunas[3]:
+        if st.button("📜", use_container_width=True, help="Análise de Palavras"):
+            st.session_state.pagina_selecionada = "📜 Análise de Palavras"
+            st.rerun()
+    with colunas[4]:
+        if st.button("⚙️", use_container_width=True, help="Detalhes Técnicos"):
+            st.session_state.pagina_selecionada = "⚙️ Detalhes Técnicos"
+            st.rerun()
+    with colunas[5]:
+        if st.button("ℹ️", use_container_width=True, help="Sobre o Projeto"):
+            st.session_state.pagina_selecionada = "ℹ️ Sobre o Projeto"
+            st.rerun()
+    st.markdown("<hr>", unsafe_allow_html=True)
 
 
 # --- ADICIONADO: Carregar modelo de linguagem para stopwords ---
@@ -51,62 +79,29 @@ except FileNotFoundError:
 
 
 with st.sidebar:
+    st.header("Menu Interativo")
     
-    # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
-    st.header("Dados Violência Brasil")
-    # --- INÍCIO DO BLOCO DE EMOJIS ---
-    st.markdown("""
-    <div style="text-align: center; font-size: 24px; margin-bottom: 15px;">
-        <a href="?page=Home" target="_self" title="Home">🏠</a> &nbsp;&nbsp;
-        <a href="?page=Dashboard" target="_self" title="Dashboard de Análise">📊</a> &nbsp;&nbsp;
-        <a href="?page=Previsao" target="_self" title="Módulo de Previsão">🧠</a> &nbsp;&nbsp;
-        <a href="?page=Analise" target="_self" title="Análise de Palavras">📜</a> &nbsp;&nbsp;
-        <a href="?page=Detalhes" target="_self" title="Detalhes Técnicos">⚙️</a> &nbsp;&nbsp;
-        <a href="?page=Sobre" target="_self" title="Sobre o Projeto">ℹ️</a>
-    </div>
-    <hr>
-    """, unsafe_allow_html=True)
-    # --- FIM DO BLOCO DE EMOJIS ---
-
-    # ... (seu código de CSS e st.header aqui) ...
-    # SUBSTITUA APENAS O SEU st.radio na barra lateral por este bloco:
-
-# Dicionário que traduz o link para o nome completo da página
-    paginas = {
-        "Dashboard": "📊 Dashboard de Análise",
-        "Previsao": "🧠 Módulo de Previsão",
-        "Analise": "📜 Análise de Palavras",
-        "Detalhes": "⚙️ Detalhes Técnicos",
-        "Sobre": "ℹ️ Sobre o Projeto"
-    }
-    opcoes_menu = list(paginas.values())
-
-    # Ouve o 'sinal' do emoji clicado no link
-    pagina_clicada = st.query_params.get("page", None)
-
-    # Define qual bolinha do radio deve ser marcada
-    indice = 0 
-    if pagina_clicada in paginas:
-        indice = opcoes_menu.index(paginas[pagina_clicada])
-
-    # SEU CÓDIGO ORIGINAL, que continua criando a variável 'pagina_selecionada'
-    pagina_selecionada = st.radio(
-        "Escolha uma seção:",
-        opcoes_menu,
-        index=indice
+    opcoes_menu = (
+        "📊 Dashboard de Análise", "🧠 Módulo de Previsão", "📜 Análise de Palavras", 
+        "⚙️ Detalhes Técnicos", "ℹ️ Sobre o Projeto"
     )
     
-    # ... (seu st.markdown("---") e st.info(...) aqui) ...
+    # O st.radio agora está 100% sincronizado com a "memória" (session_state)
+    st.radio(
+        "Escolha uma seção:",
+        opcoes_menu,
+        key="pagina_selecionada"
+    )
+
     st.markdown("---")
     st.info(
-        "Análise visual dos dados de violência e um módulo para estimativas futuras. "
-        "O projeto representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
+        "Este painel representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
         "pelo IF Sudeste MG - Campus Muriaé."
     )
 # ==============================================================================
 # --- SEÇÃO 1: DASHBOARD DE ANÁLISE (RESTAURADA DO ORIGINAL) ---
 # ==============================================================================
-if pagina_selecionada == "📊 Dashboard de Análise":
+if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
 
     df = df_completo.copy()
     df['Ano'] = df['data_referencia'].dt.year
@@ -122,6 +117,8 @@ if pagina_selecionada == "📊 Dashboard de Análise":
 
     # ---------- TÍTULO GLOBAL ----------
     st.markdown("<h1 style='text-align: center; font-size: 40px; color: white'>📊 Dados da Violência no Brasil</h1>", unsafe_allow_html=True)
+    
+    menu_horizontal()
     
     
     st.info("Exploração detalhada dos dados sobre a violência no Brasil. Utilize os filtros de Ano, Estado e Tipo de Evento para visualizar os gráficos e a tabela com informações específicas. Dica: ao selecionar um único estado, o filtro por cidade será habilitado para uma análise ainda mais granular.")
@@ -309,9 +306,12 @@ if pagina_selecionada == "📊 Dashboard de Análise":
 # ==============================================================================
 # --- SEÇÃO 2: MÓDULO DE PREVISÃO (VERSÃO COMPLETA E CORRIGIDA) ---
 # ==============================================================================
-elif pagina_selecionada == "🧠 Módulo de Previsão":
+elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
     
     st.markdown("<h1 style='text-align: center; color: white;'>🧠 Módulo de Previsão Anual</h1>", unsafe_allow_html=True)
+    
+    menu_horizontal()
+    
     st.markdown("#### Como Funciona?")
     st.info("""
     Este módulo utiliza um modelo de Inteligência Artificial, especificamente uma **rede neural recorrente (LSTM - Long Short-Term Memory)**, para projetar estimativas futuras. O modelo foi treinado para reconhecer padrões em sequências de eventos com base nos dados históricos de 2015 a 2024. 
@@ -416,9 +416,12 @@ elif pagina_selecionada == "🧠 Módulo de Previsão":
 # ==============================================================================
 # --- SEÇÃO 3: ANÁLISE DE PALAVRAS (VERSÃO COM CONTROLE FINO) ---
 # ==============================================================================
-elif pagina_selecionada == "📜 Análise de Palavras":
+elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
 
     st.markdown("<h1 style='text-align: center; color: white;'>📜 Análise de Tipos de Evento</h1>", unsafe_allow_html=True)
+    
+    menu_horizontal()
+    
     st.info("Frequência dos eventos exibidas em Nuvem de Palavras e através de uma tabela de percentual de cada evento.")
 
     try:
@@ -474,9 +477,12 @@ elif pagina_selecionada == "📜 Análise de Palavras":
     # ==============================================================================
 # --- SEÇÃO 4: DETALHES TÉCNICOS DO PROJETO (VERSÃO FINAL) ---
 # ==============================================================================
-elif pagina_selecionada == "⚙️ Detalhes Técnicos":
+elif st.session_state.pagina_selecionada == "⚙️ Detalhes Técnicos":
 
     st.markdown("<h1 style='text-align: center; color: white;'>⚙️ Detalhes Técnicos do Projeto</h1>", unsafe_allow_html=True)
+    
+    menu_horizontal()
+    
     st.info("Arquitetura, tecnologias e a metodologia utilizadas para o desenvolvimento desta ferramenta de análise e previsão.")
 
     st.markdown("---")
@@ -564,9 +570,12 @@ elif pagina_selecionada == "⚙️ Detalhes Técnicos":
 # ==============================================================================
 # --- SEÇÃO 5: SOBRE O PROJETO ---
 # ==============================================================================
-elif pagina_selecionada == "ℹ️ Sobre o Projeto":
+elif st.session_state.pagina_selecionada == "ℹ️ Sobre o Projeto":
 
     st.markdown("<h1 style='text-align: center; color: white;'>ℹ️ Sobre o Projeto e a Fonte dos Dados</h1>", unsafe_allow_html=True)
+    
+    menu_horizontal()
+    
     st.info("Visualização e análises dos dados abertos sobre segurança pública no Brasil, com o objetivo de promover a transparência e facilitar o entendimento sobre o tema.")
 
     st.markdown("---")
