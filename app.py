@@ -58,6 +58,8 @@ except FileNotFoundError:
 with st.sidebar:
     
         # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
+    st.header("Dados Violência Brasil")
+    
     st.markdown(
         """
         <div style="text-align: center; font-size: 28px;">
@@ -74,7 +76,7 @@ with st.sidebar:
     )
     
 
-    st.header("Menu Interativo teste")
+    
     pagina_selecionada = st.radio(
     "Escolha uma seção:",
     (
