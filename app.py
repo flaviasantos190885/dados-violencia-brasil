@@ -90,7 +90,8 @@ with st.sidebar:
     # --- MENU DE EMOJIS NA BARRA LATERAL ---
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
-        st.link_button("🏠", "https://dados-violencia-brasil.streamlit.app/", use_container_width=True, help="Página Inicial")
+        if st.button("🏠", use_container_width=True, help="Página Inicial (Dashboard)"):
+            st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col2:
         if st.button("📊", use_container_width=True, help="Dashboard de Análise"):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
