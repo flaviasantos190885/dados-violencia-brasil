@@ -54,21 +54,19 @@ with st.sidebar:
     
     # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
     st.header("Dados Violência Brasil")
-        # --- EMOJIS DE NAVEGAÇÃO (ICONS) ---
-    st.markdown(
-        """
-        <div style="text-align: center; font-size: 28px;">
-            <a href="https://dados-violencia-brasil.streamlit.app" target="_self" title="Home">🏠</a> &nbsp;
-            <a href="#dashboard-de-análise" title="Dashboard de Análise">📊</a> &nbsp;
-            <a href="#módulo-de-previsão" title="Módulo de Previsão">🧠</a> &nbsp;
-            <a href="#análise-de-palavras" title="Análise de Palavras">📜</a> &nbsp;
-            <a href="#detalhes-técnicos" title="Detalhes Técnicos">⚙️</a> &nbsp;
-            <a href="#sobre-o-projeto" title="Sobre o Projeto">ℹ️</a>
-        </div>
-        <br>
-        """,
-        unsafe_allow_html=True
-    )
+    # --- INÍCIO DO BLOCO DE EMOJIS ---
+    st.markdown("""
+    <div style="text-align: center; font-size: 24px; margin-bottom: 15px;">
+        <a href="?page=Home" target="_self" title="Home">🏠</a> &nbsp;&nbsp;
+        <a href="?page=Dashboard" target="_self" title="Dashboard de Análise">📊</a> &nbsp;&nbsp;
+        <a href="?page=Previsao" target="_self" title="Módulo de Previsão">🧠</a> &nbsp;&nbsp;
+        <a href="?page=Analise" target="_self" title="Análise de Palavras">📜</a> &nbsp;&nbsp;
+        <a href="?page=Detalhes" target="_self" title="Detalhes Técnicos">⚙️</a> &nbsp;&nbsp;
+        <a href="?page=Sobre" target="_self" title="Sobre o Projeto">ℹ️</a>
+    </div>
+    <hr>
+    """, unsafe_allow_html=True)
+    # --- FIM DO BLOCO DE EMOJIS ---
 
     # ... (seu código de CSS e st.header aqui) ...
     # SUBSTITUA APENAS O SEU st.radio na barra lateral por este bloco:
@@ -125,21 +123,8 @@ if pagina_selecionada == "📊 Dashboard de Análise":
     # ---------- TÍTULO GLOBAL ----------
     st.markdown("<h1 style='text-align: center; font-size: 40px; color: white'>📊 Dados da Violência no Brasil</h1>", unsafe_allow_html=True)
     
-    # --- INÍCIO DO BLOCO DE EMOJIS ---
-    st.markdown("""
-    <div style="text-align: center; font-size: 24px; margin-bottom: 15px;">
-        <a href="?page=Home" target="_self" title="Home">🏠</a> &nbsp;&nbsp;
-        <a href="?page=Dashboard" target="_self" title="Dashboard de Análise">📊</a> &nbsp;&nbsp;
-        <a href="?page=Previsao" target="_self" title="Módulo de Previsão">🧠</a> &nbsp;&nbsp;
-        <a href="?page=Analise" target="_self" title="Análise de Palavras">📜</a> &nbsp;&nbsp;
-        <a href="?page=Detalhes" target="_self" title="Detalhes Técnicos">⚙️</a> &nbsp;&nbsp;
-        <a href="?page=Sobre" target="_self" title="Sobre o Projeto">ℹ️</a>
-    </div>
-    <hr>
-    """, unsafe_allow_html=True)
-    # --- FIM DO BLOCO DE EMOJIS ---
     
-    st.info("Exploração detalhada dos dados de violência. Utilize os filtros de Ano, Estado e Tipo de Evento para visualizar os gráficos e a tabela com informações específicas. Dica: ao selecionar um único estado, o filtro por cidade será habilitado para uma análise ainda mais granular.")
+    st.info("Exploração detalhada dos dados sobre a violência no Brasil. Utilize os filtros de Ano, Estado e Tipo de Evento para visualizar os gráficos e a tabela com informações específicas. Dica: ao selecionar um único estado, o filtro por cidade será habilitado para uma análise ainda mais granular.")
 
     # Filtros disponíveis
     anos = sorted(df['Ano'].unique())
