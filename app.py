@@ -25,13 +25,13 @@ except OSError:
 
 #   Página de avisos 
 st.set_page_config(layout="wide", page_title="Análise de Violência no Brasil")
-# --- CUSTOMIZAÇÃO DA FONTE (ADICIONE ESTE BLOCO) ---
+# Exemplo para a fonte "Poppins"
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
     html, body, [class*="st-"], [class*="css-"]  {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 </style>
 """, unsafe_allow_html=True)
