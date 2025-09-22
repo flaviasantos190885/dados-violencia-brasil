@@ -87,7 +87,7 @@ with st.sidebar:
 
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
-        if st.button("🏠", use_container_width=True, help="Home teste"):
+        if st.button("🏠", use_container_width=True, help="Home"):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col2:
         if st.button("📊", use_container_width=True):
