@@ -129,6 +129,8 @@ with st.sidebar:
     
     st.markdown("""
     <div style="font-size: 12px; color: #D3D3D3; line-height: 1.6;">
+        <br>
+        <br>
         Trabalho de Conclusão de Curso (TCC) 
         <br>
         Gestão da Tecnologia da Informação (GTI)
