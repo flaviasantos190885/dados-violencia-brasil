@@ -128,9 +128,10 @@ with st.sidebar:
     st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. ")
     
     st.info(
-        "Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
-        "IF Sudeste MG - Campus Muriaé."
-    )
+    "Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI)\n"
+    "IF Sudeste MG - Campus Muriaé\n"
+    "Desenvolvido por Flavia Santos"
+    )   
     
 # ==============================================================================
 # --- SEÇÃO 1: DASHBOARD DE ANÁLISE (RESTAURADA DO ORIGINAL) ---
