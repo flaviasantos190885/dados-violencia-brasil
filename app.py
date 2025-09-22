@@ -25,6 +25,16 @@ except OSError:
 
 #   Página de avisos 
 st.set_page_config(layout="wide", page_title="Análise de Violência no Brasil")
+# --- CUSTOMIZAÇÃO DA FONTE (ADICIONE ESTE BLOCO) ---
+st.markdown("""
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    
+    html, body, [class*="st-"], [class*="css-"]  {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
+""", unsafe_allow_html=True)
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 #   Carregamento de arquivos de previsão
