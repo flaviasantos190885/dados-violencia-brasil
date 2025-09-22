@@ -61,15 +61,14 @@ with st.sidebar:
         }
 
         /* --- CSS PARA OS BOTÕES DE EMOJI --- */
-        /* Seleciona os botões dentro do bloco horizontal da barra lateral */
         [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] button {
-            background-color: transparent; /* Fundo invisível */
-            border: none;                 /* Sem borda */
-            padding: 0 !important;        /* Sem espaçamento interno */
-            font-size: 24px;              /* Tamanho do emoji */
-            color: white !important;      /* Garante que o emoji seja branco */
-            text-decoration: none;        /* Sem sublinhado */
-            transition: transform 0.1s ease-in-out; /* Efeito suave */
+            background-color: transparent; 
+            border: none;                
+            padding: 0 !important;        
+            font-size: 24px;              
+            color: white !important;      
+            text-decoration: none;        
+            transition: transform 0.1s ease-in-out; 
         }
 
         /* Efeito ao passar o mouse */
@@ -88,10 +87,10 @@ with st.sidebar:
 
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
-        if st.button("🏠", use_container_width=True, help="Página Inicial (Dashboard)"):
+        if st.button("🏠", use_container_width=True, help="Home"):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col2:
-        if st.button("📊", use_container_width=True, help="Dashboard de Análise"):
+        if st.button("📊", use_container_width=True):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col3:
         if st.button("🧠", use_container_width=True, help="Módulo de Previsão"):
