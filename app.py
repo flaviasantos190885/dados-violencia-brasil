@@ -422,12 +422,7 @@ elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
 
         st.subheader("Frequência de Tipos de Evento")
         
-        # --- MUDANÇA 1: CONTROLE FINO DO TAMANHO DAS FRASES ---
-        # Criei um "fator de escala" para controlar a diferença de tamanho.
-        # 1.0 = diferença máxima (original)
-        # 0.5 = raiz quadrada (diferença média) <-- BOM PONTO DE PARTIDA
-        # < 0.5 = diferenças cada vez menores
-        fator_de_escala = 1.0 
+        fator_de_escala = 0.5
         
         dicionario_frases_escalonado = dict(zip(
             df_frequencia_frase['Frase'], 
