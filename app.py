@@ -87,22 +87,22 @@ with st.sidebar:
 
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
-        if st.button("🏠", use_container_width=True, help="Home"):
+        if st.button("🏠", use_container_width=True):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col2:
         if st.button("📊", use_container_width=True):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col3:
-        if st.button("🧠", use_container_width=True, help="Módulo de Previsão"):
+        if st.button("🧠", use_container_width=True):
             st.session_state.pagina_selecionada = "🧠 Módulo de Previsão"
     with col4:
-        if st.button("📜", use_container_width=True, help="Análise de Palavras"):
+        if st.button("📜", use_container_width=True):
             st.session_state.pagina_selecionada = "📜 Análise de Palavras"
     with col5:
-        if st.button("⚙️", use_container_width=True, help="Detalhes Técnicos"):
+        if st.button("⚙️", use_container_width=True):
             st.session_state.pagina_selecionada = "⚙️ Detalhes Técnicos"
     with col6:
-        if st.button("ℹ️", use_container_width=True, help="Sobre o Projeto"):
+        if st.button("ℹ️", use_container_width=True):
             st.session_state.pagina_selecionada = "ℹ️ Sobre o Projeto"
     
     st.markdown("---") 
