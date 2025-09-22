@@ -131,7 +131,18 @@ with st.sidebar:
     "Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI)\n"
     "IF Sudeste MG - Campus Muriaé\n"
     "Desenvolvido por Flavia Santos"
-    )   
+    )
+    
+    st.markdown("""
+    <div style="font-size: 14px; color: #D3D3D3; line-height: 1.6;">
+        Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI)
+        <br>
+        IF Sudeste MG - Campus Muriaé
+        <br>
+        Desenvolvido por Flavia Santos
+    </div>
+    """, unsafe_allow_html=True)
+    
     
 # ==============================================================================
 # --- SEÇÃO 1: DASHBOARD DE ANÁLISE (RESTAURADA DO ORIGINAL) ---
