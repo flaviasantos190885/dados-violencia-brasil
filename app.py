@@ -124,10 +124,14 @@ with st.sidebar:
     )
 
     st.markdown("---")
+    
+    st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. ")
+    
     st.info(
-        "Este painel representa o Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
-        "pelo IF Sudeste MG - Campus Muriaé."
+        "Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação (GTI) "
+        "IF Sudeste MG - Campus Muriaé."
     )
+    
 # ==============================================================================
 # --- SEÇÃO 1: DASHBOARD DE ANÁLISE (RESTAURADA DO ORIGINAL) ---
 # ==============================================================================
