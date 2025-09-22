@@ -414,7 +414,7 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
 #   Análise de Palavras
 elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
 
-    st.markdown("<h1 style='text-align: center; color: white;'>📜 Análise de Tipos de Evento</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white;'>📜 Análise de Palavras - Tipos de Evento</h1>", unsafe_allow_html=True)
     st.info("Frequência dos eventos exibidas em Nuvem de Palavras e através de uma tabela de percentual de cada evento.")
 
     try:
