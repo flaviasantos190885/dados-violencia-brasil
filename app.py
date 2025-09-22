@@ -51,7 +51,7 @@ except FileNotFoundError:
 
 
 with st.sidebar:
-    st.markdown("<h2 style='text-align: center; font-size: 30px; color: white'> Dados da Violência no Brasil</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; font-size: 250px; color: white'> Dados da Violência no Brasil</h2>", unsafe_allow_html=True)
     #st.header("Dados Violência Brasil")
     
     # --- CÓDIGO CSS ATUALIZADO ---
