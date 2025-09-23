@@ -357,7 +357,17 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
             col_filtros1, col_filtros2 = st.columns(2)
             with col_filtros1:
                 uf_selecionada = st.selectbox("Filtrar por UF (Opcional)", ["Todos"] + sorted(df_completo['uf'].unique()))
+                
+                if uf_selecionada != "Todos":
+                    cidades_disponiveis = sorted(df_completo[df_completo['uf'] == uf_selecionada]['municipio'].unique())
+                    cidade_selecionada = st.selectbox("Filtrar por Cidade (Opcional)", ["Todas"] + cidades_disponiveis)
+                else:
+                    cidade_selecionada = "Todas"
+                    
                 arma_selecionada = st.selectbox("Filtrar por Arma (Opcional)", ["Todos"] + sorted(df_completo['arma'].unique()))
+
+                
+
             with col_filtros2:
                 evento_selecionado = st.selectbox("Filtrar por Evento (Opcional)", ["Todos"] + sorted(df_completo['evento'].unique()))
                 faixa_selecionada = st.selectbox("Filtrar por Faixa Etária (Opcional)", ["Todos"] + sorted(df_completo['faixa_etaria'].unique()))
@@ -366,13 +376,23 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
                 df_filtrado_pred = df_completo.copy()
 
                 if uf_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
+                if cidade_selecionada != "Todas": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
                 if evento_selecionado != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
                 if arma_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
                 if faixa_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
+                
+                # 🔹 É AQUI QUE VOCÊ ENTRA COM O TRATAMENTO:
+                if df_filtrado_pred.empty:
+                    st.error("❌ Nenhum dado encontrado para os filtros escolhidos. Tente opções menos específicos.")
+                    return
+
+                if len(df_filtrado_pred) < 10:
+                    st.warning(f"⚠️ Dados históricos insuficientes, é necessário pelo menos {len(df_filtrado_pred)} eventos para gerar uma previsão confiável.")
+                    return
 
                 janela = 10
                 if len(df_filtrado_pred) < janela:
-                    st.error(f"Dados históricos insuficientes ({len(df_filtrado_pred)} eventos) para o cenário. Tente filtros menos específicos.")
+                    st.error(f"Dados históricos insuficientes é necessário pelo menos {len(df_filtrado_pred)} eventos para o cenário. Tente filtros menos específicos.")
                 else:
                     with st.spinner("Calculando... O modelo está processando os dados."):
                         num_anos_historico = df_filtrado_pred['Ano'].nunique()
