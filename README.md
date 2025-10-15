@@ -16,7 +16,7 @@ Funcionalidades Principais
 
 📄 Páginas Informativas: Seções dedicadas a explicar a metodologia, as tecnologias utilizadas e a fonte dos dados do projeto.
 
-Tecnologias Utilizadas
+Tecnologias Utilizadas:
 Linguagem: Python
 
 Aplicação Web: Streamlit
