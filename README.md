@@ -1,4 +1,4 @@
-# ANÁLISE VISUAL E PREDITIVA DE DADOA DA VIOLÊNCIA NO BRASIL
+# ANÁLISE VISUAL E PREDITIVA DE DADOS DA VIOLÊNCIA NO BRASIL
 
 Este projeto foi desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) em Gestão da Tecnologia da Informação pelo Instituto Federal do Sudeste de Minas Gerais (IF Sudeste MG - Campus Muriaé), sob a orientação do Professor Gustavo Willan Pereira.
 
