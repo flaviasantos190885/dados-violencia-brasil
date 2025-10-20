@@ -10,7 +10,7 @@ from wordcloud import WordCloud
 import spacy
 import os
 
-#   Controle para navegação
+#   Controle para navegação teste
 if 'pagina_selecionada' not in st.session_state:
     st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
 
