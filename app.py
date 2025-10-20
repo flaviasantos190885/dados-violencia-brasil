@@ -417,14 +417,60 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
                         previsao_evento_real = y_scaler.inverse_transform(previsao_evento_normalizada)
                         vitimas_por_evento = np.ceil(previsao_evento_real[0][0])
                         
-                        previsao_anual_total = vitimas_por_evento * media_eventos_ano
-                
-                st.success("Previsão Concluída!")
-                st.metric(
-                    label=f"Estimativa de Vítimas para {ano_desejado}",
-                    value=f"{int(previsao_anual_total)}",
-                    delta_color="off"
-                )
+                        # --- PREVISÃO ITERATIVA ANO A ANO COM CRESCIMENTO GARANTIDO ---
+                        ultimo_ano_real = 2024  # ajuste conforme seu último ano real no dataset
+                        anos_para_prever = max(0, ano_desejado - ultimo_ano_real)
+
+                        previsao_anual_total = 0
+                        ano_atual = ultimo_ano_real
+                        base_atual = df_filtrado_pred.copy()
+                        previsao_ano_anterior = None  # armazena o valor do ano anterior
+
+                        for i in range(anos_para_prever):
+                            ano_atual += 1
+                            
+                            sequencia_base = base_atual.tail(janela - 1).copy()
+                            evento_futuro_template = base_atual.tail(1).copy()
+                            evento_futuro_template['Ano'] = ano_atual
+                            
+                            sequencia_final_df = pd.concat([sequencia_base, evento_futuro_template], ignore_index=True)
+                            X_para_prever = sequencia_final_df.drop(columns=['total_vitima', 'data_referencia', 'municipio'])
+                            
+                            for col in X_para_prever.select_dtypes(include=['object']).columns:
+                                if col in preprocessor.feature_names_in_:
+                                    X_para_prever[col] = X_para_prever[col].astype('category')
+                            
+                            X_processado = preprocessor.transform(X_para_prever)
+                            X_final = np.reshape(X_processado, (1, X_processado.shape[0], X_processado.shape[1]))
+                            
+                            previsao_evento_normalizada = model.predict(X_final)
+                            previsao_evento_real = y_scaler.inverse_transform(previsao_evento_normalizada)
+                            vitimas_por_evento = float(previsao_evento_real[0][0])
+                            
+                            media_eventos_ano = len(base_atual) / base_atual['Ano'].nunique()
+                            previsao_ano = vitimas_por_evento * media_eventos_ano
+                            
+                            # garante que a previsão não caia em relação ao ano anterior
+                            if previsao_ano_anterior is not None:
+                                previsao_ano = max(previsao_ano, previsao_ano_anterior)
+                            
+                            # aplica o aumento percentual incremental (ex: 0,5% ao ano)
+                            previsao_ano *= (1 + 0.005)  # ou outro percentual que desejar
+                            
+                            previsao_anual_total = previsao_ano
+                            previsao_ano_anterior = previsao_anual_total  # atualiza para o próximo ano
+                            
+                            # adiciona o evento simulado à base para próxima iteração
+                            evento_futuro_template['total_vitima'] = previsao_ano / media_eventos_ano
+                            base_atual = pd.concat([base_atual, evento_futuro_template], ignore_index=True)
+
+                        st.success("✅ Previsão Concluída!")
+                        st.metric(
+                            label=f"Estimativa de Vítimas para {ano_desejado}",
+                            value=f"{int(previsao_anual_total)}",
+                            delta=f"{anos_para_prever} ano(s) à frente",
+                            delta_color="normal"
+                        )
         
         prediction_dialog()
 
