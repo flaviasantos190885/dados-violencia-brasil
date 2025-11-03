@@ -374,69 +374,122 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
                 faixa_selecionada = st.selectbox("Filtrar por Faixa Etária (Opcional)", ["Todos"] + sorted(df_completo['faixa_etaria'].unique()))
 
             if st.button("Calcular Estimativa"):
-                # ---------- AQUI: LIMITAR HISTÓRICO AOS ÚLTIMOS 5 ANOS DISPONÍVEIS ----------
-                ultimo_ano_disponivel = df_completo['Ano'].max()
-                anos_usados = list(range(ultimo_ano_disponivel - 4, ultimo_ano_disponivel + 1))
+                # ---------- BLOCO SUBSTITUTO: usar dados até ano_desejado-1 e previsão recursiva quando necessário ----------
+                from sklearn.linear_model import LinearRegression
 
-                df_filtrado_pred = df_completo[df_completo['Ano'].isin(anos_usados)].copy()
+                def projetar_eventos_ano(df_historico, ano_alvo):
+                    series = df_historico.groupby('Ano').size().reset_index(name='count')
+                    if series.shape[0] < 2:
+                        return int(series['count'].mean() if not series['count'].empty else 0)
+                    X = series[['Ano']].values
+                    y = series['count'].values
+                    lr = LinearRegression()
+                    lr.fit(X, y)
+                    pred = lr.predict(np.array([[ano_alvo]]))[0]
+                    return max(int(round(pred)), 0)
 
-                # Aplicar filtros opcionais
-                if uf_selecionada != "Todos":
-                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
-                if cidade_selecionada != "Todas":
-                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
-                if evento_selecionado != "Todos":
-                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
-                if arma_selecionada != "Todos":
-                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
-                if faixa_selecionada != "Todos":
-                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
+                def prever_ano(df_base, ano_para_prever):
+                    janela = 10
+                    if len(df_base) < janela:
+                        return None, f"Dados históricos insuficientes ({len(df_base)} eventos) para o cenário."
+                    media_eventos_ano = df_base.groupby('Ano').size().mean()
+                    sequencia_base = df_base.tail(janela - 1).copy()
+                    evento_template = df_base.tail(1).copy().reset_index(drop=True)
+                    evento_template['Ano'] = ano_para_prever
+                    sequencia_final = pd.concat([sequencia_base.reset_index(drop=True), evento_template], ignore_index=True)
 
-                # Verificações iniciais
-                if df_filtrado_pred.empty:
-                    st.error("❌ Nenhum dado encontrado para os filtros escolhidos. Tente opções menos específicos.")
-                    return
-
-                janela = 10
-                if len(df_filtrado_pred) < janela:
-                    st.warning(f"⚠️ Dados históricos insuficientes, é necessário pelo menos {janela} eventos para gerar uma previsão confiável. Eventos disponíveis: {len(df_filtrado_pred)}")
-                    return
-
-                # Recalcular média de eventos por ano de forma mais estável (média anual)
-                num_anos_historico = df_filtrado_pred['Ano'].nunique()
-                if num_anos_historico > 0:
-                    media_eventos_ano = df_filtrado_pred.groupby('Ano').size().mean()
-                else:
-                    media_eventos_ano = 0
-
-                with st.spinner("Calculando... O modelo está processando os dados."):
-                    sequencia_base = df_filtrado_pred.tail(janela - 1).copy()
-                    evento_futuro_template = df_filtrado_pred.tail(1).copy()
-                    evento_futuro_template['Ano'] = ano_desejado
-
-                    sequencia_final_df = pd.concat([sequencia_base, evento_futuro_template], ignore_index=True)
-
-                    X_para_prever = sequencia_final_df.drop(columns=['total_vitima', 'data_referencia', 'municipio'])
-
+                    X_para_prever = sequencia_final.drop(columns=['total_vitima', 'data_referencia', 'municipio'])
                     for col in X_para_prever.select_dtypes(include=['object']).columns:
                         if col in preprocessor.feature_names_in_:
                             X_para_prever[col] = X_para_prever[col].astype('category')
 
-                    X_processado = preprocessor.transform(X_para_prever)
-                    X_final = np.reshape(X_processado, (1, X_processado.shape[0], X_processado.shape[1]))
+                    X_proc = preprocessor.transform(X_para_prever)
+                    X_final = np.reshape(X_proc, (1, X_proc.shape[0], X_proc.shape[1]))
 
-                    previsao_evento_normalizada = model.predict(X_final)
-                    previsao_evento_real = y_scaler.inverse_transform(previsao_evento_normalizada)
-                    vitimas_por_evento = np.ceil(previsao_evento_real[0][0])
+                    y_pred_norm = model.predict(X_final)
+                    y_pred_real = y_scaler.inverse_transform(y_pred_norm)
+                    vitimas_por_evento = np.ceil(y_pred_real[0][0])
 
                     previsao_anual_total = vitimas_por_evento * media_eventos_ano
+                    return int(round(previsao_anual_total)), None
 
-                st.success("Previsão Concluída!")
-                st.metric(
-                    label=f"Estimativa de Vítimas para {ano_desejado}",
-                    value=f"{int(previsao_anual_total)}",
-                    delta_color="off"
-                )
+                # pega último ano disponível nos dados reais
+                ano_max_real = df_completo['Ano'].max()
+                ano_alvo = int(ano_desejado)
+
+                if ano_alvo <= ano_max_real:
+                    st.error(f"Digite um ano futuro (maior que {ano_max_real}).")
+                    return
+
+                # CASO 1: previsão apenas para o próximo ano disponível (ano_max_real + 1)
+                if ano_alvo == ano_max_real + 1:
+                    df_filtrado_pred = df_completo[df_completo['Ano'] <= ano_max_real].copy()
+                    if uf_selecionada != "Todos":
+                        df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
+                    if cidade_selecionada != "Todas":
+                        df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
+                    if evento_selecionado != "Todos":
+                        df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
+                    if arma_selecionada != "Todos":
+                        df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
+                    if faixa_selecionada != "Todos":
+                        df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
+
+                    total_previsto, erro = prever_ano(df_filtrado_pred, ano_alvo)
+                    if erro:
+                        st.warning(erro)
+                        return
+                    st.success("Previsão Concluída!")
+                    st.metric(label=f"Estimativa de Vítimas para {ano_alvo}", value=f"{total_previsto}", delta_color="off")
+
+                # CASO 2: previsão para ano > ano_max_real + 1 -> fazer previsão recursiva ano-a-ano
+                else:
+                    # Primeiro aplique os filtros nos dados reais (até ano_max_real)
+                    df_base_recursive = df_completo[df_completo['Ano'] <= ano_max_real].copy()
+                    if uf_selecionada != "Todos":
+                        df_base_recursive = df_base_recursive[df_base_recursive['uf'] == uf_selecionada]
+                    if cidade_selecionada != "Todas":
+                        df_base_recursive = df_base_recursive[df_base_recursive['municipio'] == cidade_selecionada]
+                    if evento_selecionado != "Todos":
+                        df_base_recursive = df_base_recursive[df_base_recursive['evento'] == evento_selecionado]
+                    if arma_selecionada != "Todos":
+                        df_base_recursive = df_base_recursive[df_base_recursive['arma'] == arma_selecionada]
+                    if faixa_selecionada != "Todos":
+                        df_base_recursive = df_base_recursive[df_base_recursive['faixa_etaria'] == faixa_selecionada]
+
+                    ano_para = ano_max_real + 1
+                    ultimo_previsto = None
+
+                    while ano_para <= ano_alvo:
+                        if len(df_base_recursive) < 10:
+                            st.warning(f"Não há dados suficientes ({len(df_base_recursive)} eventos) para continuar a previsão recursiva no ano {ano_para}.")
+                            return
+
+                        total_previsto, erro = prever_ano(df_base_recursive, ano_para)
+                        if erro:
+                            st.warning(erro)
+                            return
+
+                        eventos_proj = projetar_eventos_ano(df_base_recursive, ano_para)
+                        vitimas_por_evento_estimada = int(round(total_previsto / max(eventos_proj, 1)))
+
+                        # criar um template sintético simples para anexar ao histórico (1 registro)
+                        template = df_base_recursive.tail(1).copy().reset_index(drop=True)
+                        template['total_vitima'] = vitimas_por_evento_estimada
+                        template['feminino'] = 0
+                        template['masculino'] = vitimas_por_evento_estimada
+                        template['nao_informado'] = 0
+                        template['Ano'] = ano_para
+
+                        df_base_recursive = pd.concat([df_base_recursive, template], ignore_index=True)
+
+                        ultimo_previsto = total_previsto
+                        ano_para += 1
+
+                    st.success("Previsão Recursiva Concluída!")
+                    st.metric(label=f"Estimativa de Vítimas para {ano_alvo}", value=f"{int(ultimo_previsto)}", delta_color="off")
+                # ---------------------------------------------------------------------------------------
+
         
         prediction_dialog()
 
