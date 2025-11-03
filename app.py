@@ -424,12 +424,12 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
                         
                         previsao_anual_total = vitimas_por_evento * media_eventos_ano
                 
+                # aplica ajuste de +5% por ano além do próximo ano disponível
+                extra_years = max(0, int(ano_desejado) - (df_completo['Ano'].max() + 1))
+                previsao_ajustada = int(round(previsao_anual_total * (1 + 0.05 * extra_years)))
                 st.success("Previsão Concluída!")
-                st.metric(
-                    label=f"Estimativa de Vítimas para {ano_desejado}",
-                    value=f"{int(previsao_anual_total)}",
-                    delta_color="off"
-                )
+                st.metric(label=f"Estimativa de Vítimas para {ano_desejado}", value=f"{previsao_ajustada}", delta_color="off")
+
                 # st.caption(f"Cálculo baseado em uma previsão de {int(vitimas_por_evento)} vítimas por evento, multiplicado pela média de {media_eventos_ano:.1f} eventos/ano para o cenário escolhido.")
         
         # Esta linha chama a função que definimos acima, fazendo o dialog aparecer
