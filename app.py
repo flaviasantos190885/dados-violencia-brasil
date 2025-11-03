@@ -45,6 +45,7 @@ def carregar_ativos_previsao():
 try:
     df_completo = pd.read_csv("Dados_2015_2024.csv")
     df_completo['data_referencia'] = pd.to_datetime(df_completo['data_referencia'], errors='coerce')
+    df_completo['Ano'] = df_completo['data_referencia'].dt.year
 except FileNotFoundError:
     st.error("Erro: O arquivo 'Dados_2015_2024.csv' não foi encontrado. Por favor, coloque-o na mesma pasta.")
     st.stop() 
@@ -373,52 +374,63 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
                 faixa_selecionada = st.selectbox("Filtrar por Faixa Etária (Opcional)", ["Todos"] + sorted(df_completo['faixa_etaria'].unique()))
 
             if st.button("Calcular Estimativa"):
-                df_filtrado_pred = df_completo.copy()
+                # ---------- AQUI: LIMITAR HISTÓRICO AOS ÚLTIMOS 5 ANOS DISPONÍVEIS ----------
+                ultimo_ano_disponivel = df_completo['Ano'].max()
+                anos_usados = list(range(ultimo_ano_disponivel - 4, ultimo_ano_disponivel + 1))
 
-                if uf_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
-                if cidade_selecionada != "Todas": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
-                if evento_selecionado != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
-                if arma_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
-                if faixa_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
-                
-                # 🔹 É AQUI QUE VOCÊ ENTRA COM O TRATAMENTO:
+                df_filtrado_pred = df_completo[df_completo['Ano'].isin(anos_usados)].copy()
+
+                # Aplicar filtros opcionais
+                if uf_selecionada != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
+                if cidade_selecionada != "Todas":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
+                if evento_selecionado != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
+                if arma_selecionada != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
+                if faixa_selecionada != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
+
+                # Verificações iniciais
                 if df_filtrado_pred.empty:
                     st.error("❌ Nenhum dado encontrado para os filtros escolhidos. Tente opções menos específicos.")
                     return
 
-                if len(df_filtrado_pred) < 10:
-                    st.warning(f"⚠️ Dados históricos insuficientes, é necessário pelo menos {len(df_filtrado_pred)} eventos para gerar uma previsão confiável.")
-                    return
-
                 janela = 10
                 if len(df_filtrado_pred) < janela:
-                    st.error(f"Dados históricos insuficientes é necessário pelo menos {len(df_filtrado_pred)} eventos para o cenário. Tente filtros menos específicos.")
+                    st.warning(f"⚠️ Dados históricos insuficientes, é necessário pelo menos {janela} eventos para gerar uma previsão confiável. Eventos disponíveis: {len(df_filtrado_pred)}")
+                    return
+
+                # Recalcular média de eventos por ano de forma mais estável (média anual)
+                num_anos_historico = df_filtrado_pred['Ano'].nunique()
+                if num_anos_historico > 0:
+                    media_eventos_ano = df_filtrado_pred.groupby('Ano').size().mean()
                 else:
-                    with st.spinner("Calculando... O modelo está processando os dados."):
-                        num_anos_historico = df_filtrado_pred['Ano'].nunique()
-                        media_eventos_ano = len(df_filtrado_pred) / num_anos_historico if num_anos_historico > 0 else 0
-                        
-                        sequencia_base = df_filtrado_pred.tail(janela - 1).copy()
-                        evento_futuro_template = df_filtrado_pred.tail(1).copy()
-                        evento_futuro_template['Ano'] = ano_desejado
-                        
-                        sequencia_final_df = pd.concat([sequencia_base, evento_futuro_template], ignore_index=True)
+                    media_eventos_ano = 0
 
-                        X_para_prever = sequencia_final_df.drop(columns=['total_vitima', 'data_referencia', 'municipio'])
+                with st.spinner("Calculando... O modelo está processando os dados."):
+                    sequencia_base = df_filtrado_pred.tail(janela - 1).copy()
+                    evento_futuro_template = df_filtrado_pred.tail(1).copy()
+                    evento_futuro_template['Ano'] = ano_desejado
 
-                        for col in X_para_prever.select_dtypes(include=['object']).columns:
-                            if col in preprocessor.feature_names_in_:
-                                X_para_prever[col] = X_para_prever[col].astype('category')
-                        
-                        X_processado = preprocessor.transform(X_para_prever)
-                        X_final = np.reshape(X_processado, (1, X_processado.shape[0], X_processado.shape[1]))
-                        
-                        previsao_evento_normalizada = model.predict(X_final)
-                        previsao_evento_real = y_scaler.inverse_transform(previsao_evento_normalizada)
-                        vitimas_por_evento = np.ceil(previsao_evento_real[0][0])
-                        
-                        previsao_anual_total = vitimas_por_evento * media_eventos_ano
-                
+                    sequencia_final_df = pd.concat([sequencia_base, evento_futuro_template], ignore_index=True)
+
+                    X_para_prever = sequencia_final_df.drop(columns=['total_vitima', 'data_referencia', 'municipio'])
+
+                    for col in X_para_prever.select_dtypes(include=['object']).columns:
+                        if col in preprocessor.feature_names_in_:
+                            X_para_prever[col] = X_para_prever[col].astype('category')
+
+                    X_processado = preprocessor.transform(X_para_prever)
+                    X_final = np.reshape(X_processado, (1, X_processado.shape[0], X_processado.shape[1]))
+
+                    previsao_evento_normalizada = model.predict(X_final)
+                    previsao_evento_real = y_scaler.inverse_transform(previsao_evento_normalizada)
+                    vitimas_por_evento = np.ceil(previsao_evento_real[0][0])
+
+                    previsao_anual_total = vitimas_por_evento * media_eventos_ano
+
                 st.success("Previsão Concluída!")
                 st.metric(
                     label=f"Estimativa de Vítimas para {ano_desejado}",
@@ -501,19 +513,12 @@ elif st.session_state.pagina_selecionada == "⚙️ Detalhes Técnicos":
     st.subheader("Modelo de Previsão: Rede Neural LSTM")
     st.write("""
     O módulo de previsão utiliza um modelo de **Rede Neural Recorrente (RNN)** do tipo **LSTM (Long Short-Term Memory)**. Este tipo de arquitetura é especialmente eficaz para analisar sequências, pois consegue "lembrar" de informações de passos anteriores para prever valores futuros.
-    """)
 
-    with st.expander("Sobre o modelo LSTM"):
-        st.markdown("""
-        A **Rede Neural LSTM (Long Short-Term Memory)** é um tipo avançado de Rede Neural Recorrente (RNN), projetada especificamente para aprender com sequências de dados, como séries temporais ou texto.
+    Sua principal inovação em relação às RNNs tradicionais é a sua capacidade de superar o problema da "memória curta". Ela faz isso através de uma estrutura interna chamada **célula de memória**, que funciona como uma memória de longo prazo. O fluxo de informações nesta célula é controlado por três mecanismos chamados **"gates" (portões)**:
 
-        Sua principal inovação em relação às RNNs tradicionais é a sua capacidade de superar o problema da "memória curta". Ela faz isso através de uma estrutura interna chamada **célula de memória**, que funciona como uma memória de longo prazo. O fluxo de informações nesta célula é controlado por três mecanismos chamados **"gates" (portões)**:
-
-        - **Portão de Esquecimento (Forget Gate):** Analisa a nova entrada de dados e decide quais informações da memória de longo prazo devem ser descartadas.
-        - **Portão de Entrada (Input Gate):** Determina quais novas informações são relevantes e devem ser armazenadas na célula de memória.
-        - **Portão de Saída (Output Gate):** Filtra a memória de longo prazo para gerar a saída ou a previsão para o passo atual da sequência.
-        
-        Essa arquitetura permite que o modelo retenha informações por longos períodos, tornando-o ideal para capturar tendências e padrões complexos nos dados históricos de criminalidade para realizar previsões futuras.
+    - **Portão de Esquecimento (Forget Gate):** Analisa a nova entrada de dados e decide quais informações da memória de longo prazo devem ser descartadas.
+    - **Portão de Entrada (Input Gate):** Determina quais novas informações são relevantes e devem ser armazenadas na célula de memória.
+    - **Portão de Saída (Output Gate):** Filtra a memória de longo prazo para gerar a saída ou a previsão para o passo atual da sequência.
         """)
     
     col1, col2 = st.columns(2)
@@ -590,16 +595,5 @@ elif st.session_state.pagina_selecionada == "ℹ️ Sobre o Projeto":
     Além disso, reforça o compromisso do Ministério com a divulgação regular e padronizada dessas informações, promovendo maior transparência e apoio à tomada de decisões estratégicas na área da segurança.
     """)
     
-    st.markdown("---")
-
-    with st.expander("Clique para ler sobre as atribuições da Secretaria Nacional de Segurança Pública (SENASP)"):
-        st.write("""
-        A Secretaria Nacional de Segurança Pública – SENASP foi criada pelo Decreto nº 2.315, de 4 de setembro de 1997.
-        
-        A SENASP é responsável por formular políticas, diretrizes e ações para a segurança pública no país. Possui como objetivo promover a integração e a coordenação entre as diferentes esferas governamentais e agências de segurança para enfrentar desafios relacionados à segurança pública, como a prevenção de crimes, combate à violência e capacitação de profissionais da área.
-        
-        Compete à SENASP o assessoramento técnico ao Ministro da Justiça, integrando os entes federativos e os órgãos que compõem o Sistema Único de Segurança Pública (SUSP), além de promover a gestão do Fundo Nacional de Segurança Pública (FNSP).
-        """)
-
     st.markdown("---")
     st.markdown("Desenvolvido por Flavia 💙")
