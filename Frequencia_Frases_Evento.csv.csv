@@ -1,0 +1,2424 @@
+uf,Ano,Frase,Contagem,Porcentagem
+AC,2015,Homicídio doloso,127,11.36
+AC,2015,Lesão corporal seguida de morte,91,8.14
+AC,2015,Feminicídio,88,7.87
+AC,2015,Morte no trânsito,79,07.07
+AC,2015,Suicídio,67,5.99
+AC,2015,Suicídio ,66,5.9
+AC,2015,Morte por intervenção de Agente do Estado,63,5.64
+AC,2015,Latrocínio,62,5.55
+AC,2015,Mortes a esclarecer,40,3.58
+AC,2015,Morte de Agente do Estado,19,1.7
+AC,2016,Morte no trânsito,128,11.66
+AC,2016,Feminicídio,101,9.2
+AC,2016,Homicídio doloso,80,7.29
+AC,2016,Morte por intervenção de Agente do Estado,69,6.28
+AC,2016,Lesão corporal seguida de morte,59,5.37
+AC,2016,Mortes a esclarecer,59,5.37
+AC,2016,Suicídio,42,3.83
+AC,2016,Suicídio ,40,3.64
+AC,2016,Morte de Agente do Estado,15,1.37
+AC,2017,Lesão corporal seguida de morte,96,8.91
+AC,2017,Feminicídio,89,8.26
+AC,2017,Morte no trânsito,87,08.07
+AC,2017,Homicídio doloso,86,7.98
+AC,2017,Suicídio,65,06.03
+AC,2017,Morte por intervenção de Agente do Estado,58,5.38
+AC,2017,Mortes a esclarecer,51,4.73
+AC,2017,Suicídio ,39,3.62
+AC,2017,Morte de Agente do Estado,12,1.11
+AC,2018,Morte no trânsito,116,10.44
+AC,2018,Homicídio doloso,113,10.17
+AC,2018,Lesão corporal seguida de morte,93,8.37
+AC,2018,Feminicídio,73,6.57
+AC,2018,Morte por intervenção de Agente do Estado,70,6.3
+AC,2018,Suicídio,53,4.77
+AC,2018,Mortes a esclarecer,50,4.5
+AC,2018,Suicídio ,49,4.41
+AC,2018,Morte de Agente do Estado,16,1.44
+AC,2019,Homicídio doloso,124,11.13
+AC,2019,Feminicídio,113,10.14
+AC,2019,Morte no trânsito,84,7.54
+AC,2019,Lesão corporal seguida de morte,71,6.37
+AC,2019,Suicídio,67,06.01
+AC,2019,Morte por intervenção de Agente do Estado,57,5.12
+AC,2019,Mortes a esclarecer,48,4.31
+AC,2019,Suicídio ,42,3.77
+AC,2019,Morte de Agente do Estado,12,01.08
+AC,2020,Morte no trânsito,129,11.24
+AC,2020,Feminicídio,118,10.28
+AC,2020,Homicídio doloso,84,7.32
+AC,2020,Morte por intervenção de Agente do Estado,71,6.18
+AC,2020,Suicídio,64,5.57
+AC,2020,Lesão corporal seguida de morte,63,5.49
+AC,2020,Suicídio ,59,5.14
+AC,2020,Mortes a esclarecer,42,3.66
+AC,2020,Morte de Agente do Estado,16,1.39
+AC,2021,Lesão corporal seguida de morte,100,8.89
+AC,2021,Feminicídio,86,7.64
+AC,2021,Morte no trânsito,85,7.56
+AC,2021,Homicídio doloso,77,6.84
+AC,2021,Morte por intervenção de Agente do Estado,69,6.13
+AC,2021,Suicídio ,68,06.04
+AC,2021,Suicídio,57,05.07
+AC,2021,Mortes a esclarecer,55,4.89
+AC,2021,Morte de Agente do Estado,19,1.69
+AC,2022,Morte no trânsito,113,9.83
+AC,2022,Homicídio doloso,112,9.74
+AC,2022,Feminicídio,98,8.52
+AC,2022,Lesão corporal seguida de morte,87,7.57
+AC,2022,Suicídio,63,5.48
+AC,2022,Morte por intervenção de Agente do Estado,53,4.61
+AC,2022,Mortes a esclarecer,42,3.65
+AC,2022,Suicídio ,42,3.65
+AC,2022,Morte de Agente do Estado,16,1.39
+AC,2023,Homicídio doloso,127,10.06
+AC,2023,Feminicídio,120,9.5
+AC,2023,Lesão corporal seguida de morte,100,7.92
+AC,2023,Morte por intervenção de Agente do Estado,80,6.33
+AC,2023,Morte no trânsito,71,5.62
+AC,2023,Suicídio,70,5.54
+AC,2023,Suicídio ,67,5.3
+AC,2023,Mortes a esclarecer,63,4.99
+AC,2023,Morte de Agente do Estado,14,1.11
+AC,2024,Homicídio doloso,119,9.92
+AC,2024,Feminicídio,113,9.42
+AC,2024,Morte no trânsito,101,8.42
+AC,2024,Lesão corporal seguida de morte,98,8.17
+AC,2024,Suicídio,60,5.0
+AC,2024,Suicídio ,51,4.25
+AC,2024,Mortes a esclarecer,50,4.17
+AC,2024,Morte por intervenção de Agente do Estado,50,4.17
+AC,2024,Morte de Agente do Estado,14,1.17
+AL,2015,Morte no trânsito,114,10.06
+AL,2015,Homicídio doloso,102,9.0
+AL,2015,Morte por intervenção de Agente do Estado,83,7.33
+AL,2015,Lesão corporal seguida de morte,82,7.24
+AL,2015,Feminicídio,69,06.09
+AL,2015,Mortes a esclarecer,64,5.65
+AL,2015,Suicídio,49,4.32
+AL,2015,Suicídio ,39,3.44
+AL,2015,Morte de Agente do Estado,11,0.97
+AL,2016,Homicídio doloso,115,10.93
+AL,2016,Feminicídio,87,8.27
+AL,2016,Morte no trânsito,73,6.94
+AL,2016,Suicídio,62,5.89
+AL,2016,Lesão corporal seguida de morte,57,5.42
+AL,2016,Morte por intervenção de Agente do Estado,48,4.56
+AL,2016,Suicídio ,44,4.18
+AL,2016,Mortes a esclarecer,36,3.42
+AL,2016,Morte de Agente do Estado,15,1.43
+AL,2017,Morte no trânsito,126,11.0
+AL,2017,Homicídio doloso,109,9.52
+AL,2017,Feminicídio,89,7.77
+AL,2017,Lesão corporal seguida de morte,78,6.81
+AL,2017,Morte por intervenção de Agente do Estado,74,6.46
+AL,2017,Suicídio,68,5.94
+AL,2017,Mortes a esclarecer,47,4.1
+AL,2017,Suicídio ,42,3.67
+AL,2017,Morte de Agente do Estado,11,0.96
+AL,2018,Feminicídio,123,10.29
+AL,2018,Homicídio doloso,95,7.95
+AL,2018,Morte no trânsito,90,7.53
+AL,2018,Lesão corporal seguida de morte,74,6.19
+AL,2018,Morte por intervenção de Agente do Estado,70,5.86
+AL,2018,Mortes a esclarecer,63,5.27
+AL,2018,Suicídio ,55,4.6
+AL,2018,Suicídio,53,4.44
+AL,2018,Morte de Agente do Estado,19,1.59
+AL,2019,Homicídio doloso,117,10.46
+AL,2019,Feminicídio,112,10.01
+AL,2019,Morte por intervenção de Agente do Estado,77,6.88
+AL,2019,Morte no trânsito,73,6.52
+AL,2019,Suicídio,68,06.08
+AL,2019,Lesão corporal seguida de morte,60,5.36
+AL,2019,Suicídio ,59,5.27
+AL,2019,Mortes a esclarecer,51,4.56
+AL,2019,Morte de Agente do Estado,17,1.52
+AL,2020,Feminicídio,111,10.3
+AL,2020,Homicídio doloso,104,9.65
+AL,2020,Morte no trânsito,77,7.14
+AL,2020,Lesão corporal seguida de morte,76,07.05
+AL,2020,Morte por intervenção de Agente do Estado,66,6.12
+AL,2020,Suicídio ,63,5.84
+AL,2020,Suicídio,54,05.01
+AL,2020,Mortes a esclarecer,50,4.64
+AL,2020,Morte de Agente do Estado,16,1.48
+AL,2021,Homicídio doloso,112,9.36
+AL,2021,Morte no trânsito,105,8.77
+AL,2021,Feminicídio,102,8.52
+AL,2021,Lesão corporal seguida de morte,78,6.52
+AL,2021,Morte por intervenção de Agente do Estado,72,06.02
+AL,2021,Mortes a esclarecer,62,5.18
+AL,2021,Suicídio,48,04.01
+AL,2021,Suicídio ,48,04.01
+AL,2021,Morte de Agente do Estado,16,1.34
+AL,2022,Feminicídio,101,8.65
+AL,2022,Lesão corporal seguida de morte,101,8.65
+AL,2022,Homicídio doloso,95,8.13
+AL,2022,Morte por intervenção de Agente do Estado,75,6.42
+AL,2022,Morte no trânsito,73,6.25
+AL,2022,Suicídio ,71,06.08
+AL,2022,Suicídio,65,5.57
+AL,2022,Mortes a esclarecer,36,03.08
+AL,2022,Morte de Agente do Estado,14,1.2
+AL,2023,Feminicídio,121,10.62
+AL,2023,Morte no trânsito,107,9.39
+AL,2023,Homicídio doloso,106,9.31
+AL,2023,Lesão corporal seguida de morte,67,5.88
+AL,2023,Suicídio,61,5.36
+AL,2023,Morte por intervenção de Agente do Estado,59,5.18
+AL,2023,Suicídio ,57,5.0
+AL,2023,Mortes a esclarecer,46,04.04
+AL,2023,Morte de Agente do Estado,18,1.58
+AL,2024,Morte no trânsito,122,10.6
+AL,2024,Homicídio doloso,117,10.17
+AL,2024,Feminicídio,96,8.34
+AL,2024,Morte por intervenção de Agente do Estado,80,6.95
+AL,2024,Lesão corporal seguida de morte,75,6.52
+AL,2024,Suicídio,69,5.99
+AL,2024,Mortes a esclarecer,63,5.47
+AL,2024,Suicídio ,55,4.78
+AL,2024,Morte de Agente do Estado,19,1.65
+AM,2015,Homicídio doloso,87,8.35
+AM,2015,Morte no trânsito,77,7.39
+AM,2015,Feminicídio,76,7.29
+AM,2015,Morte por intervenção de Agente do Estado,70,6.72
+AM,2015,Lesão corporal seguida de morte,64,6.14
+AM,2015,Suicídio ,59,5.66
+AM,2015,Suicídio,51,4.89
+AM,2015,Mortes a esclarecer,49,4.7
+AM,2015,Morte de Agente do Estado,18,1.73
+AM,2016,Homicídio doloso,124,11.3
+AM,2016,Feminicídio,107,9.75
+AM,2016,Lesão corporal seguida de morte,81,7.38
+AM,2016,Morte no trânsito,76,6.93
+AM,2016,Morte por intervenção de Agente do Estado,62,5.65
+AM,2016,Mortes a esclarecer,48,4.38
+AM,2016,Suicídio,47,4.28
+AM,2016,Suicídio ,45,4.1
+AM,2016,Morte de Agente do Estado,13,1.19
+AM,2017,Homicídio doloso,129,11.96
+AM,2017,Feminicídio,87,08.06
+AM,2017,Lesão corporal seguida de morte,85,7.88
+AM,2017,Morte por intervenção de Agente do Estado,82,7.6
+AM,2017,Morte no trânsito,76,07.04
+AM,2017,Suicídio,44,04.08
+AM,2017,Suicídio ,41,3.8
+AM,2017,Mortes a esclarecer,40,3.71
+AM,2017,Morte de Agente do Estado,19,1.76
+AM,2018,Homicídio doloso,96,09.03
+AM,2018,Feminicídio,85,8.0
+AM,2018,Lesão corporal seguida de morte,80,7.53
+AM,2018,Morte no trânsito,77,7.24
+AM,2018,Morte por intervenção de Agente do Estado,59,5.55
+AM,2018,Suicídio,58,5.46
+AM,2018,Mortes a esclarecer,53,4.99
+AM,2018,Suicídio ,50,4.7
+AM,2018,Morte de Agente do Estado,11,01.03
+AM,2019,Feminicídio,120,10.94
+AM,2019,Morte no trânsito,104,9.48
+AM,2019,Homicídio doloso,81,7.38
+AM,2019,Suicídio,65,5.93
+AM,2019,Mortes a esclarecer,60,5.47
+AM,2019,Suicídio ,60,5.47
+AM,2019,Lesão corporal seguida de morte,59,5.38
+AM,2019,Morte por intervenção de Agente do Estado,55,05.01
+AM,2019,Morte de Agente do Estado,18,1.64
+AM,2020,Homicídio doloso,126,10.85
+AM,2020,Lesão corporal seguida de morte,86,7.41
+AM,2020,Morte no trânsito,78,6.72
+AM,2020,Morte por intervenção de Agente do Estado,77,6.63
+AM,2020,Feminicídio,73,6.29
+AM,2020,Mortes a esclarecer,59,05.08
+AM,2020,Suicídio,56,4.82
+AM,2020,Suicídio ,47,04.05
+AM,2020,Morte de Agente do Estado,13,1.12
+AM,2021,Feminicídio,106,9.19
+AM,2021,Homicídio doloso,103,8.93
+AM,2021,Morte no trânsito,81,07.03
+AM,2021,Lesão corporal seguida de morte,68,5.9
+AM,2021,Mortes a esclarecer,62,5.38
+AM,2021,Morte por intervenção de Agente do Estado,62,5.38
+AM,2021,Suicídio ,55,4.77
+AM,2021,Suicídio,52,4.51
+AM,2021,Morte de Agente do Estado,16,1.39
+AM,2022,Feminicídio,123,10.73
+AM,2022,Morte no trânsito,122,10.65
+AM,2022,Homicídio doloso,120,10.47
+AM,2022,Morte por intervenção de Agente do Estado,65,5.67
+AM,2022,Lesão corporal seguida de morte,62,5.41
+AM,2022,Suicídio,52,4.54
+AM,2022,Mortes a esclarecer,51,4.45
+AM,2022,Suicídio ,50,4.36
+AM,2022,Morte de Agente do Estado,11,0.96
+AM,2023,Homicídio doloso,110,10.53
+AM,2023,Morte no trânsito,79,7.56
+AM,2023,Suicídio,71,6.79
+AM,2023,Feminicídio,67,6.41
+AM,2023,Lesão corporal seguida de morte,65,6.22
+AM,2023,Morte por intervenção de Agente do Estado,61,5.84
+AM,2023,Mortes a esclarecer,47,4.5
+AM,2023,Suicídio ,45,4.31
+AM,2023,Morte de Agente do Estado,17,1.63
+AM,2024,Feminicídio,88,8.5
+AM,2024,Lesão corporal seguida de morte,87,8.41
+AM,2024,Homicídio doloso,86,8.31
+AM,2024,Morte no trânsito,72,6.96
+AM,2024,Morte por intervenção de Agente do Estado,72,6.96
+AM,2024,Suicídio,60,5.8
+AM,2024,Mortes a esclarecer,40,3.86
+AM,2024,Suicídio ,39,3.77
+AM,2024,Morte de Agente do Estado,17,1.64
+AP,2015,Morte no trânsito,95,8.84
+AP,2015,Feminicídio,78,7.26
+AP,2015,Homicídio doloso,72,6.7
+AP,2015,Lesão corporal seguida de morte,65,06.05
+AP,2015,Mortes a esclarecer,62,5.77
+AP,2015,Morte por intervenção de Agente do Estado,62,5.77
+AP,2015,Suicídio ,59,5.49
+AP,2015,Suicídio,50,4.65
+AP,2015,Morte de Agente do Estado,13,1.21
+AP,2016,Homicídio doloso,120,11.04
+AP,2016,Lesão corporal seguida de morte,103,9.48
+AP,2016,Morte no trânsito,80,7.36
+AP,2016,Feminicídio,74,6.81
+AP,2016,Suicídio,69,6.35
+AP,2016,Morte por intervenção de Agente do Estado,62,5.7
+AP,2016,Suicídio ,60,5.52
+AP,2016,Mortes a esclarecer,43,3.96
+AP,2016,Morte de Agente do Estado,15,1.38
+AP,2017,Homicídio doloso,106,9.68
+AP,2017,Morte no trânsito,87,7.95
+AP,2017,Morte por intervenção de Agente do Estado,74,6.76
+AP,2017,Feminicídio,71,6.48
+AP,2017,Lesão corporal seguida de morte,68,6.21
+AP,2017,Suicídio ,63,5.75
+AP,2017,Suicídio,48,4.38
+AP,2017,Mortes a esclarecer,46,4.2
+AP,2017,Morte de Agente do Estado,19,1.74
+AP,2018,Feminicídio,112,9.47
+AP,2018,Homicídio doloso,112,9.47
+AP,2018,Morte no trânsito,92,7.78
+AP,2018,Morte por intervenção de Agente do Estado,73,6.17
+AP,2018,Lesão corporal seguida de morte,69,5.83
+AP,2018,Suicídio ,67,5.66
+AP,2018,Suicídio,43,3.63
+AP,2018,Mortes a esclarecer,38,3.21
+AP,2018,Morte de Agente do Estado,15,1.27
+AP,2019,Morte no trânsito,127,10.64
+AP,2019,Feminicídio,106,8.88
+AP,2019,Lesão corporal seguida de morte,100,8.38
+AP,2019,Homicídio doloso,88,7.37
+AP,2019,Morte por intervenção de Agente do Estado,80,6.7
+AP,2019,Suicídio,66,5.53
+AP,2019,Mortes a esclarecer,49,4.1
+AP,2019,Suicídio ,46,3.85
+AP,2019,Morte de Agente do Estado,16,1.34
+AP,2020,Morte no trânsito,130,10.6
+AP,2020,Feminicídio,116,9.46
+AP,2020,Homicídio doloso,102,8.32
+AP,2020,Lesão corporal seguida de morte,101,8.24
+AP,2020,Morte por intervenção de Agente do Estado,84,6.85
+AP,2020,Suicídio ,64,5.22
+AP,2020,Suicídio,52,4.24
+AP,2020,Mortes a esclarecer,46,3.75
+AP,2020,Morte de Agente do Estado,19,1.55
+AP,2021,Morte no trânsito,127,10.74
+AP,2021,Feminicídio,111,9.38
+AP,2021,Morte por intervenção de Agente do Estado,84,7.1
+AP,2021,Lesão corporal seguida de morte,76,6.42
+AP,2021,Homicídio doloso,75,6.34
+AP,2021,Suicídio ,59,4.99
+AP,2021,Mortes a esclarecer,49,4.14
+AP,2021,Suicídio,44,3.72
+AP,2021,Morte de Agente do Estado,16,1.35
+AP,2022,Feminicídio,113,10.2
+AP,2022,Morte no trânsito,106,9.57
+AP,2022,Homicídio doloso,83,7.49
+AP,2022,Morte por intervenção de Agente do Estado,72,6.5
+AP,2022,Lesão corporal seguida de morte,67,06.05
+AP,2022,Suicídio,67,06.05
+AP,2022,Suicídio ,67,06.05
+AP,2022,Mortes a esclarecer,52,4.69
+AP,2022,Morte de Agente do Estado,19,1.71
+AP,2023,Feminicídio,114,9.5
+AP,2023,Homicídio doloso,91,7.58
+AP,2023,Lesão corporal seguida de morte,89,7.42
+AP,2023,Morte no trânsito,86,7.17
+AP,2023,Suicídio ,62,5.17
+AP,2023,Mortes a esclarecer,61,05.08
+AP,2023,Suicídio,60,5.0
+AP,2023,Morte por intervenção de Agente do Estado,52,4.33
+AP,2023,Morte de Agente do Estado,18,1.5
+AP,2024,Homicídio doloso,129,10.79
+AP,2024,Morte no trânsito,108,09.03
+AP,2024,Feminicídio,102,8.53
+AP,2024,Lesão corporal seguida de morte,86,7.19
+AP,2024,Suicídio ,59,4.93
+AP,2024,Mortes a esclarecer,51,4.26
+AP,2024,Morte por intervenção de Agente do Estado,47,3.93
+AP,2024,Suicídio,42,3.51
+AP,2024,Morte de Agente do Estado,14,1.17
+BA,2015,Feminicídio,110,10.0
+BA,2015,Morte no trânsito,99,9.0
+BA,2015,Homicídio doloso,71,6.45
+BA,2015,Morte por intervenção de Agente do Estado,62,5.64
+BA,2015,Mortes a esclarecer,58,5.27
+BA,2015,Lesão corporal seguida de morte,57,5.18
+BA,2015,Suicídio,53,4.82
+BA,2015,Suicídio ,44,4.0
+BA,2015,Morte de Agente do Estado,15,1.36
+BA,2016,Feminicídio,117,10.03
+BA,2016,Morte no trânsito,109,9.34
+BA,2016,Homicídio doloso,84,7.2
+BA,2016,Morte por intervenção de Agente do Estado,72,6.17
+BA,2016,Lesão corporal seguida de morte,66,5.66
+BA,2016,Suicídio ,64,5.48
+BA,2016,Suicídio,54,4.63
+BA,2016,Mortes a esclarecer,46,3.94
+BA,2016,Morte de Agente do Estado,17,1.46
+BA,2017,Homicídio doloso,118,11.17
+BA,2017,Feminicídio,82,7.77
+BA,2017,Lesão corporal seguida de morte,71,6.72
+BA,2017,Morte no trânsito,71,6.72
+BA,2017,Suicídio ,64,06.06
+BA,2017,Morte por intervenção de Agente do Estado,58,5.49
+BA,2017,Suicídio,54,5.11
+BA,2017,Mortes a esclarecer,37,3.5
+BA,2017,Morte de Agente do Estado,18,1.7
+BA,2018,Morte no trânsito,118,10.84
+BA,2018,Feminicídio,89,8.17
+BA,2018,Lesão corporal seguida de morte,83,7.62
+BA,2018,Homicídio doloso,78,7.16
+BA,2018,Morte por intervenção de Agente do Estado,63,5.79
+BA,2018,Suicídio,42,3.86
+BA,2018,Mortes a esclarecer,41,3.76
+BA,2018,Suicídio ,40,3.67
+BA,2018,Morte de Agente do Estado,19,1.74
+BA,2019,Morte no trânsito,129,11.32
+BA,2019,Lesão corporal seguida de morte,98,8.6
+BA,2019,Feminicídio,81,7.11
+BA,2019,Homicídio doloso,80,07.02
+BA,2019,Morte por intervenção de Agente do Estado,74,6.49
+BA,2019,Suicídio,65,5.7
+BA,2019,Suicídio ,46,04.04
+BA,2019,Mortes a esclarecer,45,3.95
+BA,2019,Morte de Agente do Estado,17,1.49
+BA,2020,Feminicídio,116,9.92
+BA,2020,Homicídio doloso,105,8.98
+BA,2020,Morte no trânsito,99,8.47
+BA,2020,Lesão corporal seguida de morte,77,6.59
+BA,2020,Mortes a esclarecer,61,5.22
+BA,2020,Suicídio ,59,05.05
+BA,2020,Morte por intervenção de Agente do Estado,55,4.7
+BA,2020,Suicídio,52,4.45
+BA,2020,Morte de Agente do Estado,12,01.03
+BA,2021,Morte no trânsito,109,9.45
+BA,2021,Lesão corporal seguida de morte,103,8.93
+BA,2021,Homicídio doloso,93,08.07
+BA,2021,Feminicídio,76,6.59
+BA,2021,Morte por intervenção de Agente do Estado,71,6.16
+BA,2021,Mortes a esclarecer,45,3.9
+BA,2021,Suicídio ,44,3.82
+BA,2021,Suicídio,43,3.73
+BA,2021,Morte de Agente do Estado,11,0.95
+BA,2022,Morte no trânsito,102,9.76
+BA,2022,Feminicídio,78,7.46
+BA,2022,Homicídio doloso,77,7.37
+BA,2022,Lesão corporal seguida de morte,69,6.6
+BA,2022,Mortes a esclarecer,63,06.03
+BA,2022,Morte por intervenção de Agente do Estado,51,4.88
+BA,2022,Suicídio,43,4.11
+BA,2022,Suicídio ,40,3.83
+BA,2022,Morte de Agente do Estado,15,1.44
+BA,2023,Feminicídio,122,9.8
+BA,2023,Morte no trânsito,122,9.8
+BA,2023,Lesão corporal seguida de morte,88,07.07
+BA,2023,Morte por intervenção de Agente do Estado,84,6.75
+BA,2023,Homicídio doloso,76,6.1
+BA,2023,Suicídio ,67,5.38
+BA,2023,Suicídio,66,5.3
+BA,2023,Mortes a esclarecer,40,3.21
+BA,2023,Morte de Agente do Estado,16,1.29
+BA,2024,Homicídio doloso,114,9.55
+BA,2024,Feminicídio,99,8.29
+BA,2024,Lesão corporal seguida de morte,98,8.21
+BA,2024,Morte no trânsito,90,7.54
+BA,2024,Morte por intervenção de Agente do Estado,69,5.78
+BA,2024,Suicídio,64,5.36
+BA,2024,Suicídio ,56,4.69
+BA,2024,Mortes a esclarecer,55,4.61
+BA,2024,Morte de Agente do Estado,12,01.01
+CE,2015,Homicídio doloso,99,8.79
+CE,2015,Feminicídio,96,8.53
+CE,2015,Morte no trânsito,93,8.26
+CE,2015,Suicídio ,70,6.22
+CE,2015,Morte por intervenção de Agente do Estado,64,5.68
+CE,2015,Lesão corporal seguida de morte,57,05.06
+CE,2015,Suicídio,56,4.97
+CE,2015,Mortes a esclarecer,47,4.17
+CE,2015,Morte de Agente do Estado,17,1.51
+CE,2016,Homicídio doloso,107,9.71
+CE,2016,Morte no trânsito,95,8.62
+CE,2016,Lesão corporal seguida de morte,90,8.17
+CE,2016,Feminicídio,84,7.62
+CE,2016,Suicídio,61,5.54
+CE,2016,Suicídio ,57,5.17
+CE,2016,Morte por intervenção de Agente do Estado,54,4.9
+CE,2016,Mortes a esclarecer,39,3.54
+CE,2016,Morte de Agente do Estado,11,1.0
+CE,2017,Morte no trânsito,119,10.33
+CE,2017,Lesão corporal seguida de morte,93,08.07
+CE,2017,Feminicídio,87,7.55
+CE,2017,Homicídio doloso,84,7.29
+CE,2017,Morte por intervenção de Agente do Estado,84,7.29
+CE,2017,Suicídio ,63,5.47
+CE,2017,Mortes a esclarecer,48,4.17
+CE,2017,Suicídio,42,3.65
+CE,2017,Morte de Agente do Estado,12,01.04
+CE,2018,Homicídio doloso,129,11.55
+CE,2018,Morte no trânsito,113,10.12
+CE,2018,Feminicídio,106,9.49
+CE,2018,Lesão corporal seguida de morte,62,5.55
+CE,2018,Morte por intervenção de Agente do Estado,58,5.19
+CE,2018,Mortes a esclarecer,52,4.66
+CE,2018,Suicídio ,46,4.12
+CE,2018,Suicídio,41,3.67
+CE,2018,Morte de Agente do Estado,13,1.16
+CE,2019,Feminicídio,93,8.77
+CE,2019,Lesão corporal seguida de morte,83,7.83
+CE,2019,Morte no trânsito,81,7.64
+CE,2019,Homicídio doloso,74,6.98
+CE,2019,Suicídio ,60,5.66
+CE,2019,Mortes a esclarecer,56,5.28
+CE,2019,Suicídio,56,5.28
+CE,2019,Morte por intervenção de Agente do Estado,49,4.62
+CE,2019,Morte de Agente do Estado,14,1.32
+CE,2020,Homicídio doloso,88,8.1
+CE,2020,Morte por intervenção de Agente do Estado,76,6.99
+CE,2020,Morte no trânsito,75,6.9
+CE,2020,Feminicídio,69,6.35
+CE,2020,Lesão corporal seguida de morte,69,6.35
+CE,2020,Suicídio ,69,6.35
+CE,2020,Mortes a esclarecer,63,5.8
+CE,2020,Suicídio,49,4.51
+CE,2020,Morte de Agente do Estado,15,1.38
+CE,2021,Homicídio doloso,129,11.06
+CE,2021,Lesão corporal seguida de morte,87,7.46
+CE,2021,Feminicídio,86,7.38
+CE,2021,Morte no trânsito,78,6.69
+CE,2021,Morte por intervenção de Agente do Estado,63,5.4
+CE,2021,Mortes a esclarecer,61,5.23
+CE,2021,Suicídio,55,4.72
+CE,2021,Suicídio ,52,4.46
+CE,2021,Morte de Agente do Estado,15,1.29
+CE,2022,Lesão corporal seguida de morte,93,8.8
+CE,2022,Feminicídio,75,7.1
+CE,2022,Homicídio doloso,74,7.0
+CE,2022,Morte no trânsito,73,6.91
+CE,2022,Mortes a esclarecer,65,6.15
+CE,2022,Suicídio,61,5.77
+CE,2022,Morte por intervenção de Agente do Estado,51,4.82
+CE,2022,Suicídio ,49,4.64
+CE,2022,Morte de Agente do Estado,12,1.14
+CE,2023,Feminicídio,114,10.31
+CE,2023,Homicídio doloso,114,10.31
+CE,2023,Morte no trânsito,95,8.59
+CE,2023,Lesão corporal seguida de morte,93,8.41
+CE,2023,Morte por intervenção de Agente do Estado,51,4.61
+CE,2023,Mortes a esclarecer,49,4.43
+CE,2023,Suicídio,47,4.25
+CE,2023,Suicídio ,39,3.53
+CE,2023,Morte de Agente do Estado,12,01.08
+CE,2024,Homicídio doloso,117,10.21
+CE,2024,Morte no trânsito,117,10.21
+CE,2024,Lesão corporal seguida de morte,99,8.64
+CE,2024,Feminicídio,93,8.12
+CE,2024,Suicídio ,54,4.71
+CE,2024,Suicídio,53,4.62
+CE,2024,Morte por intervenção de Agente do Estado,47,4.1
+CE,2024,Mortes a esclarecer,44,3.84
+CE,2024,Morte de Agente do Estado,19,1.66
+DF,2015,Feminicídio,121,10.77
+DF,2015,Homicídio doloso,114,10.14
+DF,2015,Morte no trânsito,91,8.1
+DF,2015,Lesão corporal seguida de morte,73,6.49
+DF,2015,Morte por intervenção de Agente do Estado,71,6.32
+DF,2015,Mortes a esclarecer,58,5.16
+DF,2015,Suicídio ,47,4.18
+DF,2015,Suicídio,45,4.0
+DF,2015,Morte de Agente do Estado,17,1.51
+DF,2016,Feminicídio,122,10.09
+DF,2016,Morte no trânsito,119,9.84
+DF,2016,Homicídio doloso,106,8.77
+DF,2016,Lesão corporal seguida de morte,84,6.95
+DF,2016,Morte por intervenção de Agente do Estado,81,6.7
+DF,2016,Mortes a esclarecer,55,4.55
+DF,2016,Suicídio ,53,4.38
+DF,2016,Suicídio,50,4.14
+DF,2016,Morte de Agente do Estado,14,1.16
+DF,2017,Morte no trânsito,129,11.44
+DF,2017,Feminicídio,111,9.84
+DF,2017,Homicídio doloso,109,9.66
+DF,2017,Lesão corporal seguida de morte,65,5.76
+DF,2017,Mortes a esclarecer,63,5.59
+DF,2017,Suicídio ,55,4.88
+DF,2017,Morte por intervenção de Agente do Estado,52,4.61
+DF,2017,Suicídio,44,3.9
+DF,2017,Morte de Agente do Estado,12,01.06
+DF,2018,Morte no trânsito,103,9.13
+DF,2018,Homicídio doloso,94,8.33
+DF,2018,Lesão corporal seguida de morte,94,8.33
+DF,2018,Feminicídio,72,6.38
+DF,2018,Suicídio ,64,5.67
+DF,2018,Morte por intervenção de Agente do Estado,63,5.59
+DF,2018,Mortes a esclarecer,57,05.05
+DF,2018,Suicídio,45,3.99
+DF,2018,Morte de Agente do Estado,11,0.98
+DF,2019,Morte no trânsito,118,10.51
+DF,2019,Feminicídio,106,9.44
+DF,2019,Lesão corporal seguida de morte,86,7.66
+DF,2019,Morte por intervenção de Agente do Estado,76,6.77
+DF,2019,Homicídio doloso,70,6.23
+DF,2019,Suicídio ,57,05.08
+DF,2019,Suicídio,54,4.81
+DF,2019,Mortes a esclarecer,38,3.38
+DF,2019,Morte de Agente do Estado,16,1.42
+DF,2020,Morte no trânsito,130,11.24
+DF,2020,Lesão corporal seguida de morte,85,7.35
+DF,2020,Homicídio doloso,83,7.17
+DF,2020,Feminicídio,72,6.22
+DF,2020,Suicídio ,66,5.7
+DF,2020,Mortes a esclarecer,63,5.45
+DF,2020,Morte por intervenção de Agente do Estado,57,4.93
+DF,2020,Suicídio,52,4.49
+DF,2020,Morte de Agente do Estado,14,1.21
+DF,2021,Homicídio doloso,118,10.82
+DF,2021,Lesão corporal seguida de morte,78,7.15
+DF,2021,Morte no trânsito,78,7.15
+DF,2021,Feminicídio,77,07.06
+DF,2021,Suicídio ,59,5.41
+DF,2021,Morte por intervenção de Agente do Estado,56,5.13
+DF,2021,Suicídio,55,05.04
+DF,2021,Mortes a esclarecer,37,3.39
+DF,2021,Morte de Agente do Estado,12,1.1
+DF,2022,Morte no trânsito,102,9.38
+DF,2022,Lesão corporal seguida de morte,100,9.2
+DF,2022,Homicídio doloso,74,6.81
+DF,2022,Suicídio ,69,6.35
+DF,2022,Morte por intervenção de Agente do Estado,69,6.35
+DF,2022,Feminicídio,68,6.26
+DF,2022,Suicídio,68,6.26
+DF,2022,Mortes a esclarecer,47,4.32
+DF,2022,Morte de Agente do Estado,16,1.47
+DF,2023,Morte no trânsito,122,10.92
+DF,2023,Feminicídio,115,10.3
+DF,2023,Homicídio doloso,104,9.31
+DF,2023,Lesão corporal seguida de morte,81,7.25
+DF,2023,Suicídio,62,5.55
+DF,2023,Mortes a esclarecer,57,5.1
+DF,2023,Morte por intervenção de Agente do Estado,48,4.3
+DF,2023,Suicídio ,44,3.94
+DF,2023,Morte de Agente do Estado,15,1.34
+DF,2024,Morte no trânsito,123,10.38
+DF,2024,Feminicídio,110,9.28
+DF,2024,Homicídio doloso,101,8.52
+DF,2024,Lesão corporal seguida de morte,66,5.57
+DF,2024,Mortes a esclarecer,61,5.15
+DF,2024,Morte por intervenção de Agente do Estado,57,4.81
+DF,2024,Suicídio ,54,4.56
+DF,2024,Suicídio,53,4.47
+DF,2024,Morte de Agente do Estado,11,0.93
+ES,2015,Morte por intervenção de Agente do Estado,81,26.47
+ES,2016,Morte no trânsito,124,11.0
+ES,2016,Feminicídio,123,10.91
+ES,2016,Homicídio doloso,78,6.92
+ES,2016,Lesão corporal seguida de morte,66,5.86
+ES,2016,Morte por intervenção de Agente do Estado,66,5.86
+ES,2016,Mortes a esclarecer,55,4.88
+ES,2016,Suicídio ,55,4.88
+ES,2016,Suicídio,53,4.7
+ES,2016,Morte de Agente do Estado,18,1.6
+ES,2017,Homicídio doloso,119,10.16
+ES,2017,Feminicídio,115,9.82
+ES,2017,Morte no trânsito,89,7.6
+ES,2017,Lesão corporal seguida de morte,82,7.0
+ES,2017,Morte por intervenção de Agente do Estado,78,6.66
+ES,2017,Suicídio,54,4.61
+ES,2017,Mortes a esclarecer,49,4.18
+ES,2017,Suicídio ,44,3.76
+ES,2017,Morte de Agente do Estado,14,1.2
+ES,2018,Morte no trânsito,121,10.53
+ES,2018,Homicídio doloso,111,9.66
+ES,2018,Feminicídio,85,7.4
+ES,2018,Morte por intervenção de Agente do Estado,67,5.83
+ES,2018,Lesão corporal seguida de morte,59,5.13
+ES,2018,Suicídio,48,4.18
+ES,2018,Suicídio ,46,4.0
+ES,2018,Mortes a esclarecer,42,3.66
+ES,2018,Morte de Agente do Estado,13,1.13
+ES,2019,Homicídio doloso,129,11.35
+ES,2019,Feminicídio,88,7.74
+ES,2019,Morte no trânsito,73,6.42
+ES,2019,Suicídio ,65,5.72
+ES,2019,Lesão corporal seguida de morte,61,5.36
+ES,2019,Mortes a esclarecer,57,05.01
+ES,2019,Morte por intervenção de Agente do Estado,55,4.84
+ES,2019,Suicídio,48,4.22
+ES,2019,Morte de Agente do Estado,17,1.5
+ES,2020,Morte no trânsito,121,10.74
+ES,2020,Homicídio doloso,115,10.2
+ES,2020,Feminicídio,84,7.45
+ES,2020,Morte por intervenção de Agente do Estado,78,6.92
+ES,2020,Suicídio,68,06.03
+ES,2020,Lesão corporal seguida de morte,58,5.15
+ES,2020,Mortes a esclarecer,55,4.88
+ES,2020,Suicídio ,40,3.55
+ES,2020,Morte de Agente do Estado,18,1.6
+ES,2021,Homicídio doloso,116,10.25
+ES,2021,Morte no trânsito,97,8.57
+ES,2021,Feminicídio,91,08.04
+ES,2021,Lesão corporal seguida de morte,85,7.51
+ES,2021,Suicídio,58,5.12
+ES,2021,Mortes a esclarecer,53,4.68
+ES,2021,Suicídio ,51,4.51
+ES,2021,Morte por intervenção de Agente do Estado,47,4.15
+ES,2021,Morte de Agente do Estado,11,0.97
+ES,2022,Homicídio doloso,107,10.51
+ES,2022,Morte no trânsito,101,9.92
+ES,2022,Feminicídio,78,7.66
+ES,2022,Morte por intervenção de Agente do Estado,73,7.17
+ES,2022,Lesão corporal seguida de morte,69,6.78
+ES,2022,Suicídio ,57,5.6
+ES,2022,Suicídio,46,4.52
+ES,2022,Mortes a esclarecer,35,3.44
+ES,2022,Morte de Agente do Estado,18,1.77
+ES,2023,Homicídio doloso,124,10.92
+ES,2023,Feminicídio,90,7.92
+ES,2023,Lesão corporal seguida de morte,90,7.92
+ES,2023,Morte no trânsito,89,7.83
+ES,2023,Suicídio,66,5.81
+ES,2023,Mortes a esclarecer,60,5.28
+ES,2023,Morte por intervenção de Agente do Estado,59,5.19
+ES,2023,Suicídio ,40,3.52
+ES,2023,Morte de Agente do Estado,13,1.14
+ES,2024,Morte no trânsito,122,10.93
+ES,2024,Homicídio doloso,108,9.68
+ES,2024,Lesão corporal seguida de morte,100,8.96
+ES,2024,Suicídio,68,06.09
+ES,2024,Feminicídio,67,6.0
+ES,2024,Morte por intervenção de Agente do Estado,62,5.56
+ES,2024,Mortes a esclarecer,57,5.11
+ES,2024,Suicídio ,52,4.66
+ES,2024,Morte de Agente do Estado,11,0.99
+GO,2015,Homicídio doloso,119,10.28
+GO,2015,Feminicídio,112,9.67
+GO,2015,Lesão corporal seguida de morte,97,8.38
+GO,2015,Morte no trânsito,96,8.29
+GO,2015,Morte por intervenção de Agente do Estado,58,05.01
+GO,2015,Suicídio,51,4.4
+GO,2015,Mortes a esclarecer,45,3.89
+GO,2015,Suicídio ,44,3.8
+GO,2015,Morte de Agente do Estado,14,1.21
+GO,2016,Homicídio doloso,111,10.56
+GO,2016,Feminicídio,92,8.75
+GO,2016,Morte no trânsito,72,6.85
+GO,2016,Lesão corporal seguida de morte,63,5.99
+GO,2016,Morte por intervenção de Agente do Estado,57,5.42
+GO,2016,Suicídio,51,4.85
+GO,2016,Mortes a esclarecer,50,4.76
+GO,2016,Suicídio ,39,3.71
+GO,2016,Morte de Agente do Estado,12,1.14
+GO,2017,Morte no trânsito,120,11.03
+GO,2017,Homicídio doloso,103,9.47
+GO,2017,Lesão corporal seguida de morte,82,7.54
+GO,2017,Feminicídio,75,6.89
+GO,2017,Suicídio ,70,6.43
+GO,2017,Morte por intervenção de Agente do Estado,68,6.25
+GO,2017,Mortes a esclarecer,48,4.41
+GO,2017,Suicídio,47,4.32
+GO,2017,Morte de Agente do Estado,13,1.19
+GO,2018,Morte no trânsito,113,9.56
+GO,2018,Lesão corporal seguida de morte,102,8.63
+GO,2018,Feminicídio,97,8.21
+GO,2018,Homicídio doloso,84,7.11
+GO,2018,Suicídio ,67,5.67
+GO,2018,Morte por intervenção de Agente do Estado,61,5.16
+GO,2018,Mortes a esclarecer,51,4.31
+GO,2018,Suicídio,43,3.64
+GO,2018,Morte de Agente do Estado,13,1.1
+GO,2019,Morte no trânsito,127,10.74
+GO,2019,Homicídio doloso,120,10.15
+GO,2019,Lesão corporal seguida de morte,93,7.87
+GO,2019,Feminicídio,90,7.61
+GO,2019,Suicídio ,68,5.75
+GO,2019,Suicídio,67,5.67
+GO,2019,Morte por intervenção de Agente do Estado,59,4.99
+GO,2019,Mortes a esclarecer,41,3.47
+GO,2019,Morte de Agente do Estado,11,0.93
+GO,2020,Feminicídio,123,10.35
+GO,2020,Homicídio doloso,111,9.34
+GO,2020,Lesão corporal seguida de morte,96,08.08
+GO,2020,Morte por intervenção de Agente do Estado,82,6.9
+GO,2020,Morte no trânsito,71,5.98
+GO,2020,Suicídio ,64,5.39
+GO,2020,Suicídio,63,5.3
+GO,2020,Mortes a esclarecer,57,4.8
+GO,2020,Morte de Agente do Estado,16,1.35
+GO,2021,Homicídio doloso,118,10.52
+GO,2021,Feminicídio,95,8.47
+GO,2021,Lesão corporal seguida de morte,90,08.02
+GO,2021,Morte no trânsito,74,6.6
+GO,2021,Suicídio ,68,06.06
+GO,2021,Morte por intervenção de Agente do Estado,63,5.61
+GO,2021,Mortes a esclarecer,47,4.19
+GO,2021,Suicídio,46,4.1
+GO,2021,Morte de Agente do Estado,14,1.25
+GO,2022,Homicídio doloso,119,10.56
+GO,2022,Feminicídio,107,9.49
+GO,2022,Morte no trânsito,101,8.96
+GO,2022,Lesão corporal seguida de morte,95,8.43
+GO,2022,Morte por intervenção de Agente do Estado,74,6.57
+GO,2022,Suicídio,47,4.17
+GO,2022,Suicídio ,40,3.55
+GO,2022,Mortes a esclarecer,39,3.46
+GO,2022,Morte de Agente do Estado,16,1.42
+GO,2023,Morte no trânsito,125,10.29
+GO,2023,Homicídio doloso,117,9.63
+GO,2023,Lesão corporal seguida de morte,99,8.15
+GO,2023,Feminicídio,84,6.91
+GO,2023,Morte por intervenção de Agente do Estado,71,5.84
+GO,2023,Suicídio ,62,5.1
+GO,2023,Mortes a esclarecer,46,3.79
+GO,2023,Suicídio,41,3.37
+GO,2023,Morte de Agente do Estado,16,1.32
+GO,2024,Feminicídio,93,8.5
+GO,2024,Homicídio doloso,83,7.59
+GO,2024,Lesão corporal seguida de morte,74,6.76
+GO,2024,Morte no trânsito,73,6.67
+GO,2024,Suicídio ,68,6.22
+GO,2024,Suicídio,66,06.03
+GO,2024,Mortes a esclarecer,58,5.3
+GO,2024,Morte por intervenção de Agente do Estado,53,4.84
+GO,2024,Morte de Agente do Estado,15,1.37
+MA,2015,Feminicídio,96,09.07
+MA,2015,Lesão corporal seguida de morte,96,09.07
+MA,2015,Morte no trânsito,93,8.79
+MA,2015,Homicídio doloso,86,8.13
+MA,2015,Suicídio ,58,5.48
+MA,2015,Morte por intervenção de Agente do Estado,46,4.35
+MA,2015,Mortes a esclarecer,45,4.25
+MA,2015,Suicídio,43,04.06
+MA,2015,Morte de Agente do Estado,15,1.42
+MA,2016,Homicídio doloso,116,9.84
+MA,2016,Morte no trânsito,92,7.8
+MA,2016,Feminicídio,83,07.04
+MA,2016,Morte por intervenção de Agente do Estado,83,07.04
+MA,2016,Lesão corporal seguida de morte,81,6.87
+MA,2016,Suicídio ,64,5.43
+MA,2016,Suicídio,60,05.09
+MA,2016,Mortes a esclarecer,35,2.97
+MA,2016,Morte de Agente do Estado,19,1.61
+MA,2017,Homicídio doloso,92,8.57
+MA,2017,Morte no trânsito,78,7.26
+MA,2017,Feminicídio,71,6.61
+MA,2017,Lesão corporal seguida de morte,67,6.24
+MA,2017,Morte por intervenção de Agente do Estado,63,5.87
+MA,2017,Suicídio ,61,5.68
+MA,2017,Suicídio,58,5.4
+MA,2017,Mortes a esclarecer,54,05.03
+MA,2017,Morte de Agente do Estado,14,1.3
+MA,2018,Feminicídio,105,9.74
+MA,2018,Morte no trânsito,98,09.09
+MA,2018,Homicídio doloso,75,6.96
+MA,2018,Lesão corporal seguida de morte,69,6.4
+MA,2018,Suicídio ,66,6.12
+MA,2018,Morte por intervenção de Agente do Estado,56,5.19
+MA,2018,Mortes a esclarecer,51,4.73
+MA,2018,Suicídio,40,3.71
+MA,2018,Morte de Agente do Estado,11,01.02
+MA,2019,Morte no trânsito,128,10.88
+MA,2019,Homicídio doloso,118,10.03
+MA,2019,Lesão corporal seguida de morte,100,8.5
+MA,2019,Feminicídio,77,6.54
+MA,2019,Suicídio,63,5.35
+MA,2019,Suicídio ,60,5.1
+MA,2019,Morte por intervenção de Agente do Estado,54,4.59
+MA,2019,Mortes a esclarecer,51,4.33
+MA,2019,Morte de Agente do Estado,13,1.1
+MA,2020,Homicídio doloso,99,8.89
+MA,2020,Lesão corporal seguida de morte,88,7.9
+MA,2020,Morte no trânsito,87,7.81
+MA,2020,Morte por intervenção de Agente do Estado,81,7.27
+MA,2020,Suicídio,71,6.37
+MA,2020,Feminicídio,68,6.1
+MA,2020,Suicídio ,63,5.66
+MA,2020,Mortes a esclarecer,47,4.22
+MA,2020,Morte de Agente do Estado,14,1.26
+MA,2021,Homicídio doloso,122,10.73
+MA,2021,Morte no trânsito,105,9.23
+MA,2021,Feminicídio,76,6.68
+MA,2021,Lesão corporal seguida de morte,70,6.16
+MA,2021,Suicídio ,70,6.16
+MA,2021,Suicídio,56,4.93
+MA,2021,Mortes a esclarecer,48,4.22
+MA,2021,Morte por intervenção de Agente do Estado,48,4.22
+MA,2021,Morte de Agente do Estado,19,1.67
+MA,2022,Feminicídio,114,9.75
+MA,2022,Morte no trânsito,109,9.32
+MA,2022,Homicídio doloso,90,7.7
+MA,2022,Lesão corporal seguida de morte,89,7.61
+MA,2022,Morte por intervenção de Agente do Estado,83,7.1
+MA,2022,Suicídio ,64,5.47
+MA,2022,Suicídio,56,4.79
+MA,2022,Mortes a esclarecer,40,3.42
+MA,2022,Morte de Agente do Estado,12,01.03
+MA,2023,Homicídio doloso,90,7.7
+MA,2023,Lesão corporal seguida de morte,90,7.7
+MA,2023,Feminicídio,84,7.19
+MA,2023,Morte no trânsito,81,6.93
+MA,2023,Morte por intervenção de Agente do Estado,73,6.24
+MA,2023,Suicídio,65,5.56
+MA,2023,Suicídio ,60,5.13
+MA,2023,Mortes a esclarecer,46,3.93
+MA,2023,Morte de Agente do Estado,16,1.37
+MA,2024,Feminicídio,120,9.72
+MA,2024,Homicídio doloso,120,9.72
+MA,2024,Morte no trânsito,98,7.94
+MA,2024,Lesão corporal seguida de morte,89,7.21
+MA,2024,Morte por intervenção de Agente do Estado,74,6.0
+MA,2024,Mortes a esclarecer,63,5.11
+MA,2024,Suicídio,63,5.11
+MA,2024,Suicídio ,50,04.05
+MA,2024,Morte de Agente do Estado,12,0.97
+MG,2015,Feminicídio,122,10.21
+MG,2015,Morte no trânsito,119,9.96
+MG,2015,Homicídio doloso,96,08.03
+MG,2015,Morte por intervenção de Agente do Estado,70,5.86
+MG,2015,Lesão corporal seguida de morte,67,5.61
+MG,2015,Suicídio ,65,5.44
+MG,2015,Mortes a esclarecer,51,4.27
+MG,2015,Suicídio,40,3.35
+MG,2015,Morte de Agente do Estado,12,1.0
+MG,2016,Homicídio doloso,103,9.82
+MG,2016,Morte no trânsito,91,8.67
+MG,2016,Lesão corporal seguida de morte,70,6.67
+MG,2016,Feminicídio,69,6.58
+MG,2016,Suicídio,63,06.01
+MG,2016,Mortes a esclarecer,54,5.15
+MG,2016,Suicídio ,53,05.05
+MG,2016,Morte por intervenção de Agente do Estado,49,4.67
+MG,2016,Morte de Agente do Estado,13,1.24
+MG,2017,Lesão corporal seguida de morte,103,9.23
+MG,2017,Feminicídio,96,8.6
+MG,2017,Morte no trânsito,94,8.42
+MG,2017,Homicídio doloso,81,7.26
+MG,2017,Morte por intervenção de Agente do Estado,70,6.27
+MG,2017,Mortes a esclarecer,57,5.11
+MG,2017,Suicídio ,54,4.84
+MG,2017,Suicídio,52,4.66
+MG,2017,Morte de Agente do Estado,12,01.08
+MG,2018,Homicídio doloso,112,9.56
+MG,2018,Feminicídio,105,8.97
+MG,2018,Morte no trânsito,86,7.34
+MG,2018,Lesão corporal seguida de morte,85,7.26
+MG,2018,Morte por intervenção de Agente do Estado,78,6.66
+MG,2018,Suicídio,70,5.98
+MG,2018,Suicídio ,68,5.81
+MG,2018,Mortes a esclarecer,53,4.53
+MG,2018,Morte de Agente do Estado,17,1.45
+MG,2019,Morte no trânsito,96,09.08
+MG,2019,Lesão corporal seguida de morte,92,8.7
+MG,2019,Feminicídio,91,8.61
+MG,2019,Homicídio doloso,76,7.19
+MG,2019,Morte por intervenção de Agente do Estado,63,5.96
+MG,2019,Suicídio,62,5.87
+MG,2019,Suicídio ,46,4.35
+MG,2019,Mortes a esclarecer,43,04.07
+MG,2019,Morte de Agente do Estado,16,1.51
+MG,2020,Homicídio doloso,118,9.66
+MG,2020,Feminicídio,114,9.33
+MG,2020,Morte no trânsito,103,8.43
+MG,2020,Lesão corporal seguida de morte,96,7.86
+MG,2020,Suicídio ,69,5.65
+MG,2020,Suicídio,63,5.16
+MG,2020,Morte por intervenção de Agente do Estado,62,05.07
+MG,2020,Mortes a esclarecer,41,3.36
+MG,2020,Morte de Agente do Estado,14,1.15
+MG,2021,Morte no trânsito,100,9.51
+MG,2021,Homicídio doloso,97,9.22
+MG,2021,Feminicídio,83,7.89
+MG,2021,Suicídio,69,6.56
+MG,2021,Lesão corporal seguida de morte,57,5.42
+MG,2021,Morte por intervenção de Agente do Estado,55,5.23
+MG,2021,Suicídio ,47,4.47
+MG,2021,Mortes a esclarecer,37,3.52
+MG,2021,Morte de Agente do Estado,16,1.52
+MG,2022,Feminicídio,111,9.61
+MG,2022,Lesão corporal seguida de morte,100,8.66
+MG,2022,Morte no trânsito,90,7.79
+MG,2022,Homicídio doloso,88,7.62
+MG,2022,Morte por intervenção de Agente do Estado,73,6.32
+MG,2022,Suicídio,70,06.06
+MG,2022,Suicídio ,55,4.76
+MG,2022,Mortes a esclarecer,46,3.98
+MG,2022,Morte de Agente do Estado,15,1.3
+MG,2023,Feminicídio,108,10.02
+MG,2023,Homicídio doloso,101,9.37
+MG,2023,Morte por intervenção de Agente do Estado,73,6.77
+MG,2023,Morte no trânsito,71,6.59
+MG,2023,Lesão corporal seguida de morte,64,5.94
+MG,2023,Suicídio ,59,5.47
+MG,2023,Suicídio,46,4.27
+MG,2023,Mortes a esclarecer,40,3.71
+MG,2023,Morte de Agente do Estado,15,1.39
+MG,2024,Feminicídio,102,9.55
+MG,2024,Homicídio doloso,102,9.55
+MG,2024,Morte no trânsito,77,7.21
+MG,2024,Morte por intervenção de Agente do Estado,66,6.18
+MG,2024,Lesão corporal seguida de morte,62,5.81
+MG,2024,Suicídio,61,5.71
+MG,2024,Suicídio ,55,5.15
+MG,2024,Mortes a esclarecer,45,4.21
+MG,2024,Morte de Agente do Estado,12,1.12
+MS,2015,Morte no trânsito,123,10.77
+MS,2015,Feminicídio,112,9.81
+MS,2015,Homicídio doloso,97,8.49
+MS,2015,Suicídio ,67,5.87
+MS,2015,Lesão corporal seguida de morte,65,5.69
+MS,2015,Morte por intervenção de Agente do Estado,58,05.08
+MS,2015,Suicídio,51,4.47
+MS,2015,Mortes a esclarecer,49,4.29
+MS,2015,Morte de Agente do Estado,11,0.96
+MS,2016,Homicídio doloso,113,10.25
+MS,2016,Feminicídio,93,8.44
+MS,2016,Lesão corporal seguida de morte,88,7.99
+MS,2016,Morte no trânsito,71,6.44
+MS,2016,Suicídio,54,4.9
+MS,2016,Morte por intervenção de Agente do Estado,53,4.81
+MS,2016,Mortes a esclarecer,42,3.81
+MS,2016,Suicídio ,41,3.72
+MS,2016,Morte de Agente do Estado,15,1.36
+MS,2017,Homicídio doloso,123,11.12
+MS,2017,Feminicídio,104,9.4
+MS,2017,Lesão corporal seguida de morte,84,7.59
+MS,2017,Morte no trânsito,79,7.14
+MS,2017,Morte por intervenção de Agente do Estado,56,05.06
+MS,2017,Suicídio ,53,4.79
+MS,2017,Mortes a esclarecer,49,4.43
+MS,2017,Suicídio,47,4.25
+MS,2017,Morte de Agente do Estado,12,01.08
+MS,2018,Morte no trânsito,110,9.6
+MS,2018,Feminicídio,106,9.25
+MS,2018,Lesão corporal seguida de morte,85,7.42
+MS,2018,Homicídio doloso,83,7.24
+MS,2018,Suicídio,64,5.58
+MS,2018,Mortes a esclarecer,59,5.15
+MS,2018,Morte por intervenção de Agente do Estado,58,05.06
+MS,2018,Suicídio ,53,4.62
+MS,2018,Morte de Agente do Estado,14,1.22
+MS,2019,Feminicídio,99,8.94
+MS,2019,Morte no trânsito,90,8.13
+MS,2019,Homicídio doloso,74,6.68
+MS,2019,Suicídio,67,06.05
+MS,2019,Lesão corporal seguida de morte,61,5.51
+MS,2019,Mortes a esclarecer,57,5.15
+MS,2019,Morte por intervenção de Agente do Estado,47,4.25
+MS,2019,Suicídio ,43,3.88
+MS,2019,Morte de Agente do Estado,14,1.26
+MS,2020,Homicídio doloso,105,8.84
+MS,2020,Lesão corporal seguida de morte,104,8.75
+MS,2020,Feminicídio,100,8.42
+MS,2020,Morte no trânsito,97,8.16
+MS,2020,Morte por intervenção de Agente do Estado,60,05.05
+MS,2020,Mortes a esclarecer,56,4.71
+MS,2020,Suicídio ,56,4.71
+MS,2020,Suicídio,46,3.87
+MS,2020,Morte de Agente do Estado,14,1.18
+MS,2021,Morte no trânsito,106,9.27
+MS,2021,Feminicídio,103,9.0
+MS,2021,Homicídio doloso,87,7.6
+MS,2021,Morte por intervenção de Agente do Estado,81,07.08
+MS,2021,Suicídio ,64,5.59
+MS,2021,Lesão corporal seguida de morte,63,5.51
+MS,2021,Suicídio,54,4.72
+MS,2021,Mortes a esclarecer,40,3.5
+MS,2021,Morte de Agente do Estado,11,0.96
+MS,2022,Morte no trânsito,123,10.56
+MS,2022,Feminicídio,91,7.81
+MS,2022,Lesão corporal seguida de morte,85,7.3
+MS,2022,Morte por intervenção de Agente do Estado,77,6.61
+MS,2022,Homicídio doloso,75,6.44
+MS,2022,Suicídio,67,5.75
+MS,2022,Suicídio ,65,5.58
+MS,2022,Mortes a esclarecer,55,4.72
+MS,2022,Morte de Agente do Estado,13,1.12
+MS,2023,Homicídio doloso,84,7.88
+MS,2023,Feminicídio,79,7.41
+MS,2023,Lesão corporal seguida de morte,79,7.41
+MS,2023,Morte no trânsito,76,7.13
+MS,2023,Suicídio,71,6.66
+MS,2023,Suicídio ,65,6.1
+MS,2023,Morte por intervenção de Agente do Estado,59,5.53
+MS,2023,Mortes a esclarecer,40,3.75
+MS,2023,Morte de Agente do Estado,13,1.22
+MS,2024,Homicídio doloso,118,10.34
+MS,2024,Morte no trânsito,100,8.76
+MS,2024,Feminicídio,99,8.68
+MS,2024,Morte por intervenção de Agente do Estado,84,7.36
+MS,2024,Suicídio ,66,5.78
+MS,2024,Lesão corporal seguida de morte,63,5.52
+MS,2024,Suicídio,48,4.21
+MS,2024,Mortes a esclarecer,39,3.42
+MS,2024,Morte de Agente do Estado,13,1.14
+MT,2015,Morte no trânsito,122,10.83
+MT,2015,Homicídio doloso,99,8.79
+MT,2015,Lesão corporal seguida de morte,96,8.53
+MT,2015,Feminicídio,95,8.44
+MT,2015,Morte por intervenção de Agente do Estado,56,4.97
+MT,2015,Suicídio,53,4.71
+MT,2015,Mortes a esclarecer,47,4.17
+MT,2015,Suicídio ,44,3.91
+MT,2015,Morte de Agente do Estado,19,1.69
+MT,2016,Feminicídio,122,10.66
+MT,2016,Morte no trânsito,118,10.31
+MT,2016,Homicídio doloso,104,09.08
+MT,2016,Lesão corporal seguida de morte,63,5.5
+MT,2016,Morte por intervenção de Agente do Estado,59,5.15
+MT,2016,Suicídio,57,4.98
+MT,2016,Mortes a esclarecer,46,04.02
+MT,2016,Suicídio ,46,04.02
+MT,2016,Morte de Agente do Estado,17,1.48
+MT,2017,Lesão corporal seguida de morte,100,9.31
+MT,2017,Morte no trânsito,98,9.12
+MT,2017,Homicídio doloso,84,7.82
+MT,2017,Feminicídio,78,7.26
+MT,2017,Mortes a esclarecer,58,5.4
+MT,2017,Suicídio,55,5.12
+MT,2017,Suicídio ,52,4.84
+MT,2017,Morte por intervenção de Agente do Estado,47,4.38
+MT,2017,Morte de Agente do Estado,17,1.58
+MT,2018,Feminicídio,92,8.89
+MT,2018,Homicídio doloso,84,8.12
+MT,2018,Morte no trânsito,77,7.44
+MT,2018,Lesão corporal seguida de morte,58,5.6
+MT,2018,Morte por intervenção de Agente do Estado,55,5.31
+MT,2018,Mortes a esclarecer,53,5.12
+MT,2018,Suicídio,44,4.25
+MT,2018,Suicídio ,43,4.15
+MT,2018,Morte de Agente do Estado,17,1.64
+MT,2019,Morte no trânsito,121,10.46
+MT,2019,Homicídio doloso,107,9.25
+MT,2019,Lesão corporal seguida de morte,89,7.69
+MT,2019,Feminicídio,82,07.09
+MT,2019,Mortes a esclarecer,63,5.45
+MT,2019,Suicídio,63,5.45
+MT,2019,Suicídio ,62,5.36
+MT,2019,Morte por intervenção de Agente do Estado,53,4.58
+MT,2019,Morte de Agente do Estado,11,0.95
+MT,2020,Lesão corporal seguida de morte,102,8.8
+MT,2020,Feminicídio,100,8.63
+MT,2020,Morte no trânsito,100,8.63
+MT,2020,Homicídio doloso,79,6.82
+MT,2020,Morte por intervenção de Agente do Estado,72,6.21
+MT,2020,Suicídio ,65,5.61
+MT,2020,Suicídio,60,5.18
+MT,2020,Mortes a esclarecer,42,3.62
+MT,2020,Morte de Agente do Estado,19,1.64
+MT,2021,Feminicídio,114,10.16
+MT,2021,Lesão corporal seguida de morte,91,8.11
+MT,2021,Morte no trânsito,87,7.75
+MT,2021,Morte por intervenção de Agente do Estado,78,6.95
+MT,2021,Homicídio doloso,77,6.86
+MT,2021,Suicídio ,68,06.06
+MT,2021,Suicídio,58,5.17
+MT,2021,Mortes a esclarecer,50,4.46
+MT,2021,Morte de Agente do Estado,15,1.34
+MT,2022,Feminicídio,122,11.0
+MT,2022,Morte no trânsito,114,10.28
+MT,2022,Homicídio doloso,83,7.48
+MT,2022,Suicídio ,69,6.22
+MT,2022,Morte por intervenção de Agente do Estado,69,6.22
+MT,2022,Lesão corporal seguida de morte,59,5.32
+MT,2022,Suicídio,56,05.05
+MT,2022,Mortes a esclarecer,36,3.25
+MT,2022,Morte de Agente do Estado,13,1.17
+MT,2023,Feminicídio,94,8.58
+MT,2023,Homicídio doloso,91,8.31
+MT,2023,Morte no trânsito,90,8.22
+MT,2023,Lesão corporal seguida de morte,73,6.67
+MT,2023,Suicídio ,65,5.94
+MT,2023,Morte por intervenção de Agente do Estado,61,5.57
+MT,2023,Suicídio,54,4.93
+MT,2023,Mortes a esclarecer,41,3.74
+MT,2023,Morte de Agente do Estado,14,1.28
+MT,2024,Morte no trânsito,126,11.57
+MT,2024,Homicídio doloso,95,8.72
+MT,2024,Morte por intervenção de Agente do Estado,78,7.16
+MT,2024,Feminicídio,70,6.43
+MT,2024,Lesão corporal seguida de morte,62,5.69
+MT,2024,Suicídio ,59,5.42
+MT,2024,Mortes a esclarecer,55,05.05
+MT,2024,Suicídio,50,4.59
+MT,2024,Morte de Agente do Estado,18,1.65
+PA,2015,Homicídio doloso,100,8.55
+PA,2015,Lesão corporal seguida de morte,91,7.78
+PA,2015,Morte no trânsito,83,07.09
+PA,2015,Feminicídio,80,6.84
+PA,2015,Suicídio,69,5.9
+PA,2015,Mortes a esclarecer,62,5.3
+PA,2015,Suicídio ,56,4.79
+PA,2015,Morte por intervenção de Agente do Estado,55,4.7
+PA,2015,Morte de Agente do Estado,17,1.45
+PA,2016,Morte no trânsito,129,11.66
+PA,2016,Feminicídio,85,7.69
+PA,2016,Homicídio doloso,72,6.51
+PA,2016,Lesão corporal seguida de morte,69,6.24
+PA,2016,Mortes a esclarecer,64,5.79
+PA,2016,Suicídio,63,5.7
+PA,2016,Morte por intervenção de Agente do Estado,54,4.88
+PA,2016,Suicídio ,52,4.7
+PA,2016,Morte de Agente do Estado,19,1.72
+PA,2017,Homicídio doloso,115,10.47
+PA,2017,Lesão corporal seguida de morte,99,09.02
+PA,2017,Morte no trânsito,94,8.56
+PA,2017,Feminicídio,90,8.2
+PA,2017,Morte por intervenção de Agente do Estado,68,6.19
+PA,2017,Suicídio ,66,06.01
+PA,2017,Suicídio,60,5.46
+PA,2017,Mortes a esclarecer,38,3.46
+PA,2017,Morte de Agente do Estado,11,1.0
+PA,2018,Homicídio doloso,128,11.15
+PA,2018,Morte no trânsito,113,9.84
+PA,2018,Feminicídio,89,7.75
+PA,2018,Lesão corporal seguida de morte,82,7.14
+PA,2018,Suicídio ,65,5.66
+PA,2018,Suicídio,51,4.44
+PA,2018,Morte por intervenção de Agente do Estado,48,4.18
+PA,2018,Mortes a esclarecer,43,3.75
+PA,2018,Morte de Agente do Estado,18,1.57
+PA,2019,Homicídio doloso,104,9.6
+PA,2019,Lesão corporal seguida de morte,95,8.77
+PA,2019,Morte no trânsito,79,7.29
+PA,2019,Morte por intervenção de Agente do Estado,78,7.2
+PA,2019,Feminicídio,76,07.02
+PA,2019,Suicídio ,51,4.71
+PA,2019,Suicídio,50,4.62
+PA,2019,Mortes a esclarecer,39,3.6
+PA,2019,Morte de Agente do Estado,11,01.02
+PA,2020,Morte no trânsito,130,10.76
+PA,2020,Homicídio doloso,110,9.11
+PA,2020,Feminicídio,87,7.2
+PA,2020,Suicídio,71,5.88
+PA,2020,Lesão corporal seguida de morte,69,5.71
+PA,2020,Morte por intervenção de Agente do Estado,67,5.55
+PA,2020,Suicídio ,48,3.97
+PA,2020,Mortes a esclarecer,40,3.31
+PA,2020,Morte de Agente do Estado,18,1.49
+PA,2021,Feminicídio,123,10.84
+PA,2021,Homicídio doloso,88,7.75
+PA,2021,Morte no trânsito,85,7.49
+PA,2021,Morte por intervenção de Agente do Estado,75,6.61
+PA,2021,Lesão corporal seguida de morte,66,5.81
+PA,2021,Mortes a esclarecer,61,5.37
+PA,2021,Suicídio ,61,5.37
+PA,2021,Suicídio,43,3.79
+PA,2021,Morte de Agente do Estado,13,1.15
+PA,2022,Morte no trânsito,126,11.93
+PA,2022,Homicídio doloso,114,10.8
+PA,2022,Lesão corporal seguida de morte,72,6.82
+PA,2022,Feminicídio,69,6.53
+PA,2022,Suicídio ,53,05.02
+PA,2022,Morte por intervenção de Agente do Estado,49,4.64
+PA,2022,Mortes a esclarecer,45,4.26
+PA,2022,Suicídio,39,3.69
+PA,2022,Morte de Agente do Estado,16,1.52
+PA,2023,Morte no trânsito,124,10.45
+PA,2023,Feminicídio,107,09.01
+PA,2023,Homicídio doloso,88,7.41
+PA,2023,Lesão corporal seguida de morte,81,6.82
+PA,2023,Morte por intervenção de Agente do Estado,78,6.57
+PA,2023,Suicídio,61,5.14
+PA,2023,Mortes a esclarecer,59,4.97
+PA,2023,Suicídio ,46,3.88
+PA,2023,Morte de Agente do Estado,13,1.1
+PA,2024,Feminicídio,111,10.25
+PA,2024,Morte no trânsito,91,8.4
+PA,2024,Homicídio doloso,77,7.11
+PA,2024,Morte por intervenção de Agente do Estado,66,06.09
+PA,2024,Lesão corporal seguida de morte,56,5.17
+PA,2024,Suicídio,56,5.17
+PA,2024,Mortes a esclarecer,43,3.97
+PA,2024,Suicídio ,41,3.79
+PA,2024,Morte de Agente do Estado,15,1.39
+PB,2015,Homicídio doloso,94,8.37
+PB,2015,Morte no trânsito,89,7.93
+PB,2015,Lesão corporal seguida de morte,88,7.84
+PB,2015,Feminicídio,84,7.48
+PB,2015,Morte por intervenção de Agente do Estado,83,7.39
+PB,2015,Suicídio ,67,5.97
+PB,2015,Suicídio,43,3.83
+PB,2015,Mortes a esclarecer,39,3.47
+PB,2015,Morte de Agente do Estado,17,1.51
+PB,2016,Lesão corporal seguida de morte,84,7.71
+PB,2016,Morte no trânsito,84,7.71
+PB,2016,Morte por intervenção de Agente do Estado,81,7.43
+PB,2016,Homicídio doloso,76,6.97
+PB,2016,Feminicídio,70,6.42
+PB,2016,Suicídio ,59,5.41
+PB,2016,Mortes a esclarecer,54,4.95
+PB,2016,Suicídio,40,3.67
+PB,2016,Morte de Agente do Estado,13,1.19
+PB,2017,Homicídio doloso,111,10.12
+PB,2017,Morte no trânsito,97,8.84
+PB,2017,Feminicídio,85,7.75
+PB,2017,Lesão corporal seguida de morte,75,6.84
+PB,2017,Morte por intervenção de Agente do Estado,61,5.56
+PB,2017,Mortes a esclarecer,47,4.28
+PB,2017,Suicídio,47,4.28
+PB,2017,Suicídio ,41,3.74
+PB,2017,Morte de Agente do Estado,14,1.28
+PB,2018,Feminicídio,120,10.27
+PB,2018,Homicídio doloso,109,9.33
+PB,2018,Lesão corporal seguida de morte,102,8.73
+PB,2018,Morte no trânsito,99,8.48
+PB,2018,Morte por intervenção de Agente do Estado,81,6.93
+PB,2018,Suicídio ,63,5.39
+PB,2018,Mortes a esclarecer,53,4.54
+PB,2018,Suicídio,52,4.45
+PB,2018,Morte de Agente do Estado,12,01.03
+PB,2019,Morte no trânsito,105,8.97
+PB,2019,Lesão corporal seguida de morte,101,8.63
+PB,2019,Feminicídio,100,8.55
+PB,2019,Homicídio doloso,75,6.41
+PB,2019,Suicídio ,70,5.98
+PB,2019,Morte por intervenção de Agente do Estado,64,5.47
+PB,2019,Mortes a esclarecer,60,5.13
+PB,2019,Suicídio,54,4.62
+PB,2019,Morte de Agente do Estado,13,1.11
+PB,2020,Feminicídio,113,9.97
+PB,2020,Morte no trânsito,109,9.62
+PB,2020,Homicídio doloso,87,7.68
+PB,2020,Morte por intervenção de Agente do Estado,83,7.33
+PB,2020,Lesão corporal seguida de morte,62,5.47
+PB,2020,Suicídio,58,5.12
+PB,2020,Mortes a esclarecer,46,04.06
+PB,2020,Suicídio ,40,3.53
+PB,2020,Morte de Agente do Estado,14,1.24
+PB,2021,Morte no trânsito,101,9.67
+PB,2021,Lesão corporal seguida de morte,85,8.13
+PB,2021,Feminicídio,77,7.37
+PB,2021,Homicídio doloso,74,07.08
+PB,2021,Morte por intervenção de Agente do Estado,68,6.51
+PB,2021,Suicídio ,51,4.88
+PB,2021,Mortes a esclarecer,42,04.02
+PB,2021,Suicídio,41,3.92
+PB,2021,Morte de Agente do Estado,12,1.15
+PB,2022,Lesão corporal seguida de morte,82,7.94
+PB,2022,Homicídio doloso,81,7.84
+PB,2022,Morte no trânsito,73,07.07
+PB,2022,Morte por intervenção de Agente do Estado,71,6.87
+PB,2022,Feminicídio,69,6.68
+PB,2022,Mortes a esclarecer,63,6.1
+PB,2022,Suicídio ,56,5.42
+PB,2022,Suicídio,48,4.65
+PB,2022,Morte de Agente do Estado,12,1.16
+PB,2023,Morte no trânsito,114,10.55
+PB,2023,Lesão corporal seguida de morte,102,9.44
+PB,2023,Feminicídio,77,7.12
+PB,2023,Homicídio doloso,76,07.03
+PB,2023,Morte por intervenção de Agente do Estado,61,5.64
+PB,2023,Suicídio ,57,5.27
+PB,2023,Suicídio,46,4.26
+PB,2023,Mortes a esclarecer,44,04.07
+PB,2023,Morte de Agente do Estado,17,1.57
+PB,2024,Morte no trânsito,118,10.47
+PB,2024,Feminicídio,108,9.58
+PB,2024,Homicídio doloso,95,8.43
+PB,2024,Lesão corporal seguida de morte,84,7.45
+PB,2024,Mortes a esclarecer,61,5.41
+PB,2024,Suicídio,61,5.41
+PB,2024,Morte por intervenção de Agente do Estado,59,5.24
+PB,2024,Suicídio ,56,4.97
+PB,2024,Morte de Agente do Estado,14,1.24
+PE,2015,Morte no trânsito,104,9.61
+PE,2015,Feminicídio,99,9.15
+PE,2015,Homicídio doloso,80,7.39
+PE,2015,Lesão corporal seguida de morte,79,7.3
+PE,2015,Suicídio ,61,5.64
+PE,2015,Morte por intervenção de Agente do Estado,46,4.25
+PE,2015,Mortes a esclarecer,41,3.79
+PE,2015,Suicídio,39,3.6
+PE,2015,Morte de Agente do Estado,13,1.2
+PE,2016,Feminicídio,120,10.52
+PE,2016,Morte no trânsito,108,9.47
+PE,2016,Homicídio doloso,80,07.01
+PE,2016,Lesão corporal seguida de morte,79,6.92
+PE,2016,Suicídio ,58,05.08
+PE,2016,Morte por intervenção de Agente do Estado,57,5.0
+PE,2016,Suicídio,56,4.91
+PE,2016,Mortes a esclarecer,52,4.56
+PE,2016,Morte de Agente do Estado,18,1.58
+PE,2017,Morte no trânsito,87,8.15
+PE,2017,Lesão corporal seguida de morte,81,7.58
+PE,2017,Homicídio doloso,80,7.49
+PE,2017,Feminicídio,72,6.74
+PE,2017,Mortes a esclarecer,47,4.4
+PE,2017,Morte por intervenção de Agente do Estado,47,4.4
+PE,2017,Suicídio,39,3.65
+PE,2017,Suicídio ,39,3.65
+PE,2017,Morte de Agente do Estado,19,1.78
+PE,2018,Feminicídio,115,9.9
+PE,2018,Morte no trânsito,115,9.9
+PE,2018,Homicídio doloso,100,8.61
+PE,2018,Lesão corporal seguida de morte,88,7.57
+PE,2018,Mortes a esclarecer,58,4.99
+PE,2018,Morte por intervenção de Agente do Estado,58,4.99
+PE,2018,Suicídio,52,4.48
+PE,2018,Suicídio ,49,4.22
+PE,2018,Morte de Agente do Estado,19,1.64
+PE,2019,Lesão corporal seguida de morte,94,8.26
+PE,2019,Morte no trânsito,92,08.08
+PE,2019,Feminicídio,82,7.21
+PE,2019,Homicídio doloso,82,7.21
+PE,2019,Morte por intervenção de Agente do Estado,72,6.33
+PE,2019,Suicídio,66,5.8
+PE,2019,Mortes a esclarecer,58,5.1
+PE,2019,Suicídio ,41,3.6
+PE,2019,Morte de Agente do Estado,14,1.23
+PE,2020,Morte no trânsito,122,10.57
+PE,2020,Feminicídio,96,8.32
+PE,2020,Morte por intervenção de Agente do Estado,79,6.85
+PE,2020,Homicídio doloso,77,6.67
+PE,2020,Lesão corporal seguida de morte,71,6.15
+PE,2020,Suicídio,49,4.25
+PE,2020,Suicídio ,49,4.25
+PE,2020,Mortes a esclarecer,39,3.38
+PE,2020,Morte de Agente do Estado,19,1.65
+PE,2021,Morte no trânsito,120,10.03
+PE,2021,Feminicídio,108,09.03
+PE,2021,Homicídio doloso,101,8.44
+PE,2021,Lesão corporal seguida de morte,85,7.11
+PE,2021,Suicídio ,68,5.69
+PE,2021,Mortes a esclarecer,60,05.02
+PE,2021,Morte por intervenção de Agente do Estado,57,4.77
+PE,2021,Suicídio,42,3.51
+PE,2021,Morte de Agente do Estado,14,1.17
+PE,2022,Feminicídio,122,10.64
+PE,2022,Morte no trânsito,101,8.81
+PE,2022,Homicídio doloso,92,08.02
+PE,2022,Morte por intervenção de Agente do Estado,75,6.54
+PE,2022,Lesão corporal seguida de morte,73,6.36
+PE,2022,Suicídio,55,4.8
+PE,2022,Mortes a esclarecer,48,4.18
+PE,2022,Suicídio ,41,3.57
+PE,2022,Morte de Agente do Estado,13,1.13
+PE,2023,Feminicídio,119,10.86
+PE,2023,Morte no trânsito,95,8.67
+PE,2023,Homicídio doloso,91,8.3
+PE,2023,Morte por intervenção de Agente do Estado,84,7.66
+PE,2023,Suicídio,69,6.3
+PE,2023,Lesão corporal seguida de morte,59,5.38
+PE,2023,Mortes a esclarecer,42,3.83
+PE,2023,Suicídio ,41,3.74
+PE,2023,Morte de Agente do Estado,12,01.09
+PE,2024,Feminicídio,112,9.49
+PE,2024,Morte no trânsito,101,8.56
+PE,2024,Homicídio doloso,90,7.63
+PE,2024,Lesão corporal seguida de morte,77,6.53
+PE,2024,Morte por intervenção de Agente do Estado,77,6.53
+PE,2024,Suicídio ,71,06.02
+PE,2024,Mortes a esclarecer,61,5.17
+PE,2024,Suicídio,39,3.31
+PE,2024,Morte de Agente do Estado,15,1.27
+PI,2015,Morte no trânsito,87,08.08
+PI,2015,Feminicídio,80,7.43
+PI,2015,Homicídio doloso,74,6.87
+PI,2015,Suicídio ,70,6.5
+PI,2015,Suicídio,67,6.22
+PI,2015,Lesão corporal seguida de morte,65,06.04
+PI,2015,Morte por intervenção de Agente do Estado,53,4.92
+PI,2015,Mortes a esclarecer,48,4.46
+PI,2015,Morte de Agente do Estado,11,01.02
+PI,2016,Feminicídio,115,9.71
+PI,2016,Morte no trânsito,101,8.53
+PI,2016,Lesão corporal seguida de morte,97,8.19
+PI,2016,Homicídio doloso,80,6.76
+PI,2016,Suicídio,69,5.83
+PI,2016,Mortes a esclarecer,58,4.9
+PI,2016,Morte por intervenção de Agente do Estado,52,4.39
+PI,2016,Suicídio ,48,04.05
+PI,2016,Morte de Agente do Estado,13,1.1
+PI,2017,Homicídio doloso,127,11.39
+PI,2017,Lesão corporal seguida de morte,102,9.15
+PI,2017,Feminicídio,82,7.35
+PI,2017,Morte no trânsito,73,6.55
+PI,2017,Suicídio,70,6.28
+PI,2017,Morte por intervenção de Agente do Estado,59,5.29
+PI,2017,Suicídio ,51,4.57
+PI,2017,Mortes a esclarecer,40,3.59
+PI,2017,Morte de Agente do Estado,19,1.7
+PI,2018,Feminicídio,113,10.5
+PI,2018,Homicídio doloso,93,8.64
+PI,2018,Morte no trânsito,84,7.81
+PI,2018,Lesão corporal seguida de morte,62,5.76
+PI,2018,Suicídio,58,5.39
+PI,2018,Morte por intervenção de Agente do Estado,55,5.11
+PI,2018,Suicídio ,54,05.02
+PI,2018,Mortes a esclarecer,44,04.09
+PI,2018,Morte de Agente do Estado,12,1.12
+PI,2019,Feminicídio,118,10.53
+PI,2019,Morte no trânsito,88,7.85
+PI,2019,Morte por intervenção de Agente do Estado,80,7.14
+PI,2019,Lesão corporal seguida de morte,79,07.05
+PI,2019,Homicídio doloso,70,6.24
+PI,2019,Suicídio,70,6.24
+PI,2019,Mortes a esclarecer,63,5.62
+PI,2019,Suicídio ,57,05.08
+PI,2019,Morte de Agente do Estado,18,1.61
+PI,2020,Feminicídio,119,10.15
+PI,2020,Morte no trânsito,97,8.28
+PI,2020,Homicídio doloso,95,8.11
+PI,2020,Lesão corporal seguida de morte,72,6.14
+PI,2020,Morte por intervenção de Agente do Estado,72,6.14
+PI,2020,Suicídio,69,5.89
+PI,2020,Suicídio ,53,4.52
+PI,2020,Mortes a esclarecer,50,4.27
+PI,2020,Morte de Agente do Estado,14,1.19
+PI,2021,Morte no trânsito,115,9.66
+PI,2021,Feminicídio,109,9.15
+PI,2021,Homicídio doloso,103,8.65
+PI,2021,Morte por intervenção de Agente do Estado,78,6.55
+PI,2021,Suicídio,70,5.88
+PI,2021,Suicídio ,68,5.71
+PI,2021,Lesão corporal seguida de morte,66,5.54
+PI,2021,Mortes a esclarecer,49,4.11
+PI,2021,Morte de Agente do Estado,15,1.26
+PI,2022,Homicídio doloso,129,11.04
+PI,2022,Feminicídio,110,9.42
+PI,2022,Morte no trânsito,109,9.33
+PI,2022,Lesão corporal seguida de morte,84,7.19
+PI,2022,Morte por intervenção de Agente do Estado,70,5.99
+PI,2022,Suicídio ,54,4.62
+PI,2022,Suicídio,42,3.6
+PI,2022,Mortes a esclarecer,37,3.17
+PI,2022,Morte de Agente do Estado,14,1.2
+PI,2023,Feminicídio,115,9.82
+PI,2023,Morte no trânsito,113,9.65
+PI,2023,Homicídio doloso,110,9.39
+PI,2023,Lesão corporal seguida de morte,77,6.58
+PI,2023,Morte por intervenção de Agente do Estado,72,6.15
+PI,2023,Mortes a esclarecer,63,5.38
+PI,2023,Suicídio ,56,4.78
+PI,2023,Suicídio,47,04.01
+PI,2023,Morte de Agente do Estado,13,1.11
+PI,2024,Feminicídio,96,8.78
+PI,2024,Lesão corporal seguida de morte,95,8.69
+PI,2024,Homicídio doloso,82,7.5
+PI,2024,Morte no trânsito,75,6.86
+PI,2024,Suicídio ,69,6.31
+PI,2024,Suicídio,53,4.85
+PI,2024,Morte por intervenção de Agente do Estado,49,4.48
+PI,2024,Mortes a esclarecer,48,4.39
+PI,2024,Morte de Agente do Estado,19,1.74
+PR,2015,Feminicídio,91,9.17
+PR,2015,Morte no trânsito,84,8.47
+PR,2015,Homicídio doloso,74,7.46
+PR,2015,Suicídio,64,6.45
+PR,2015,Lesão corporal seguida de morte,61,6.15
+PR,2015,Morte por intervenção de Agente do Estado,58,5.85
+PR,2015,Mortes a esclarecer,41,4.13
+PR,2015,Suicídio ,40,04.03
+PR,2015,Morte de Agente do Estado,11,1.11
+PR,2016,Homicídio doloso,128,10.58
+PR,2016,Feminicídio,122,10.08
+PR,2016,Morte no trânsito,112,9.26
+PR,2016,Lesão corporal seguida de morte,98,8.1
+PR,2016,Suicídio ,69,5.7
+PR,2016,Suicídio,54,4.46
+PR,2016,Morte por intervenção de Agente do Estado,46,3.8
+PR,2016,Mortes a esclarecer,44,3.64
+PR,2016,Morte de Agente do Estado,13,01.07
+PR,2017,Feminicídio,120,10.22
+PR,2017,Morte no trânsito,116,9.88
+PR,2017,Homicídio doloso,105,8.94
+PR,2017,Morte por intervenção de Agente do Estado,64,5.45
+PR,2017,Lesão corporal seguida de morte,62,5.28
+PR,2017,Suicídio,60,5.11
+PR,2017,Mortes a esclarecer,47,4.0
+PR,2017,Suicídio ,45,3.83
+PR,2017,Morte de Agente do Estado,13,1.11
+PR,2018,Feminicídio,110,9.49
+PR,2018,Homicídio doloso,96,8.28
+PR,2018,Lesão corporal seguida de morte,83,7.16
+PR,2018,Morte por intervenção de Agente do Estado,82,07.08
+PR,2018,Morte no trânsito,72,6.21
+PR,2018,Suicídio,68,5.87
+PR,2018,Suicídio ,66,5.69
+PR,2018,Mortes a esclarecer,48,4.14
+PR,2018,Morte de Agente do Estado,14,1.21
+PR,2019,Morte no trânsito,113,9.9
+PR,2019,Lesão corporal seguida de morte,103,09.03
+PR,2019,Homicídio doloso,88,7.71
+PR,2019,Feminicídio,83,7.27
+PR,2019,Suicídio,65,5.7
+PR,2019,Mortes a esclarecer,64,5.61
+PR,2019,Morte por intervenção de Agente do Estado,59,5.17
+PR,2019,Suicídio ,46,04.03
+PR,2019,Morte de Agente do Estado,19,1.67
+PR,2020,Homicídio doloso,110,9.95
+PR,2020,Feminicídio,101,9.13
+PR,2020,Morte no trânsito,95,8.59
+PR,2020,Lesão corporal seguida de morte,76,6.87
+PR,2020,Suicídio,61,5.52
+PR,2020,Suicídio ,52,4.7
+PR,2020,Mortes a esclarecer,50,4.52
+PR,2020,Morte por intervenção de Agente do Estado,49,4.43
+PR,2020,Morte de Agente do Estado,19,1.72
+PR,2021,Feminicídio,117,10.3
+PR,2021,Lesão corporal seguida de morte,96,8.45
+PR,2021,Homicídio doloso,82,7.22
+PR,2021,Morte por intervenção de Agente do Estado,80,07.04
+PR,2021,Morte no trânsito,73,6.43
+PR,2021,Mortes a esclarecer,64,5.63
+PR,2021,Suicídio,48,4.23
+PR,2021,Suicídio ,43,3.79
+PR,2021,Morte de Agente do Estado,12,01.06
+PR,2022,Feminicídio,108,9.91
+PR,2022,Homicídio doloso,87,7.98
+PR,2022,Morte por intervenção de Agente do Estado,83,7.61
+PR,2022,Morte no trânsito,71,6.51
+PR,2022,Lesão corporal seguida de morte,65,5.96
+PR,2022,Mortes a esclarecer,58,5.32
+PR,2022,Suicídio,54,4.95
+PR,2022,Suicídio ,39,3.58
+PR,2022,Morte de Agente do Estado,18,1.65
+PR,2023,Morte no trânsito,130,12.13
+PR,2023,Feminicídio,100,9.33
+PR,2023,Homicídio doloso,87,8.12
+PR,2023,Lesão corporal seguida de morte,69,6.44
+PR,2023,Morte por intervenção de Agente do Estado,52,4.85
+PR,2023,Suicídio ,49,4.57
+PR,2023,Suicídio,41,3.82
+PR,2023,Mortes a esclarecer,37,3.45
+PR,2023,Morte de Agente do Estado,13,1.21
+PR,2024,Homicídio doloso,114,9.4
+PR,2024,Feminicídio,106,8.74
+PR,2024,Lesão corporal seguida de morte,104,8.57
+PR,2024,Morte no trânsito,102,8.41
+PR,2024,Morte por intervenção de Agente do Estado,76,6.27
+PR,2024,Mortes a esclarecer,51,4.2
+PR,2024,Suicídio ,46,3.79
+PR,2024,Suicídio,44,3.63
+PR,2024,Morte de Agente do Estado,16,1.32
+RJ,2015,Homicídio doloso,83,7.5
+RJ,2015,Feminicídio,80,7.23
+RJ,2015,Lesão corporal seguida de morte,80,7.23
+RJ,2015,Morte no trânsito,71,6.41
+RJ,2015,Suicídio ,57,5.15
+RJ,2015,Morte por intervenção de Agente do Estado,55,4.97
+RJ,2015,Mortes a esclarecer,54,4.88
+RJ,2015,Suicídio,53,4.79
+RJ,2015,Morte de Agente do Estado,12,01.08
+RJ,2016,Homicídio doloso,111,10.61
+RJ,2016,Feminicídio,96,9.18
+RJ,2016,Morte no trânsito,73,6.98
+RJ,2016,Lesão corporal seguida de morte,69,6.6
+RJ,2016,Suicídio,50,4.78
+RJ,2016,Suicídio ,49,4.68
+RJ,2016,Morte por intervenção de Agente do Estado,48,4.59
+RJ,2016,Mortes a esclarecer,36,3.44
+RJ,2016,Morte de Agente do Estado,12,1.15
+RJ,2017,Morte no trânsito,127,11.32
+RJ,2017,Feminicídio,115,10.25
+RJ,2017,Homicídio doloso,98,8.73
+RJ,2017,Lesão corporal seguida de morte,66,5.88
+RJ,2017,Morte por intervenção de Agente do Estado,58,5.17
+RJ,2017,Suicídio,50,4.46
+RJ,2017,Suicídio ,46,4.1
+RJ,2017,Mortes a esclarecer,37,3.3
+RJ,2017,Morte de Agente do Estado,13,1.16
+RJ,2018,Morte no trânsito,112,9.92
+RJ,2018,Homicídio doloso,111,9.83
+RJ,2018,Feminicídio,87,7.71
+RJ,2018,Lesão corporal seguida de morte,71,6.29
+RJ,2018,Morte por intervenção de Agente do Estado,56,4.96
+RJ,2018,Suicídio,49,4.34
+RJ,2018,Suicídio ,48,4.25
+RJ,2018,Mortes a esclarecer,35,3.1
+RJ,2018,Morte de Agente do Estado,18,1.59
+RJ,2019,Feminicídio,103,9.52
+RJ,2019,Homicídio doloso,101,9.33
+RJ,2019,Morte no trânsito,100,9.24
+RJ,2019,Suicídio ,69,6.38
+RJ,2019,Morte por intervenção de Agente do Estado,63,5.82
+RJ,2019,Lesão corporal seguida de morte,58,5.36
+RJ,2019,Suicídio,55,05.08
+RJ,2019,Mortes a esclarecer,44,04.07
+RJ,2019,Morte de Agente do Estado,12,1.11
+RJ,2020,Morte no trânsito,118,10.74
+RJ,2020,Homicídio doloso,103,9.37
+RJ,2020,Feminicídio,83,7.55
+RJ,2020,Morte por intervenção de Agente do Estado,69,6.28
+RJ,2020,Lesão corporal seguida de morte,62,5.64
+RJ,2020,Suicídio ,60,5.46
+RJ,2020,Suicídio,43,3.91
+RJ,2020,Mortes a esclarecer,40,3.64
+RJ,2020,Morte de Agente do Estado,11,1.0
+RJ,2021,Lesão corporal seguida de morte,104,8.95
+RJ,2021,Feminicídio,103,8.86
+RJ,2021,Homicídio doloso,90,7.75
+RJ,2021,Morte no trânsito,87,7.49
+RJ,2021,Morte por intervenção de Agente do Estado,73,6.28
+RJ,2021,Mortes a esclarecer,63,5.42
+RJ,2021,Suicídio,61,5.25
+RJ,2021,Suicídio ,41,3.53
+RJ,2021,Morte de Agente do Estado,19,1.64
+RJ,2022,Morte no trânsito,128,11.07
+RJ,2022,Feminicídio,103,8.91
+RJ,2022,Homicídio doloso,89,7.7
+RJ,2022,Lesão corporal seguida de morte,81,07.01
+RJ,2022,Morte por intervenção de Agente do Estado,55,4.76
+RJ,2022,Suicídio,50,4.33
+RJ,2022,Suicídio ,49,4.24
+RJ,2022,Mortes a esclarecer,46,3.98
+RJ,2022,Morte de Agente do Estado,13,1.12
+RJ,2023,Morte no trânsito,116,10.56
+RJ,2023,Lesão corporal seguida de morte,100,9.11
+RJ,2023,Feminicídio,77,07.01
+RJ,2023,Homicídio doloso,76,6.92
+RJ,2023,Morte por intervenção de Agente do Estado,59,5.37
+RJ,2023,Suicídio ,58,5.28
+RJ,2023,Suicídio,53,4.83
+RJ,2023,Mortes a esclarecer,36,3.28
+RJ,2023,Morte de Agente do Estado,17,1.55
+RJ,2024,Homicídio doloso,115,10.06
+RJ,2024,Feminicídio,100,8.75
+RJ,2024,Morte no trânsito,91,7.96
+RJ,2024,Lesão corporal seguida de morte,88,7.7
+RJ,2024,Suicídio,61,5.34
+RJ,2024,Morte por intervenção de Agente do Estado,58,05.07
+RJ,2024,Suicídio ,42,3.67
+RJ,2024,Mortes a esclarecer,39,3.41
+RJ,2024,Morte de Agente do Estado,12,01.05
+RN,2015,Homicídio doloso,84,7.85
+RN,2015,Morte no trânsito,83,7.76
+RN,2015,Lesão corporal seguida de morte,80,7.48
+RN,2015,Feminicídio,77,7.2
+RN,2015,Suicídio,55,5.14
+RN,2015,Morte por intervenção de Agente do Estado,55,5.14
+RN,2015,Suicídio ,44,4.11
+RN,2015,Mortes a esclarecer,39,3.64
+RN,2015,Morte de Agente do Estado,13,1.21
+RN,2016,Morte no trânsito,127,11.3
+RN,2016,Feminicídio,118,10.5
+RN,2016,Lesão corporal seguida de morte,102,09.07
+RN,2016,Homicídio doloso,80,7.12
+RN,2016,Morte por intervenção de Agente do Estado,66,5.87
+RN,2016,Mortes a esclarecer,55,4.89
+RN,2016,Suicídio ,52,4.63
+RN,2016,Suicídio,45,4.0
+RN,2016,Morte de Agente do Estado,11,0.98
+RN,2017,Morte no trânsito,129,10.45
+RN,2017,Homicídio doloso,123,9.97
+RN,2017,Feminicídio,92,7.46
+RN,2017,Lesão corporal seguida de morte,83,6.73
+RN,2017,Suicídio ,65,5.27
+RN,2017,Suicídio,61,4.94
+RN,2017,Morte por intervenção de Agente do Estado,52,4.21
+RN,2017,Mortes a esclarecer,40,3.24
+RN,2017,Morte de Agente do Estado,13,01.05
+RN,2018,Feminicídio,118,9.98
+RN,2018,Morte no trânsito,113,9.56
+RN,2018,Homicídio doloso,108,9.14
+RN,2018,Lesão corporal seguida de morte,91,7.7
+RN,2018,Morte por intervenção de Agente do Estado,81,6.85
+RN,2018,Suicídio,59,4.99
+RN,2018,Suicídio ,52,4.4
+RN,2018,Mortes a esclarecer,36,03.05
+RN,2018,Morte de Agente do Estado,16,1.35
+RN,2019,Morte no trânsito,119,10.72
+RN,2019,Homicídio doloso,88,7.93
+RN,2019,Feminicídio,76,6.85
+RN,2019,Morte por intervenção de Agente do Estado,74,6.67
+RN,2019,Suicídio ,71,6.4
+RN,2019,Lesão corporal seguida de morte,61,5.5
+RN,2019,Suicídio,50,4.5
+RN,2019,Mortes a esclarecer,46,4.14
+RN,2019,Morte de Agente do Estado,12,01.08
+RN,2020,Homicídio doloso,130,11.13
+RN,2020,Feminicídio,97,8.3
+RN,2020,Morte no trânsito,96,8.22
+RN,2020,Lesão corporal seguida de morte,79,6.76
+RN,2020,Morte por intervenção de Agente do Estado,79,6.76
+RN,2020,Suicídio,68,5.82
+RN,2020,Mortes a esclarecer,59,05.05
+RN,2020,Suicídio ,43,3.68
+RN,2020,Morte de Agente do Estado,14,1.2
+RN,2021,Feminicídio,100,8.67
+RN,2021,Homicídio doloso,97,8.41
+RN,2021,Morte no trânsito,95,8.24
+RN,2021,Morte por intervenção de Agente do Estado,84,7.29
+RN,2021,Lesão corporal seguida de morte,81,07.03
+RN,2021,Suicídio,63,5.46
+RN,2021,Mortes a esclarecer,57,4.94
+RN,2021,Suicídio ,46,3.99
+RN,2021,Morte de Agente do Estado,12,01.04
+RN,2022,Homicídio doloso,113,9.99
+RN,2022,Feminicídio,92,8.13
+RN,2022,Lesão corporal seguida de morte,84,7.43
+RN,2022,Morte no trânsito,82,7.25
+RN,2022,Suicídio,69,6.1
+RN,2022,Morte por intervenção de Agente do Estado,62,5.48
+RN,2022,Suicídio ,56,4.95
+RN,2022,Mortes a esclarecer,49,4.33
+RN,2022,Morte de Agente do Estado,16,1.41
+RN,2023,Morte no trânsito,109,9.4
+RN,2023,Lesão corporal seguida de morte,102,8.79
+RN,2023,Feminicídio,100,8.62
+RN,2023,Morte por intervenção de Agente do Estado,80,6.9
+RN,2023,Homicídio doloso,77,6.64
+RN,2023,Suicídio,64,5.52
+RN,2023,Suicídio ,49,4.22
+RN,2023,Mortes a esclarecer,42,3.62
+RN,2023,Morte de Agente do Estado,11,0.95
+RN,2024,Feminicídio,114,9.95
+RN,2024,Morte no trânsito,107,9.34
+RN,2024,Homicídio doloso,79,6.89
+RN,2024,Morte por intervenção de Agente do Estado,79,6.89
+RN,2024,Suicídio ,70,6.11
+RN,2024,Lesão corporal seguida de morte,64,5.58
+RN,2024,Suicídio,49,4.28
+RN,2024,Mortes a esclarecer,36,3.14
+RN,2024,Morte de Agente do Estado,14,1.22
+RO,2015,Homicídio doloso,109,9.99
+RO,2015,Feminicídio,99,09.07
+RO,2015,Morte no trânsito,73,6.69
+RO,2015,Morte por intervenção de Agente do Estado,69,6.32
+RO,2015,Lesão corporal seguida de morte,57,5.22
+RO,2015,Suicídio,57,5.22
+RO,2015,Suicídio ,56,5.13
+RO,2015,Mortes a esclarecer,39,3.57
+RO,2015,Morte de Agente do Estado,11,01.01
+RO,2016,Homicídio doloso,118,10.28
+RO,2016,Morte no trânsito,100,8.71
+RO,2016,Lesão corporal seguida de morte,95,8.28
+RO,2016,Feminicídio,81,07.06
+RO,2016,Suicídio ,67,5.84
+RO,2016,Morte por intervenção de Agente do Estado,55,4.79
+RO,2016,Mortes a esclarecer,49,4.27
+RO,2016,Suicídio,43,3.75
+RO,2016,Morte de Agente do Estado,14,1.22
+RO,2017,Feminicídio,116,10.03
+RO,2017,Homicídio doloso,106,9.17
+RO,2017,Morte no trânsito,80,6.92
+RO,2017,Suicídio ,70,06.06
+RO,2017,Morte por intervenção de Agente do Estado,68,5.88
+RO,2017,Lesão corporal seguida de morte,62,5.36
+RO,2017,Mortes a esclarecer,56,4.84
+RO,2017,Suicídio,42,3.63
+RO,2017,Morte de Agente do Estado,15,1.3
+RO,2018,Homicídio doloso,127,11.53
+RO,2018,Morte no trânsito,98,8.9
+RO,2018,Feminicídio,80,7.27
+RO,2018,Lesão corporal seguida de morte,71,6.45
+RO,2018,Suicídio ,70,6.36
+RO,2018,Morte por intervenção de Agente do Estado,67,06.09
+RO,2018,Suicídio,49,4.45
+RO,2018,Mortes a esclarecer,44,4.0
+RO,2018,Morte de Agente do Estado,15,1.36
+RO,2019,Morte no trânsito,124,10.98
+RO,2019,Feminicídio,116,10.27
+RO,2019,Homicídio doloso,91,08.06
+RO,2019,Lesão corporal seguida de morte,91,08.06
+RO,2019,Morte por intervenção de Agente do Estado,84,7.44
+RO,2019,Suicídio,55,4.87
+RO,2019,Suicídio ,51,4.52
+RO,2019,Mortes a esclarecer,39,3.45
+RO,2019,Morte de Agente do Estado,19,1.68
+RO,2020,Homicídio doloso,93,8.72
+RO,2020,Lesão corporal seguida de morte,92,8.62
+RO,2020,Feminicídio,83,7.78
+RO,2020,Morte no trânsito,75,07.03
+RO,2020,Suicídio,52,4.87
+RO,2020,Suicídio ,50,4.69
+RO,2020,Morte por intervenção de Agente do Estado,48,4.5
+RO,2020,Mortes a esclarecer,36,3.37
+RO,2020,Morte de Agente do Estado,15,1.41
+RO,2021,Feminicídio,114,10.27
+RO,2021,Morte no trânsito,92,8.29
+RO,2021,Morte por intervenção de Agente do Estado,83,7.48
+RO,2021,Homicídio doloso,79,7.12
+RO,2021,Lesão corporal seguida de morte,70,6.31
+RO,2021,Suicídio ,59,5.32
+RO,2021,Suicídio,52,4.68
+RO,2021,Mortes a esclarecer,43,3.87
+RO,2021,Morte de Agente do Estado,11,0.99
+RO,2022,Morte no trânsito,126,11.22
+RO,2022,Homicídio doloso,112,9.97
+RO,2022,Lesão corporal seguida de morte,87,7.75
+RO,2022,Feminicídio,75,6.68
+RO,2022,Morte por intervenção de Agente do Estado,59,5.25
+RO,2022,Mortes a esclarecer,56,4.99
+RO,2022,Suicídio ,52,4.63
+RO,2022,Suicídio,47,4.19
+RO,2022,Morte de Agente do Estado,17,1.51
+RO,2023,Homicídio doloso,118,9.97
+RO,2023,Morte no trânsito,92,7.77
+RO,2023,Lesão corporal seguida de morte,90,7.6
+RO,2023,Feminicídio,75,6.33
+RO,2023,Morte por intervenção de Agente do Estado,74,6.25
+RO,2023,Suicídio ,69,5.83
+RO,2023,Suicídio,43,3.63
+RO,2023,Mortes a esclarecer,38,3.21
+RO,2023,Morte de Agente do Estado,16,1.35
+RO,2024,Homicídio doloso,98,8.97
+RO,2024,Feminicídio,71,6.5
+RO,2024,Morte no trânsito,71,6.5
+RO,2024,Suicídio ,67,6.14
+RO,2024,Morte por intervenção de Agente do Estado,67,6.14
+RO,2024,Lesão corporal seguida de morte,64,5.86
+RO,2024,Suicídio,59,5.4
+RO,2024,Mortes a esclarecer,47,4.3
+RO,2024,Morte de Agente do Estado,12,1.1
+RR,2015,Homicídio doloso,120,10.29
+RR,2015,Morte no trânsito,113,9.69
+RR,2015,Lesão corporal seguida de morte,83,7.12
+RR,2015,Feminicídio,78,6.69
+RR,2015,Morte por intervenção de Agente do Estado,76,6.52
+RR,2015,Suicídio,67,5.75
+RR,2015,Suicídio ,51,4.37
+RR,2015,Mortes a esclarecer,41,3.52
+RR,2015,Morte de Agente do Estado,12,01.03
+RR,2016,Feminicídio,113,9.94
+RR,2016,Homicídio doloso,92,08.09
+RR,2016,Morte no trânsito,86,7.56
+RR,2016,Lesão corporal seguida de morte,81,7.12
+RR,2016,Morte por intervenção de Agente do Estado,65,5.72
+RR,2016,Suicídio,62,5.45
+RR,2016,Suicídio ,55,4.84
+RR,2016,Mortes a esclarecer,43,3.78
+RR,2016,Morte de Agente do Estado,16,1.41
+RR,2017,Morte no trânsito,119,10.6
+RR,2017,Lesão corporal seguida de morte,87,7.75
+RR,2017,Homicídio doloso,85,7.57
+RR,2017,Feminicídio,83,7.39
+RR,2017,Morte por intervenção de Agente do Estado,64,5.7
+RR,2017,Suicídio ,56,4.99
+RR,2017,Mortes a esclarecer,48,4.27
+RR,2017,Suicídio,48,4.27
+RR,2017,Morte de Agente do Estado,11,0.98
+RR,2018,Morte no trânsito,125,10.45
+RR,2018,Feminicídio,114,9.53
+RR,2018,Homicídio doloso,110,9.2
+RR,2018,Morte por intervenção de Agente do Estado,73,6.1
+RR,2018,Lesão corporal seguida de morte,72,06.02
+RR,2018,Suicídio,63,5.27
+RR,2018,Suicídio ,56,4.68
+RR,2018,Mortes a esclarecer,41,3.43
+RR,2018,Morte de Agente do Estado,16,1.34
+RR,2019,Morte no trânsito,122,10.35
+RR,2019,Feminicídio,115,9.75
+RR,2019,Homicídio doloso,111,9.41
+RR,2019,Lesão corporal seguida de morte,98,8.31
+RR,2019,Morte por intervenção de Agente do Estado,56,4.75
+RR,2019,Suicídio ,50,4.24
+RR,2019,Suicídio,49,4.16
+RR,2019,Mortes a esclarecer,37,3.14
+RR,2019,Morte de Agente do Estado,11,0.93
+RR,2020,Homicídio doloso,113,10.08
+RR,2020,Lesão corporal seguida de morte,101,09.01
+RR,2020,Morte no trânsito,101,09.01
+RR,2020,Feminicídio,100,8.92
+RR,2020,Mortes a esclarecer,58,5.17
+RR,2020,Morte por intervenção de Agente do Estado,58,5.17
+RR,2020,Suicídio,57,05.08
+RR,2020,Suicídio ,39,3.48
+RR,2020,Morte de Agente do Estado,13,1.16
+RR,2021,Lesão corporal seguida de morte,89,8.24
+RR,2021,Feminicídio,86,7.96
+RR,2021,Homicídio doloso,86,7.96
+RR,2021,Morte no trânsito,86,7.96
+RR,2021,Suicídio ,66,6.11
+RR,2021,Mortes a esclarecer,59,5.46
+RR,2021,Suicídio,56,5.19
+RR,2021,Morte por intervenção de Agente do Estado,46,4.26
+RR,2021,Morte de Agente do Estado,16,1.48
+RR,2022,Feminicídio,107,9.83
+RR,2022,Homicídio doloso,106,9.73
+RR,2022,Morte no trânsito,83,7.62
+RR,2022,Morte por intervenção de Agente do Estado,77,07.07
+RR,2022,Lesão corporal seguida de morte,70,6.43
+RR,2022,Mortes a esclarecer,64,5.88
+RR,2022,Suicídio,51,4.68
+RR,2022,Suicídio ,41,3.76
+RR,2022,Morte de Agente do Estado,12,1.1
+RR,2023,Homicídio doloso,84,7.82
+RR,2023,Morte no trânsito,81,7.54
+RR,2023,Feminicídio,75,6.98
+RR,2023,Suicídio ,68,6.33
+RR,2023,Lesão corporal seguida de morte,66,6.15
+RR,2023,Morte por intervenção de Agente do Estado,56,5.21
+RR,2023,Suicídio,39,3.63
+RR,2023,Mortes a esclarecer,37,3.45
+RR,2023,Morte de Agente do Estado,15,1.4
+RR,2024,Feminicídio,92,8.46
+RR,2024,Homicídio doloso,90,8.27
+RR,2024,Lesão corporal seguida de morte,81,7.44
+RR,2024,Morte por intervenção de Agente do Estado,80,7.35
+RR,2024,Morte no trânsito,71,6.53
+RR,2024,Mortes a esclarecer,58,5.33
+RR,2024,Suicídio,51,4.69
+RR,2024,Suicídio ,49,4.5
+RR,2024,Morte de Agente do Estado,13,1.19
+RS,2015,Homicídio doloso,123,11.01
+RS,2015,Lesão corporal seguida de morte,101,09.04
+RS,2015,Feminicídio,99,8.86
+RS,2015,Morte por intervenção de Agente do Estado,77,6.89
+RS,2015,Morte no trânsito,75,6.71
+RS,2015,Mortes a esclarecer,55,4.92
+RS,2015,Suicídio,54,4.83
+RS,2015,Suicídio ,48,4.3
+RS,2015,Morte de Agente do Estado,15,1.34
+RS,2016,Homicídio doloso,122,10.98
+RS,2016,Lesão corporal seguida de morte,93,8.37
+RS,2016,Feminicídio,84,7.56
+RS,2016,Morte no trânsito,72,6.48
+RS,2016,Morte por intervenção de Agente do Estado,66,5.94
+RS,2016,Suicídio ,52,4.68
+RS,2016,Suicídio,45,04.05
+RS,2016,Mortes a esclarecer,38,3.42
+RS,2016,Morte de Agente do Estado,12,01.08
+RS,2017,Morte no trânsito,124,10.16
+RS,2017,Homicídio doloso,115,9.43
+RS,2017,Lesão corporal seguida de morte,94,7.7
+RS,2017,Feminicídio,92,7.54
+RS,2017,Morte por intervenção de Agente do Estado,75,6.15
+RS,2017,Suicídio,68,5.57
+RS,2017,Suicídio ,67,5.49
+RS,2017,Mortes a esclarecer,43,3.52
+RS,2017,Morte de Agente do Estado,11,0.9
+RS,2018,Lesão corporal seguida de morte,95,8.72
+RS,2018,Homicídio doloso,91,8.35
+RS,2018,Morte por intervenção de Agente do Estado,77,07.06
+RS,2018,Feminicídio,74,6.79
+RS,2018,Morte no trânsito,74,6.79
+RS,2018,Suicídio,59,5.41
+RS,2018,Suicídio ,46,4.22
+RS,2018,Mortes a esclarecer,39,3.58
+RS,2018,Morte de Agente do Estado,16,1.47
+RS,2019,Homicídio doloso,104,9.17
+RS,2019,Lesão corporal seguida de morte,92,8.11
+RS,2019,Morte no trânsito,88,7.76
+RS,2019,Feminicídio,83,7.32
+RS,2019,Suicídio,69,06.08
+RS,2019,Morte por intervenção de Agente do Estado,62,5.47
+RS,2019,Mortes a esclarecer,49,4.32
+RS,2019,Suicídio ,46,04.06
+RS,2019,Morte de Agente do Estado,11,0.97
+RS,2020,Feminicídio,113,10.51
+RS,2020,Homicídio doloso,98,9.12
+RS,2020,Morte no trânsito,91,8.47
+RS,2020,Suicídio,70,6.51
+RS,2020,Lesão corporal seguida de morte,67,6.23
+RS,2020,Morte por intervenção de Agente do Estado,49,4.56
+RS,2020,Suicídio ,42,3.91
+RS,2020,Mortes a esclarecer,40,3.72
+RS,2020,Morte de Agente do Estado,12,1.12
+RS,2021,Homicídio doloso,87,7.64
+RS,2021,Morte no trânsito,87,7.64
+RS,2021,Feminicídio,83,7.29
+RS,2021,Suicídio,71,6.24
+RS,2021,Suicídio ,67,5.89
+RS,2021,Lesão corporal seguida de morte,64,5.62
+RS,2021,Mortes a esclarecer,59,5.18
+RS,2021,Morte por intervenção de Agente do Estado,58,5.1
+RS,2021,Morte de Agente do Estado,12,01.05
+RS,2022,Homicídio doloso,120,10.97
+RS,2022,Feminicídio,98,8.96
+RS,2022,Morte no trânsito,89,8.14
+RS,2022,Morte por intervenção de Agente do Estado,77,07.04
+RS,2022,Lesão corporal seguida de morte,71,6.49
+RS,2022,Suicídio,70,6.4
+RS,2022,Mortes a esclarecer,49,4.48
+RS,2022,Suicídio ,42,3.84
+RS,2022,Morte de Agente do Estado,11,01.01
+RS,2023,Morte no trânsito,128,11.35
+RS,2023,Feminicídio,107,9.49
+RS,2023,Homicídio doloso,99,8.78
+RS,2023,Lesão corporal seguida de morte,81,7.18
+RS,2023,Morte por intervenção de Agente do Estado,49,4.34
+RS,2023,Suicídio,45,3.99
+RS,2023,Mortes a esclarecer,41,3.63
+RS,2023,Suicídio ,41,3.63
+RS,2023,Morte de Agente do Estado,19,1.68
+RS,2024,Morte no trânsito,117,10.62
+RS,2024,Lesão corporal seguida de morte,101,9.17
+RS,2024,Homicídio doloso,84,7.62
+RS,2024,Feminicídio,71,6.44
+RS,2024,Suicídio ,68,6.17
+RS,2024,Suicídio,59,5.35
+RS,2024,Morte por intervenção de Agente do Estado,59,5.35
+RS,2024,Mortes a esclarecer,36,3.27
+RS,2024,Morte de Agente do Estado,11,1.0
+SC,2015,Homicídio doloso,116,10.37
+SC,2015,Morte no trânsito,98,8.76
+SC,2015,Feminicídio,82,7.33
+SC,2015,Morte por intervenção de Agente do Estado,71,6.34
+SC,2015,Suicídio ,68,06.08
+SC,2015,Lesão corporal seguida de morte,66,5.9
+SC,2015,Mortes a esclarecer,63,5.63
+SC,2015,Suicídio,45,04.02
+SC,2015,Morte de Agente do Estado,15,1.34
+SC,2016,Lesão corporal seguida de morte,103,9.36
+SC,2016,Homicídio doloso,95,8.64
+SC,2016,Feminicídio,94,8.55
+SC,2016,Morte no trânsito,83,7.55
+SC,2016,Suicídio,51,4.64
+SC,2016,Morte por intervenção de Agente do Estado,51,4.64
+SC,2016,Mortes a esclarecer,44,4.0
+SC,2016,Suicídio ,40,3.64
+SC,2016,Morte de Agente do Estado,19,1.73
+SC,2017,Homicídio doloso,119,10.46
+SC,2017,Lesão corporal seguida de morte,98,8.61
+SC,2017,Feminicídio,84,7.38
+SC,2017,Morte no trânsito,73,6.41
+SC,2017,Morte por intervenção de Agente do Estado,71,6.24
+SC,2017,Suicídio ,54,4.75
+SC,2017,Mortes a esclarecer,52,4.57
+SC,2017,Suicídio,43,3.78
+SC,2017,Morte de Agente do Estado,17,1.49
+SC,2018,Morte no trânsito,95,8.41
+SC,2018,Feminicídio,93,8.24
+SC,2018,Lesão corporal seguida de morte,85,7.53
+SC,2018,Homicídio doloso,82,7.26
+SC,2018,Suicídio,63,5.58
+SC,2018,Suicídio ,56,4.96
+SC,2018,Mortes a esclarecer,51,4.52
+SC,2018,Morte por intervenção de Agente do Estado,49,4.34
+SC,2018,Morte de Agente do Estado,12,01.06
+SC,2019,Morte no trânsito,116,10.72
+SC,2019,Feminicídio,102,9.43
+SC,2019,Morte por intervenção de Agente do Estado,76,07.02
+SC,2019,Homicídio doloso,72,6.65
+SC,2019,Lesão corporal seguida de morte,65,06.01
+SC,2019,Suicídio ,65,06.01
+SC,2019,Suicídio,56,5.18
+SC,2019,Mortes a esclarecer,46,4.25
+SC,2019,Morte de Agente do Estado,13,1.2
+SC,2020,Homicídio doloso,110,9.83
+SC,2020,Morte no trânsito,105,9.38
+SC,2020,Feminicídio,75,6.7
+SC,2020,Lesão corporal seguida de morte,70,6.26
+SC,2020,Morte por intervenção de Agente do Estado,64,5.72
+SC,2020,Suicídio ,52,4.65
+SC,2020,Mortes a esclarecer,48,4.29
+SC,2020,Suicídio,47,4.2
+SC,2020,Morte de Agente do Estado,18,1.61
+SC,2021,Homicídio doloso,127,11.02
+SC,2021,Feminicídio,118,10.24
+SC,2021,Morte no trânsito,117,10.16
+SC,2021,Lesão corporal seguida de morte,81,07.03
+SC,2021,Morte por intervenção de Agente do Estado,64,5.56
+SC,2021,Suicídio ,53,4.6
+SC,2021,Suicídio,40,3.47
+SC,2021,Mortes a esclarecer,39,3.39
+SC,2021,Morte de Agente do Estado,14,1.22
+SC,2022,Lesão corporal seguida de morte,100,9.63
+SC,2022,Morte no trânsito,78,7.51
+SC,2022,Homicídio doloso,75,7.23
+SC,2022,Feminicídio,71,6.84
+SC,2022,Suicídio,66,6.36
+SC,2022,Morte por intervenção de Agente do Estado,53,5.11
+SC,2022,Mortes a esclarecer,46,4.43
+SC,2022,Suicídio ,45,4.34
+SC,2022,Morte de Agente do Estado,11,01.06
+SC,2023,Homicídio doloso,124,11.0
+SC,2023,Morte no trânsito,123,10.91
+SC,2023,Feminicídio,99,8.78
+SC,2023,Lesão corporal seguida de morte,62,5.5
+SC,2023,Morte por intervenção de Agente do Estado,56,4.97
+SC,2023,Suicídio ,54,4.79
+SC,2023,Mortes a esclarecer,47,4.17
+SC,2023,Suicídio,41,3.64
+SC,2023,Morte de Agente do Estado,13,1.15
+SC,2024,Morte no trânsito,123,10.49
+SC,2024,Homicídio doloso,116,9.9
+SC,2024,Feminicídio,102,8.7
+SC,2024,Morte por intervenção de Agente do Estado,75,6.4
+SC,2024,Lesão corporal seguida de morte,61,5.2
+SC,2024,Suicídio,56,4.78
+SC,2024,Suicídio ,52,4.44
+SC,2024,Mortes a esclarecer,43,3.67
+SC,2024,Morte de Agente do Estado,17,1.45
+SE,2015,Morte no trânsito,116,10.38
+SE,2015,Feminicídio,95,8.5
+SE,2015,Homicídio doloso,84,7.52
+SE,2015,Lesão corporal seguida de morte,76,6.8
+SE,2015,Suicídio,58,5.19
+SE,2015,Suicídio ,55,4.92
+SE,2015,Morte por intervenção de Agente do Estado,50,4.48
+SE,2015,Mortes a esclarecer,42,3.76
+SE,2015,Morte de Agente do Estado,16,1.43
+SE,2016,Feminicídio,112,9.7
+SE,2016,Morte no trânsito,101,8.74
+SE,2016,Homicídio doloso,97,8.4
+SE,2016,Morte por intervenção de Agente do Estado,67,5.8
+SE,2016,Lesão corporal seguida de morte,64,5.54
+SE,2016,Suicídio,57,4.94
+SE,2016,Suicídio ,47,04.07
+SE,2016,Mortes a esclarecer,39,3.38
+SE,2016,Morte de Agente do Estado,19,1.65
+SE,2017,Homicídio doloso,119,10.49
+SE,2017,Morte no trânsito,102,8.99
+SE,2017,Lesão corporal seguida de morte,99,8.73
+SE,2017,Feminicídio,91,08.02
+SE,2017,Suicídio ,69,06.08
+SE,2017,Suicídio,61,5.38
+SE,2017,Morte por intervenção de Agente do Estado,46,04.06
+SE,2017,Mortes a esclarecer,44,3.88
+SE,2017,Morte de Agente do Estado,18,1.59
+SE,2018,Lesão corporal seguida de morte,102,9.45
+SE,2018,Homicídio doloso,89,8.25
+SE,2018,Feminicídio,87,08.06
+SE,2018,Morte no trânsito,71,6.58
+SE,2018,Morte por intervenção de Agente do Estado,65,06.02
+SE,2018,Mortes a esclarecer,48,4.45
+SE,2018,Suicídio,48,4.45
+SE,2018,Suicídio ,40,3.71
+SE,2018,Morte de Agente do Estado,16,1.48
+SE,2019,Morte no trânsito,123,10.76
+SE,2019,Feminicídio,103,09.01
+SE,2019,Homicídio doloso,78,6.82
+SE,2019,Lesão corporal seguida de morte,77,6.74
+SE,2019,Morte por intervenção de Agente do Estado,73,6.39
+SE,2019,Suicídio,66,5.77
+SE,2019,Suicídio ,56,4.9
+SE,2019,Mortes a esclarecer,36,3.15
+SE,2019,Morte de Agente do Estado,19,1.66
+SE,2020,Morte no trânsito,101,9.12
+SE,2020,Feminicídio,99,8.94
+SE,2020,Lesão corporal seguida de morte,97,8.75
+SE,2020,Homicídio doloso,83,7.49
+SE,2020,Morte por intervenção de Agente do Estado,67,06.05
+SE,2020,Suicídio ,52,4.69
+SE,2020,Mortes a esclarecer,46,4.15
+SE,2020,Suicídio,40,3.61
+SE,2020,Morte de Agente do Estado,19,1.71
+SE,2021,Morte no trânsito,121,10.34
+SE,2021,Feminicídio,116,9.91
+SE,2021,Homicídio doloso,112,9.57
+SE,2021,Lesão corporal seguida de morte,78,6.67
+SE,2021,Morte por intervenção de Agente do Estado,67,5.73
+SE,2021,Suicídio ,59,05.04
+SE,2021,Suicídio,55,4.7
+SE,2021,Mortes a esclarecer,49,4.19
+SE,2021,Morte de Agente do Estado,17,1.45
+SE,2022,Homicídio doloso,109,9.9
+SE,2022,Morte no trânsito,102,9.26
+SE,2022,Feminicídio,91,8.27
+SE,2022,Morte por intervenção de Agente do Estado,78,07.08
+SE,2022,Suicídio ,61,5.54
+SE,2022,Lesão corporal seguida de morte,57,5.18
+SE,2022,Suicídio,44,4.0
+SE,2022,Mortes a esclarecer,43,3.91
+SE,2022,Morte de Agente do Estado,11,1.0
+SE,2023,Feminicídio,107,9.89
+SE,2023,Morte no trânsito,95,8.78
+SE,2023,Lesão corporal seguida de morte,89,8.23
+SE,2023,Homicídio doloso,82,7.58
+SE,2023,Morte por intervenção de Agente do Estado,71,6.56
+SE,2023,Suicídio ,54,4.99
+SE,2023,Mortes a esclarecer,49,4.53
+SE,2023,Suicídio,42,3.88
+SE,2023,Morte de Agente do Estado,13,1.2
+SE,2024,Morte no trânsito,106,9.36
+SE,2024,Homicídio doloso,102,09.01
+SE,2024,Lesão corporal seguida de morte,77,6.8
+SE,2024,Feminicídio,73,6.45
+SE,2024,Morte por intervenção de Agente do Estado,65,5.74
+SE,2024,Mortes a esclarecer,61,5.39
+SE,2024,Suicídio,59,5.21
+SE,2024,Suicídio ,51,4.51
+SE,2024,Morte de Agente do Estado,15,1.33
+SP,2015,Morte no trânsito,100,09.02
+SP,2015,Feminicídio,92,8.3
+SP,2015,Homicídio doloso,91,8.21
+SP,2015,Lesão corporal seguida de morte,63,5.68
+SP,2015,Suicídio,52,4.69
+SP,2015,Suicídio ,52,4.69
+SP,2015,Morte por intervenção de Agente do Estado,51,4.6
+SP,2015,Mortes a esclarecer,47,4.24
+SP,2015,Morte de Agente do Estado,11,0.99
+SP,2016,Feminicídio,120,10.22
+SP,2016,Homicídio doloso,120,10.22
+SP,2016,Lesão corporal seguida de morte,104,8.86
+SP,2016,Morte no trânsito,77,6.56
+SP,2016,Morte por intervenção de Agente do Estado,65,5.54
+SP,2016,Suicídio ,55,4.68
+SP,2016,Mortes a esclarecer,53,4.51
+SP,2016,Suicídio,48,04.09
+SP,2016,Morte de Agente do Estado,14,1.19
+SP,2017,Morte no trânsito,129,11.67
+SP,2017,Feminicídio,89,08.05
+SP,2017,Homicídio doloso,82,7.42
+SP,2017,Morte por intervenção de Agente do Estado,74,6.7
+SP,2017,Suicídio,64,5.79
+SP,2017,Lesão corporal seguida de morte,59,5.34
+SP,2017,Suicídio ,52,4.71
+SP,2017,Mortes a esclarecer,40,3.62
+SP,2017,Morte de Agente do Estado,19,1.72
+SP,2018,Morte no trânsito,115,10.29
+SP,2018,Homicídio doloso,92,8.23
+SP,2018,Lesão corporal seguida de morte,82,7.33
+SP,2018,Morte por intervenção de Agente do Estado,80,7.16
+SP,2018,Feminicídio,69,6.17
+SP,2018,Suicídio,58,5.19
+SP,2018,Suicídio ,52,4.65
+SP,2018,Mortes a esclarecer,35,3.13
+SP,2018,Morte de Agente do Estado,17,1.52
+SP,2019,Morte no trânsito,124,10.95
+SP,2019,Homicídio doloso,110,9.72
+SP,2019,Feminicídio,83,7.33
+SP,2019,Morte por intervenção de Agente do Estado,72,6.36
+SP,2019,Lesão corporal seguida de morte,64,5.65
+SP,2019,Mortes a esclarecer,45,3.98
+SP,2019,Suicídio,45,3.98
+SP,2019,Suicídio ,44,3.89
+SP,2019,Morte de Agente do Estado,13,1.15
+SP,2020,Morte no trânsito,129,11.36
+SP,2020,Feminicídio,109,9.6
+SP,2020,Homicídio doloso,99,8.71
+SP,2020,Lesão corporal seguida de morte,85,7.48
+SP,2020,Morte por intervenção de Agente do Estado,77,6.78
+SP,2020,Mortes a esclarecer,55,4.84
+SP,2020,Suicídio,49,4.31
+SP,2020,Suicídio ,49,4.31
+SP,2020,Morte de Agente do Estado,15,1.32
+SP,2021,Feminicídio,103,09.08
+SP,2021,Morte no trânsito,100,8.82
+SP,2021,Lesão corporal seguida de morte,86,7.58
+SP,2021,Homicídio doloso,72,6.35
+SP,2021,Morte por intervenção de Agente do Estado,64,5.64
+SP,2021,Suicídio,60,5.29
+SP,2021,Suicídio ,57,05.03
+SP,2021,Mortes a esclarecer,46,04.06
+SP,2021,Morte de Agente do Estado,17,1.5
+SP,2022,Feminicídio,114,9.74
+SP,2022,Morte no trânsito,106,09.06
+SP,2022,Lesão corporal seguida de morte,98,8.38
+SP,2022,Homicídio doloso,74,6.32
+SP,2022,Mortes a esclarecer,63,5.38
+SP,2022,Suicídio ,63,5.38
+SP,2022,Morte por intervenção de Agente do Estado,63,5.38
+SP,2022,Suicídio,52,4.44
+SP,2022,Morte de Agente do Estado,19,1.62
+SP,2023,Feminicídio,123,10.56
+SP,2023,Morte no trânsito,115,9.87
+SP,2023,Homicídio doloso,103,8.84
+SP,2023,Lesão corporal seguida de morte,101,8.67
+SP,2023,Mortes a esclarecer,62,5.32
+SP,2023,Morte por intervenção de Agente do Estado,57,4.89
+SP,2023,Suicídio ,43,3.69
+SP,2023,Suicídio,42,3.61
+SP,2023,Morte de Agente do Estado,15,1.29
+SP,2024,Feminicídio,104,9.23
+SP,2024,Morte no trânsito,96,8.52
+SP,2024,Lesão corporal seguida de morte,89,7.9
+SP,2024,Homicídio doloso,79,07.01
+SP,2024,Morte por intervenção de Agente do Estado,58,5.15
+SP,2024,Suicídio,47,4.17
+SP,2024,Mortes a esclarecer,42,3.73
+SP,2024,Suicídio ,41,3.64
+SP,2024,Morte de Agente do Estado,16,1.42
+TO,2015,Homicídio doloso,97,9.74
+TO,2015,Feminicídio,96,9.64
+TO,2015,Morte por intervenção de Agente do Estado,84,8.43
+TO,2015,Morte no trânsito,71,7.13
+TO,2015,Mortes a esclarecer,63,6.33
+TO,2015,Lesão corporal seguida de morte,57,5.72
+TO,2015,Suicídio ,57,5.72
+TO,2015,Suicídio,50,05.02
+TO,2015,Morte de Agente do Estado,16,1.61
+TO,2016,Feminicídio,81,7.92
+TO,2016,Morte no trânsito,76,7.43
+TO,2016,Homicídio doloso,71,6.94
+TO,2016,Lesão corporal seguida de morte,67,6.55
+TO,2016,Suicídio,56,5.47
+TO,2016,Morte por intervenção de Agente do Estado,54,5.28
+TO,2016,Suicídio ,50,4.89
+TO,2016,Mortes a esclarecer,48,4.69
+TO,2016,Morte de Agente do Estado,16,1.56
+TO,2017,Homicídio doloso,122,11.0
+TO,2017,Feminicídio,88,7.94
+TO,2017,Lesão corporal seguida de morte,83,7.48
+TO,2017,Morte no trânsito,74,6.67
+TO,2017,Suicídio,59,5.32
+TO,2017,Mortes a esclarecer,49,4.42
+TO,2017,Suicídio ,49,4.42
+TO,2017,Morte por intervenção de Agente do Estado,46,4.15
+TO,2017,Morte de Agente do Estado,11,0.99
+TO,2018,Morte no trânsito,126,11.04
+TO,2018,Lesão corporal seguida de morte,96,8.41
+TO,2018,Feminicídio,87,7.62
+TO,2018,Morte por intervenção de Agente do Estado,77,6.75
+TO,2018,Homicídio doloso,71,6.22
+TO,2018,Mortes a esclarecer,62,5.43
+TO,2018,Suicídio,56,4.91
+TO,2018,Suicídio ,40,3.51
+TO,2018,Morte de Agente do Estado,11,0.96
+TO,2019,Homicídio doloso,123,11.03
+TO,2019,Morte no trânsito,86,7.71
+TO,2019,Lesão corporal seguida de morte,84,7.53
+TO,2019,Feminicídio,81,7.26
+TO,2019,Suicídio,71,6.37
+TO,2019,Suicídio ,68,6.1
+TO,2019,Mortes a esclarecer,59,5.29
+TO,2019,Morte por intervenção de Agente do Estado,52,4.66
+TO,2019,Morte de Agente do Estado,15,1.35
+TO,2020,Feminicídio,111,9.83
+TO,2020,Morte no trânsito,106,9.39
+TO,2020,Lesão corporal seguida de morte,95,8.41
+TO,2020,Homicídio doloso,80,07.09
+TO,2020,Morte por intervenção de Agente do Estado,69,6.11
+TO,2020,Suicídio ,50,4.43
+TO,2020,Mortes a esclarecer,45,3.99
+TO,2020,Suicídio,43,3.81
+TO,2020,Morte de Agente do Estado,15,1.33
+TO,2021,Lesão corporal seguida de morte,98,9.21
+TO,2021,Morte no trânsito,78,7.33
+TO,2021,Feminicídio,75,07.05
+TO,2021,Homicídio doloso,72,6.77
+TO,2021,Morte por intervenção de Agente do Estado,72,6.77
+TO,2021,Suicídio ,71,6.67
+TO,2021,Mortes a esclarecer,49,4.61
+TO,2021,Suicídio,40,3.76
+TO,2021,Morte de Agente do Estado,19,1.79
+TO,2022,Homicídio doloso,120,10.71
+TO,2022,Feminicídio,112,10.0
+TO,2022,Lesão corporal seguida de morte,87,7.77
+TO,2022,Morte no trânsito,86,7.68
+TO,2022,Morte por intervenção de Agente do Estado,70,6.25
+TO,2022,Suicídio ,62,5.54
+TO,2022,Suicídio,48,4.29
+TO,2022,Mortes a esclarecer,44,3.93
+TO,2022,Morte de Agente do Estado,11,0.98
+TO,2023,Homicídio doloso,124,10.96
+TO,2023,Morte no trânsito,118,10.43
+TO,2023,Feminicídio,93,8.22
+TO,2023,Lesão corporal seguida de morte,80,07.07
+TO,2023,Suicídio,52,4.6
+TO,2023,Suicídio ,50,4.42
+TO,2023,Mortes a esclarecer,47,4.16
+TO,2023,Morte por intervenção de Agente do Estado,47,4.16
+TO,2023,Morte de Agente do Estado,18,1.59
+TO,2024,Morte no trânsito,128,11.1
+TO,2024,Feminicídio,116,10.06
+TO,2024,Homicídio doloso,78,6.76
+TO,2024,Morte por intervenção de Agente do Estado,74,6.42
+TO,2024,Lesão corporal seguida de morte,62,5.38
+TO,2024,Suicídio ,59,5.12
+TO,2024,Mortes a esclarecer,56,4.86
+TO,2024,Suicídio,52,4.51
+TO,2024,Morte de Agente do Estado,15,1.3
