@@ -586,7 +586,7 @@ elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
                 st.dataframe(df_exibir, use_container_width=True, hide_index=True)
 
         except FileNotFoundError:
-            st.error("Arquivos de frequência não encontrados. Gere 'Frequencia_Frases_Evento_UF_Ano.csv' ou 'Frequencia_Frases_Evento.csv'.")
+            st.error("Arquivos de frequência não encontrados. Gere 'Frequencia_Frases_Evento.csv' ou 'Frequencia_Frases_Evento.csv'.")
         except Exception as e:
             st.error(f"Ocorreu um erro na análise de eventos (modo simples): {e}")
 
