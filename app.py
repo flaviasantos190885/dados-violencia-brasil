@@ -382,8 +382,8 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
             if st.button("Calcular Estimativa"):
                 df_filtrado_pred = df_completo.copy()
                 
-                # Aplica filtros opcionais
                 if uf_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
+                if cidade_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
                 if evento_selecionado != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
                 if arma_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
                 if faixa_selecionada != "Todos": df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
