@@ -491,48 +491,104 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
         st.markdown("Desenvolvido por Flavia 💙")
 
 # ==============================================================================
-# --- SEÇÃO 3: ANÁLISE DE PALAVRAS (VERSÃO COM CONTROLE FINO) ---
+# --- SEÇÃO 3: ANÁLISE DE PALAVRAS -----
 # ==============================================================================
+#   Análise de Palavras
 elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
 
     st.markdown("<h1 style='text-align: center; color: white;'>📜 Análise de Palavras - Tipos de Evento</h1>", unsafe_allow_html=True)
-    st.info("Frequência dos eventos exibidas em Nuvem de Palavras e através de uma tabela de percentual de cada evento.")
+    st.info("Frequência dos eventos exibidas em Nuvem de Palavras e através de uma tabela de percentual de cada evento com filtro por Estado (UF) e Ano quando disponível.")
 
     try:
-        df_frequencia_frase = pd.read_csv("Frequencia_Frases_Evento.csv")
+        # Tenta usar a versão com UF e Ano
+        df_freq = pd.read_csv("Frequencia_Frases_Evento.csv")
+        tem_cols_completas = all(c in df_freq.columns for c in ["uf", "Ano", "Frase", "Contagem", "Porcentagem"])
 
-        st.subheader("Frequência de Tipos de Evento")
-        
-        fator_de_escala = 0.5
-        
-        dicionario_frases_escalonado = dict(zip(
-            df_frequencia_frase['Frase'], 
-            df_frequencia_frase['Contagem'] ** fator_de_escala
-        ))
-        
-        if not dicionario_frases_escalonado:
-            st.warning("Não há dados de frequência para gerar a nuvem de palavras de eventos.")
+        if tem_cols_completas:
+            st.subheader("Frequência de Tipos de Evento")
+
+            # UF
+            estados = sorted(df_freq["uf"].dropna().unique())
+            uf_escolhida = st.selectbox("Selecione o Estado (UF)", ["Todos"] + estados, index=0)
+
+            # Ano (depende da UF)
+            if uf_escolhida == "Todos":
+                anos_disponiveis = sorted(df_freq["Ano"].dropna().unique())
+            else:
+                anos_disponiveis = sorted(df_freq.loc[df_freq["uf"] == uf_escolhida, "Ano"].dropna().unique())
+            ano_escolhido = st.selectbox("Selecione o Ano", ["Todos"] + [int(a) for a in anos_disponiveis], index=0)
+
+            # Filtragem
+            df_filtrado = df_freq.copy()
+            if uf_escolhida != "Todos":
+                df_filtrado = df_filtrado[df_filtrado["uf"] == uf_escolhida]
+            if ano_escolhido != "Todos":
+                df_filtrado = df_filtrado[df_filtrado["Ano"] == ano_escolhido]
+
+            # Nuvem de palavras
+            fator_de_escala = 0.5
+            dicionario = dict(zip(df_filtrado["Frase"], (df_filtrado["Contagem"] ** fator_de_escala)))
+
+            if not dicionario:
+                st.warning("Nenhum dado disponível para os filtros selecionados.")
+            else:
+                wordcloud = WordCloud(width=800, height=400, background_color="black", colormap="hot", collocations=False
+                                      ).generate_from_frequencies(dicionario)
+                fig, ax = plt.subplots(figsize=(7, 5))
+                plt.style.use("dark_background")
+                ax.imshow(wordcloud, interpolation="bilinear")
+                ax.axis("off")
+                col1, col2, col3 = st.columns([1, 6, 1])
+                with col2:
+                    st.pyplot(fig)
+
+            with st.expander("Tabela de Frequência"):
+                df_tab = df_filtrado.copy()
+                df_tab["Porcentagem"] = df_tab["Porcentagem"].map("{:.2f}%".format)
+                st.dataframe(df_tab[["uf", "Ano", "Frase", "Contagem", "Porcentagem"]],
+                             use_container_width=True, hide_index=True)
+
         else:
-            wordcloud_frases = WordCloud(
-                width=800, height=400, background_color="black", 
-                colormap="hot", collocations=False
-            ).generate_from_frequencies(dicionario_frases_escalonado)
-
-            fig_frases, ax_frases = plt.subplots(figsize=(7, 5))
-            plt.style.use("dark_background")
-            ax_frases.imshow(wordcloud_frases, interpolation="bilinear")
-            ax_frases.axis("off")
-
-            col1, col2, col3 = st.columns([1, 6, 1])
-            with col2:
-                st.pyplot(fig_frases)
-
-        with st.expander("Ver Tabela de Frequência Completa de Eventos"):
-            df_frequencia_frase['Porcentagem'] = df_frequencia_frase['Porcentagem'].map('{:.2f}%'.format)
-            st.dataframe(df_frequencia_frase, use_container_width=True, hide_index=True)
+            # Fallback para o CSV antigo (sem UF/Ano)
+            raise FileNotFoundError("Arquivo com UF/Ano não tem as colunas esperadas.")
 
     except FileNotFoundError:
-        st.error("Arquivo 'Frequencia_Frases_Evento.csv' não encontrado.")
+        # === MODO ANTIGO (SEM FILTROS) ===
+        try:
+            df_frequencia_frase = pd.read_csv("Frequencia_Frases_Evento.csv")
+
+            st.subheader("Frequência de Tipos de Evento (modo simples)")
+
+            fator_de_escala = 0.5
+            dicionario_frases_escalonado = dict(zip(
+                df_frequencia_frase['Frase'],
+                df_frequencia_frase['Contagem'] ** fator_de_escala
+            ))
+
+            if not dicionario_frases_escalonado:
+                st.warning("Não há dados de frequência para gerar a nuvem de palavras de eventos.")
+            else:
+                wordcloud_frases = WordCloud(width=800, height=400, background_color="black",
+                                             colormap="hot", collocations=False
+                                             ).generate_from_frequencies(dicionario_frases_escalonado)
+                fig_frases, ax_frases = plt.subplots(figsize=(7, 5))
+                plt.style.use("dark_background")
+                ax_frases.imshow(wordcloud_frases, interpolation="bilinear")
+                ax_frases.axis("off")
+                col1, col2, col3 = st.columns([1, 6, 1])
+                with col2:
+                    st.pyplot(fig_frases)
+
+            with st.expander("Ver Tabela de Frequência Completa de Eventos"):
+                df_exibir = df_frequencia_frase.copy()
+                df_exibir['Porcentagem'] = df_exibir['Porcentagem'].map('{:.2f}%'.format)
+                st.dataframe(df_exibir, use_container_width=True, hide_index=True)
+
+        except FileNotFoundError:
+            st.error("Arquivos de frequência não encontrados. Gere 'Frequencia_Frases_Evento_UF_Ano.csv' ou 'Frequencia_Frases_Evento.csv'.")
+        except Exception as e:
+            st.error(f"Ocorreu um erro na análise de eventos (modo simples): {e}")
+
     except Exception as e:
         st.error(f"Ocorreu um erro na análise de eventos: {e}")
 
