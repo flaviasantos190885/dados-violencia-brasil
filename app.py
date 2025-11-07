@@ -350,83 +350,111 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
         st.stop()
         
     # Botão para abrir o popup (dialog) de previsão
-        # BOTÃO PARA CALCULAR DENTRO DO POPUP
-        if st.button("Calcular Estimativa"):
-            df_filtrado_pred = df_completo.copy()
+    if st.button("🚀 Iniciar Nova Previsão", type="primary"):
+        
+        # A sintaxe correta do st.dialog usa um decorador em uma função
+        @st.dialog("Parâmetros da Previsão", width="large")
+        def prediction_dialog():
+            st.markdown("#### Preencha os campos para gerar a estimativa:")
+            
+            # INPUTS DENTRO DO POPUP
+            ano_desejado = st.number_input("Digite o ANO para a previsão (Obrigatório)", min_value=df_completo['Ano'].max() + 1, value=df_completo['Ano'].max() + 1, step=1)
+            
+            col_filtros1, col_filtros2 = st.columns(2)
+            with col_filtros1:
+                uf_selecionada = st.selectbox("Filtrar por UF (Opcional)", ["Todos"] + sorted(df_completo['uf'].unique()))
+                
+                if uf_selecionada != "Todos":
+                    cidades_disponiveis = sorted(df_completo[df_completo['uf'] == uf_selecionada]['municipio'].unique())
+                    cidade_selecionada = st.selectbox("Filtrar por Cidade (Opcional)", ["Todas"] + cidades_disponiveis)
+                else:
+                    cidade_selecionada = "Todas"
+                    
+                arma_selecionada = st.selectbox("Filtrar por Arma (Opcional)", ["Todos"] + sorted(df_completo['arma'].unique()))
 
-            # -----------------------------
-            # APLICA TODOS OS FILTROS
-            # -----------------------------
-            if uf_selecionada != "Todos":
-                df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
+                
 
-            # ✅ Filtro por cidade (FALTAVA)
-            if (uf_selecionada != "Todos") and (cidade_selecionada != "Todas"):
-                df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
+            with col_filtros2:
+                evento_selecionado = st.selectbox("Filtrar por Evento (Opcional)", ["Todos"] + sorted(df_completo['evento'].unique()))
+                faixa_selecionada = st.selectbox("Filtrar por Faixa Etária (Opcional)", ["Todos"] + sorted(df_completo['faixa_etaria'].unique()))
 
-            if evento_selecionado != "Todos":
-                df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
-            if arma_selecionada != "Todos":
-                df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
-            if faixa_selecionada != "Todos":
-                df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
+            # BOTÃO PARA CALCULAR DENTRO DO POPUP
+            # BOTÃO PARA CALCULAR DENTRO DO POPUP
+            if st.button("Calcular Estimativa"):
+                df_filtrado_pred = df_completo.copy()
 
-            # Ordena por data para garantir que a janela pegue os eventos mais recentes do cenário filtrado
-            df_filtrado_pred = df_filtrado_pred.sort_values('data_referencia')
+                # -----------------------------
+                # APLICA TODOS OS FILTROS
+                # -----------------------------
+                if uf_selecionada != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['uf'] == uf_selecionada]
 
-            janela = 10
-            if len(df_filtrado_pred) < janela:
-                st.error(
-                    f"Dados históricos insuficientes para o cenário selecionado "
-                    f"({len(df_filtrado_pred)} eventos). Tente filtros menos específicos."
-                )
-            else:
-                with st.spinner("Calculando... O modelo está processando os dados."):
-                    # média de eventos/ano agora respeitando TODOS os filtros (incluindo a cidade)
-                    num_anos_historico = df_filtrado_pred['Ano'].nunique()
-                    media_eventos_ano = (
-                        len(df_filtrado_pred) / num_anos_historico if num_anos_historico > 0 else 0
+                # ✅ Filtro por cidade (FALTAVA)
+                if (uf_selecionada != "Todos") and (cidade_selecionada != "Todas"):
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['municipio'] == cidade_selecionada]
+
+                if evento_selecionado != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['evento'] == evento_selecionado]
+                if arma_selecionada != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['arma'] == arma_selecionada]
+                if faixa_selecionada != "Todos":
+                    df_filtrado_pred = df_filtrado_pred[df_filtrado_pred['faixa_etaria'] == faixa_selecionada]
+
+                # Ordena por data para garantir que a janela pegue os eventos mais recentes do cenário filtrado
+                df_filtrado_pred = df_filtrado_pred.sort_values('data_referencia')
+
+                janela = 10
+                if len(df_filtrado_pred) < janela:
+                    st.error(
+                        f"Dados históricos insuficientes para o cenário selecionado "
+                        f"({len(df_filtrado_pred)} eventos). Tente filtros menos específicos."
                     )
+                else:
+                    with st.spinner("Calculando... O modelo está processando os dados."):
+                        # média de eventos/ano agora respeitando TODOS os filtros (incluindo a cidade)
+                        num_anos_historico = df_filtrado_pred['Ano'].nunique()
+                        media_eventos_ano = (
+                            len(df_filtrado_pred) / num_anos_historico if num_anos_historico > 0 else 0
+                        )
 
-                    # monta sequência de entrada (janela-1 últimos + template do futuro)
-                    sequencia_base = df_filtrado_pred.tail(janela - 1).copy()
-                    evento_futuro_template = df_filtrado_pred.tail(1).copy()
-                    evento_futuro_template['Ano'] = ano_desejado
+                        # monta sequência de entrada (janela-1 últimos + template do futuro)
+                        sequencia_base = df_filtrado_pred.tail(janela - 1).copy()
+                        evento_futuro_template = df_filtrado_pred.tail(1).copy()
+                        evento_futuro_template['Ano'] = ano_desejado
 
-                    sequencia_final_df = pd.concat(
-                        [sequencia_base, evento_futuro_template], ignore_index=True
-                    )
+                        sequencia_final_df = pd.concat(
+                            [sequencia_base, evento_futuro_template], ignore_index=True
+                        )
 
-                    # features para o preprocessor/modelo
-                    X_para_prever = sequencia_final_df.drop(
-                        columns=['total_vitima', 'data_referencia', 'municipio'], errors='ignore'
-                    )
+                        # features para o preprocessor/modelo
+                        X_para_prever = sequencia_final_df.drop(
+                            columns=['total_vitima', 'data_referencia', 'municipio'], errors='ignore'
+                        )
 
-                    # garante dtype categórico nas colunas que o preprocessor espera
-                    for col in X_para_prever.select_dtypes(include=['object']).columns:
-                        if hasattr(preprocessor, "feature_names_in_") and col in preprocessor.feature_names_in_:
-                            X_para_prever[col] = X_para_prever[col].astype('category')
+                        # garante dtype categórico nas colunas que o preprocessor espera
+                        for col in X_para_prever.select_dtypes(include=['object']).columns:
+                            if hasattr(preprocessor, "feature_names_in_") and col in preprocessor.feature_names_in_:
+                                X_para_prever[col] = X_para_prever[col].astype('category')
 
-                    X_processado = preprocessor.transform(X_para_prever)
-                    X_final = np.reshape(X_processado, (1, X_processado.shape[0], X_processado.shape[1]))
+                        X_processado = preprocessor.transform(X_para_prever)
+                        X_final = np.reshape(X_processado, (1, X_processado.shape[0], X_processado.shape[1]))
 
-                    previsao_evento_normalizada = model.predict(X_final)
-                    previsao_evento_real = y_scaler.inverse_transform(previsao_evento_normalizada)
-                    vitimas_por_evento = np.ceil(previsao_evento_real[0][0])
+                        previsao_evento_normalizada = model.predict(X_final)
+                        previsao_evento_real = y_scaler.inverse_transform(previsao_evento_normalizada)
+                        vitimas_por_evento = np.ceil(previsao_evento_real[0][0])
 
-                    previsao_anual_total = vitimas_por_evento * media_eventos_ano
+                        previsao_anual_total = vitimas_por_evento * media_eventos_ano
 
-                    # Ajuste de +5% por ano além do próximo ano disponível
-                    extra_years = max(0, int(ano_desejado) - (df_completo['Ano'].max() + 1))
-                    previsao_ajustada = int(round(previsao_anual_total * (1 + 0.05 * extra_years)))
+                        # Ajuste de +5% por ano além do próximo ano disponível
+                        extra_years = max(0, int(ano_desejado) - (df_completo['Ano'].max() + 1))
+                        previsao_ajustada = int(round(previsao_anual_total * (1 + 0.05 * extra_years)))
 
-                    st.success("Previsão Concluída!")
-                    st.metric(
-                        label=f"Estimativa de Vítimas para {ano_desejado}",
-                        value=f"{previsao_ajustada}",
-                        delta_color="off"
-                    )
-
+                        st.success("Previsão Concluída!")
+                        st.metric(
+                            label=f"Estimativa de Vítimas para {ano_desejado}",
+                            value=f"{previsao_ajustada}",
+                            delta_color="off"
+                        )
 
                 # st.caption(f"Cálculo baseado em uma previsão de {int(vitimas_por_evento)} vítimas por evento, multiplicado pela média de {media_eventos_ano:.1f} eventos/ano para o cenário escolhido.")
         
