@@ -327,6 +327,24 @@ if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
 # ==============================================================================
 elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
     
+    # --- Capitais por UF (IBGE) ---
+    CAPITAIS_POR_UF = {
+        "AC": "Rio Branco", "AL": "Maceió", "AP": "Macapá", "AM": "Manaus",
+        "BA": "Salvador", "CE": "Fortaleza", "DF": "Brasília", "ES": "Vitória",
+        "GO": "Goiânia", "MA": "São Luís", "MT": "Cuiabá", "MS": "Campo Grande",
+        "MG": "Belo Horizonte", "PA": "Belém", "PB": "João Pessoa", "PR": "Curitiba",
+        "PE": "Recife", "PI": "Teresina", "RJ": "Rio de Janeiro", "RN": "Natal",
+        "RS": "Porto Alegre", "RO": "Porto Velho", "RR": "Boa Vista", "SC": "Florianópolis",
+        "SE": "Aracaju", "SP": "São Paulo", "TO": "Palmas"
+    }
+
+    def eh_capital(uf: str, municipio: str) -> bool:
+        if not uf or not municipio:
+            return False
+        cap = CAPITAIS_POR_UF.get(uf)
+        return cap is not None and municipio.casefold().strip() == cap.casefold().strip()
+
+    
     st.markdown("<h1 style='text-align: center; color: white;'>🧠 Módulo de Previsão Anual</h1>", unsafe_allow_html=True)
     st.markdown("#### Como Funciona?")
     st.info("""
@@ -448,6 +466,13 @@ elif st.session_state.pagina_selecionada == "🧠 Módulo de Previsão":
                         # Ajuste de +5% por ano além do próximo ano disponível
                         extra_years = max(0, int(ano_desejado) - (df_completo['Ano'].max() + 1))
                         previsao_ajustada = int(round(previsao_anual_total * (1 + 0.05 * extra_years)))
+                        
+                        # --- regra: se a cidade escolhida for capital, soma 2000 ao resultado ---
+                        if (uf_selecionada != "Todos") and (cidade_selecionada != "Todas"):
+                            if eh_capital(uf_selecionada, cidade_selecionada):
+                                previsao_ajustada = int(previsao_ajustada + 2000)
+                                st.caption("Ajuste aplicado: cidade capital (+2000).")
+
 
                         st.success("Previsão Concluída!")
                         st.metric(
