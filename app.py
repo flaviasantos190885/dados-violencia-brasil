@@ -58,34 +58,32 @@ with st.sidebar:
     st.markdown("""
     <style>
         /* --- NOVA REGRA PARA DIMINUIR OS ESPAÇOS --- */
-        /* Altera o container principal da barra lateral para ter um 'gap' (espaço) menor */
-        [data-testid="stSidebar"] > div:first-child > div:first-child > div {
-             gap: 0.05rem; /* O padrão é 1rem. Ajuste 0.25rem ou 0.5rem como preferir */
+        /* Alvo: O container de blocos dentro da barra lateral */
+        /* Esta regra força o espaço entre cada item para 0.5rem (8px) */
+        [data-testid="stSidebarUserContent"] > div {
+             gap: 0.5rem; /* O padrão é 1rem. Tente 0.5rem ou 0.25rem */
         }
         /* --- FIM DA NOVA REGRA --- */
-        /* Espaçamento para o menu radio */
+
+        /* Espaçamento para o menu radio (seu código original) */
         div[role="radiogroup"] > div {
             margin-bottom: 15px;
         }
 
-        /* --- CSS PARA OS BOTÕES DE EMOJI --- */
+        /* --- CSS PARA OS BOTÕES DE EMOJI (seu código original) --- */
         [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] button {
             background-color: transparent; 
-            border: none;                
-            padding: 0 !important;        
-            font-size: 24px;              
-            color: white !important;      
-            text-decoration: none;        
+            border: none;
+            padding: 0 !important;
+            font-size: 24px;
+            color: white !important;
+            text-decoration: none;
             transition: transform 0.1s ease-in-out; 
         }
-
-        /* Efeito ao passar o mouse */
         [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] button:hover {
-            transform: scale(1.2); /* Aumenta um pouco o tamanho */
+            transform: scale(1.2);
             color: white;
         }
-        
-        /* Remove o contorno azul ao clicar */
         [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] button:focus {
             box-shadow: none !important;
             outline: none !important;
@@ -93,24 +91,25 @@ with st.sidebar:
     </style>
     """, unsafe_allow_html=True)
 
+    # --- O RESTO DO SEU MENU (sem alterações) ---
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
-        if st.button("🏠", use_container_width=True):
+        if st.button("🏠", use_container_width=True, help="Página Inicial (Dashboard)"):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col2:
-        if st.button("📊", use_container_width=True):
+        if st.button("📊", use_container_width=True, help="Dashboard de Análise"):
             st.session_state.pagina_selecionada = "📊 Dashboard de Análise"
     with col3:
-        if st.button("🧠", use_container_width=True):
+        if st.button("🧠", use_container_width=True, help="Módulo de Previsão"):
             st.session_state.pagina_selecionada = "🧠 Módulo de Previsão"
     with col4:
-        if st.button("📜", use_container_width=True):
+        if st.button("📜", use_container_width=True, help="Análise de Palavras"):
             st.session_state.pagina_selecionada = "📜 Análise de Palavras"
     with col5:
-        if st.button("⚙️", use_container_width=True):
+        if st.button("⚙️", use_container_width=True, help="Detalhes Técnicos"):
             st.session_state.pagina_selecionada = "⚙️ Detalhes Técnicos"
     with col6:
-        if st.button("ℹ️", use_container_width=True):
+        if st.button("ℹ️", use_container_width=True, help="Sobre o Projeto"):
             st.session_state.pagina_selecionada = "ℹ️ Sobre o Projeto"
     
     st.markdown("---") 
@@ -128,12 +127,11 @@ with st.sidebar:
 
     st.markdown("---")
     
-    st.info("Análise visual dos dados de violência e um módulo para estimativas futuras. ")
+    st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. ")
     
+    # --- TEXTO FINAL SEM OS <br> EXTRAS ---
     st.markdown("""
     <div style="font-size: 12px; color: #D3D3D3; line-height: 1.6;">
-        <br>
-        <br>
         Trabalho de Conclusão de Curso (TCC) 
         <br>
         Gestão da Tecnologia da Informação (GTI)
