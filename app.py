@@ -57,6 +57,12 @@ with st.sidebar:
     
     st.markdown("""
     <style>
+        /* --- NOVA REGRA PARA DIMINUIR OS ESPAÇOS --- */
+        /* Altera o container principal da barra lateral para ter um 'gap' (espaço) menor */
+        [data-testid="stSidebar"] > div:first-child > div:first-child > div {
+             gap: 0.25rem; /* O padrão é 1rem. Ajuste 0.25rem ou 0.5rem como preferir */
+        }
+        /* --- FIM DA NOVA REGRA --- */
         /* Espaçamento para o menu radio */
         div[role="radiogroup"] > div {
             margin-bottom: 15px;
