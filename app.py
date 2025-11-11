@@ -127,7 +127,7 @@ with st.sidebar:
 
     st.markdown("---")
     
-    st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. ")
+    st.info("Análise visual dos dados de violência e um módulo para estimativas futuras. ")
     
     # --- TEXTO FINAL SEM OS <br> EXTRAS ---
     st.markdown("""
