@@ -61,7 +61,7 @@ with st.sidebar:
         /* Alvo: O container de blocos dentro da barra lateral */
         /* Esta regra força o espaço entre cada item para 0.5rem (8px) */
         [data-testid="stSidebarUserContent"] > div {
-             gap: 0.5rem; /* O padrão é 1rem. Tente 0.5rem ou 0.25rem */
+             gap: 0.25rem; /* O padrão é 1rem. Tente 0.5rem ou 0.25rem */
         }
         /* --- FIM DA NOVA REGRA --- */
 
