@@ -595,6 +595,7 @@ elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
                 plt.style.use("dark_background")
                 ax_frases.imshow(wordcloud_frases, interpolation="bilinear")
                 ax_frases.axis("off")
+                fig_frases.tight_layout(pad=0)
                 col1, col2, col3 = st.columns([1, 6, 1])
                 with col2:
                     st.pyplot(fig_frases)
