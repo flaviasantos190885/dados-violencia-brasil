@@ -60,7 +60,7 @@ with st.sidebar:
         /* --- CSS PARA O ESPAÇO ENTRE OS EMOJIS E A LINHA --- */
         /* Alvo: O container dos botões de emoji */
         [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] {
-            margin-bottom: -0.5rem; /* Reduz a margem de baixo, "puxando" a linha para cima */
+            margin-bottom: -0.1rem; /* Reduz a margem de baixo, "puxando" a linha para cima */
         }
         /* --- FIM DA NOVA REGRA --- */
 
