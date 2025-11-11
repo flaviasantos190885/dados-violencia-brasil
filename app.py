@@ -57,11 +57,10 @@ with st.sidebar:
     
     st.markdown("""
     <style>
-        /* --- NOVA REGRA PARA DIMINUIR OS ESPAÇOS --- */
-        /* Alvo: O container de blocos dentro da barra lateral */
-        /* Esta regra força o espaço entre cada item para 0.5rem (8px) */
-        [data-testid="stSidebarUserContent"] > div {
-             gap: 0.25rem; /* O padrão é 1rem. Tente 0.5rem ou 0.25rem */
+        /* --- CSS PARA O ESPAÇO ENTRE OS EMOJIS E A LINHA --- */
+        /* Alvo: O container dos botões de emoji */
+        [data-testid="stSidebar"] [data-testid="stHorizontalBlock"] {
+            margin-bottom: -0.5rem; /* Reduz a margem de baixo, "puxando" a linha para cima */
         }
         /* --- FIM DA NOVA REGRA --- */
 
@@ -127,9 +126,9 @@ with st.sidebar:
 
     st.markdown("---")
     
-    st.info("Análise visual dos dados de violência e um módulo para estimativas futuras. ")
+    st.info("Este painel oferece uma análise visual dos dados de violência e um módulo para estimativas futuras. ")
     
-    # --- TEXTO FINAL SEM OS <br> EXTRAS ---
+    # Texto final sem os <br> extras
     st.markdown("""
     <div style="font-size: 12px; color: #D3D3D3; line-height: 1.6;">
         Trabalho de Conclusão de Curso (TCC) 
@@ -595,7 +594,6 @@ elif st.session_state.pagina_selecionada == "📜 Análise de Palavras":
                 plt.style.use("dark_background")
                 ax_frases.imshow(wordcloud_frases, interpolation="bilinear")
                 ax_frases.axis("off")
-                fig_frases.tight_layout(pad=0)
                 col1, col2, col3 = st.columns([1, 6, 1])
                 with col2:
                     st.pyplot(fig_frases)
