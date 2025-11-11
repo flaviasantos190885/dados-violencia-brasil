@@ -139,11 +139,12 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     
-#   Dashboard de Análise
+#   Dashboard de Análise
 if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
 
     df = df_completo.copy()
-    df['Ano'] = df['data_referencia'].dt.year
+    # Adicionado 'Ano' aqui para garantir que existe
+    df['Ano'] = df['data_referencia'].dt.year 
     df['Mes'] = df['data_referencia'].dt.month_name()
 
     meses_pt = {
@@ -157,7 +158,7 @@ if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
     
     st.info("Exploração detalhada dos dados sobre a violência no Brasil. Utilize os filtros de Ano, Estado e Tipo de Evento para visualizar os gráficos e a tabela com informações específicas. Dica: ao selecionar um único estado, o filtro por cidade será habilitado para uma análise ainda mais granular.")
 
-    # Filtros para seleção de previsão
+    # Filtros para seleção
     anos = sorted(df['Ano'].unique())
     todos_estados = sorted(df['uf'].unique())
     eventos = sorted(df['evento'].unique())
@@ -184,12 +185,18 @@ if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
         estados_filtrados = estado_selecionado
 
     if len(estados_filtrados) == 1:
-        cidades = df[df['uf'] == estados_filtrados[0]]['municipio'].sort_values().unique()
-        cidade_input = st.selectbox("Selecione a Cidade", ["Todas"] + list(cidades), index=0, key="cidade")
+        # Corrigido para garantir que 'municipio' exista antes de filtrar
+        cidades_df = df[df['uf'] == estados_filtrados[0]]
+        if not cidades_df.empty:
+            cidades = cidades_df['municipio'].sort_values().unique()
+            cidade_input = st.selectbox("Selecione a Cidade", ["Todas"] + list(cidades), index=0, key="cidade")
+        else:
+            cidade_input = "Todas" # Se o estado não tiver cidades no df, não quebra
     else:
         st.selectbox("Selecione a Cidade", ["Todas"], index=0, disabled=True, key="cidade_disabled")
         cidade_input = "Todas"
 
+    # Aplica os filtros
     df_filtrado = df[df['Ano'] == ano_selecionado]
     df_filtrado = df_filtrado[df_filtrado['uf'].isin(estados_filtrados)]
 
@@ -199,9 +206,8 @@ if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
     if evento_input != "Todos":
         df_filtrado = df_filtrado[df_filtrado['evento'] == evento_input]
 
-    #   Total de vítimas pelo dataframe já filtrado
+    #   Total de vítimas (funciona mesmo se estiver vazio)
     total_vitimas = df_filtrado['total_vitima'].sum()
-    #   Formata o número para ter separador de milhar (ex: 12.345)
     total_formatado = f"{total_vitimas:,}".replace(',', '.')
 
     if evento_input == "Todos":
@@ -210,116 +216,125 @@ if st.session_state.pagina_selecionada == "📊 Dashboard de Análise":
         titulo_base = f"{evento_input} - {ano_selecionado}"
 
     titulo_final = f"{titulo_base} (Total de Vítimas: {total_formatado})"
-
     st.markdown(f"<h2 style='font-size: 32px; color: white; font-weight: bold !important;'>{titulo_final}</h2>", unsafe_allow_html=True)
 
-    #   Gráfico de Barras
-    st.markdown("<h3 style='font-size: 22px; color: white;'>Total de Vítimas por Estado</h3>", unsafe_allow_html=True)
-    df_barra = df_filtrado.groupby('uf')['total_vitima'].sum().reset_index()
-
-    if len(estados_filtrados) == 1:
-        total_estado = df_barra['total_vitima'].iloc[0]
-        df_barra['uf'] = df_barra['uf'] + f' (Total: {total_estado})'
-
-    fig_barra = px.bar(
-        df_barra,
-        x='uf',
-        y='total_vitima',
-        text='total_vitima',
-        labels={'uf': 'Estado', 'total_vitima': 'Total de Vítimas'},
-        color='uf'
-    )
-    fig_barra.update_traces(width=0.6)
-    st.plotly_chart(fig_barra)
-
-    #   Gráfico de Linhas
-    st.subheader("Evolução Mensal dos Casos por Estado")
-
-    df_linha = df_filtrado.groupby(['uf', 'Mes'])['total_vitima'].sum().reset_index()
-    ordem_meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
-                'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
-    df_linha['Mes'] = pd.Categorical(df_linha['Mes'], categories=ordem_meses, ordered=True)
-    df_linha = df_linha.sort_values(['uf', 'Mes'])
-
-    fig_linha = px.line(
-        df_linha,
-        x='Mes',
-        y='total_vitima',
-        color='uf',
-        markers=True,
-        labels={
-            'Mes': 'Mês',
-            'total_vitima': 'Total de Vítimas',
-            'uf': 'Estado'
-        }
-    )
-
-    fig_linha.update_traces(textposition='top center')
-    st.plotly_chart(fig_linha)
-
-
-    #   Gráfico de Pizza
-    st.subheader("Distribuição de Tipos de Armas por Faixa Etária")
-    col4, col5 = st.columns(2)
-
-    with col4:
-        faixa_etaria_input = st.selectbox(
-            "Selecione a Faixa Etária",
-            options=["Todas"] + sorted(df_filtrado['faixa_etaria'].dropna().unique().tolist()),
-            key="faixa"
-        )
-
-    with col5:
-        tipo_arma_input = st.selectbox(
-            "Selecione o Tipo de Arma",
-            options=["Todas"] + sorted(df_filtrado['arma'].dropna().unique().tolist()),
-            key="arma"
-        )
-
-    df_pizza = df_filtrado.copy()
-    if faixa_etaria_input != "Todas":
-        df_pizza = df_pizza[df_pizza['faixa_etaria'] == faixa_etaria_input]
-    if tipo_arma_input != "Todas":
-        df_pizza = df_pizza[df_pizza['arma'] == tipo_arma_input]
-
-    dados_pizza = df_pizza.groupby('arma').size().reset_index(name='quantidade')
-    dados_pizza = dados_pizza.rename(columns={'arma': 'Tipo de Arma'})
-
-    if not dados_pizza.empty:
-        fig_pizza = px.pie(
-            dados_pizza,
-            names='Tipo de Arma',
-            values='quantidade',
-            title="Distribuição de Armas (Filtrada)",
-            hole=0.4
-        )
-        st.plotly_chart(fig_pizza)
+    # Verifica se o dataframe filtrado está vazio ANTES de tentar desenhar os gráficos
+    
+    if df_filtrado.empty:
+        st.warning("Nenhum dado encontrado para os filtros selecionados. Por favor, tente uma combinação diferente.")
     else:
-        st.warning("Nenhum dado disponível para os filtros selecionados.")
+        # Se não estiver vazio, desenha todos os gráficos e tabelas
+        
+        #   Gráfico de Barras
+        st.markdown("<h3 style='font-size: 22px; color: white;'>Total de Vítimas por Estado</h3>", unsafe_allow_html=True)
+        df_barra = df_filtrado.groupby('uf')['total_vitima'].sum().reset_index()
 
-    #   Tabela
-    colunas_para_mostrar = df_filtrado.drop(columns=['Ano'])
-    colunas_para_mostrar = colunas_para_mostrar[
-        (df_filtrado['feminino'] >= 1) |
-        (df_filtrado['masculino'] >= 1) |
-        (df_filtrado['nao_informado'] >= 1)
-    ].copy()
+        if len(estados_filtrados) == 1 and not df_barra.empty:
+            total_estado = df_barra['total_vitima'].iloc[0]
+            df_barra['uf'] = df_barra['uf'] + f' (Total: {total_estado})'
 
-    colunas_para_mostrar['data_referencia'] = pd.to_datetime(colunas_para_mostrar['data_referencia']).dt.strftime('%d-%m-%Y')
+        fig_barra = px.bar(
+            df_barra,
+            x='uf',
+            y='total_vitima',
+            text='total_vitima',
+            labels={'uf': 'Estado', 'total_vitima': 'Total de Vítimas'},
+            color='uf'
+        )
+        fig_barra.update_traces(width=0.6)
+        st.plotly_chart(fig_barra, use_container_width=True) # Adicionado use_container_width
 
-    colunas_numericas = colunas_para_mostrar.select_dtypes(include='number')
-    colunas_validas = colunas_numericas.columns[colunas_numericas.sum() > 0]
+        #   Gráfico de Linhas
+        st.subheader("Evolução Mensal dos Casos por Estado")
+        df_linha = df_filtrado.groupby(['uf', 'Mes'])['total_vitima'].sum().reset_index()
+        ordem_meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                       'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+        df_linha['Mes'] = pd.Categorical(df_linha['Mes'], categories=ordem_meses, ordered=True)
+        df_linha = df_linha.sort_values(['uf', 'Mes'])
 
-    colunas_para_mostrar = pd.concat([
-        colunas_para_mostrar.select_dtypes(exclude='number'),
-        colunas_para_mostrar[colunas_validas]
-    ], axis=1)
+        fig_linha = px.line(
+            df_linha,
+            x='Mes',
+            y='total_vitima',
+            color='uf',
+            markers=True,
+            labels={
+                'Mes': 'Mês',
+                'total_vitima': 'Total de Vítimas',
+                'uf': 'Estado'
+            }
+        )
+        fig_linha.update_traces(textposition='top center')
+        st.plotly_chart(fig_linha, use_container_width=True) # Adicionado use_container_width
 
-    colunas_para_mostrar.reset_index(drop=True, inplace=True)
-    st.subheader("Dados Filtrados")
-    st.dataframe(colunas_para_mostrar)
+        #   Gráfico de Pizza
+        st.subheader("Distribuição de Tipos de Armas por Faixa Etária")
+        col4, col5 = st.columns(2)
 
-    #   Rodapé
+        with col4:
+            faixa_etaria_input = st.selectbox(
+                "Selecione a Faixa Etária",
+                options=["Todas"] + sorted(df_filtrado['faixa_etaria'].dropna().unique().tolist()),
+                key="faixa"
+            )
+
+        with col5:
+            tipo_arma_input = st.selectbox(
+                "Selecione o Tipo de Arma",
+                options=["Todas"] + sorted(df_filtrado['arma'].dropna().unique().tolist()),
+                key="arma"
+            )
+
+        df_pizza = df_filtrado.copy()
+        if faixa_etaria_input != "Todas":
+            df_pizza = df_pizza[df_pizza['faixa_etaria'] == faixa_etaria_input]
+        if tipo_arma_input != "Todas":
+            df_pizza = df_pizza[df_pizza['arma'] == tipo_arma_input]
+
+        dados_pizza = df_pizza.groupby('arma').size().reset_index(name='quantidade')
+        dados_pizza = dados_pizza.rename(columns={'arma': 'Tipo de Arma'})
+
+        if not dados_pizza.empty:
+            fig_pizza = px.pie(
+                dados_pizza,
+                names='Tipo de Arma',
+                values='quantidade',
+                title="Distribuição de Armas (Filtrada)",
+                hole=0.4
+            )
+            st.plotly_chart(fig_pizza, use_container_width=True) # Adicionado use_container_width
+        else:
+            st.warning("Nenhum dado disponível para os filtros de Arma/Faixa Etária selecionados.")
+
+        #   Tabela
+        st.subheader("Dados Filtrados")
+        # Criando a cópia de forma segura
+        colunas_para_mostrar = df_filtrado.loc[
+            (df_filtrado['feminino'] >= 1) |
+            (df_filtrado['masculino'] >= 1) |
+            (df_filtrado['nao_informado'] >= 1)
+        ].copy()
+        
+        colunas_para_mostrar = colunas_para_mostrar.drop(columns=['Ano'], errors='ignore')
+
+        if not colunas_para_mostrar.empty:
+            colunas_para_mostrar['data_referencia'] = pd.to_datetime(colunas_para_mostrar['data_referencia']).dt.strftime('%d-%m-%Y')
+
+            colunas_numericas = colunas_para_mostrar.select_dtypes(include='number')
+            colunas_validas = colunas_numericas.columns[colunas_numericas.sum() > 0]
+
+            colunas_para_mostrar = pd.concat([
+                colunas_para_mostrar.select_dtypes(exclude='number'),
+                colunas_para_mostrar[colunas_validas]
+            ], axis=1)
+
+            colunas_para_mostrar.reset_index(drop=True, inplace=True)
+            st.dataframe(colunas_para_mostrar)
+        else:
+            st.info("Nenhum registro de vítima (feminino, masculino ou não informado) encontrado para esta seleção.")
+            
+
+    #   Rodapé
     st.markdown("---")
     st.markdown("Desenvolvido por Flavia 💙")
 
