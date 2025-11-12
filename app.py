@@ -683,7 +683,7 @@ elif st.session_state.pagina_selecionada == "⚙️ Detalhes Técnicos":
     Qualquer atualização enviada (`git push`) do ambiente de desenvolvimento (VS Code) para o GitHub é automaticamente detectada pelo Streamlit Cloud, que atualiza a aplicação na web de forma síncrona. Isso garante que a versão online esteja sempre refletindo o código mais recente.
     
     **A aplicação pode ser acessada publicamente no endereço:**
-    [https://dados-violencia-brasil-2015-a-2024.streamlit.app/](https://dados-violencia-brasil-2015-a-2024.streamlit.app/)
+    [https://dados-violencia-brasil.streamlit.app/](https://dados-violencia-brasil.streamlit.app/)
     """)
 
     st.markdown("---")
