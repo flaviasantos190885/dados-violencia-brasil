@@ -695,7 +695,6 @@ elif st.session_state.pagina_selecionada == "⚙️ Detalhes Técnicos":
 elif st.session_state.pagina_selecionada == "ℹ️ Sobre o Projeto":
 
     st.markdown("<h1 style='text-align: center; color: white;'>ℹ️ Sobre o Projeto e a Fonte dos Dados</h1>", unsafe_allow_html=True)
-    st.info("Visualização e análises dos dados abertos sobre segurança pública no Brasil, com o objetivo de promover a transparência e facilitar o entendimento sobre o tema.")
 
     st.markdown("---")
 
